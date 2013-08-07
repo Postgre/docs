@@ -1,0 +1,62 @@
+# -----------------------------------------------------------------------------
+# rollback pom when merging branches
+# -----------------------------------------------------------------------------
+
+git st -s | grep "UU.*pom.xml" | sed "s/UU/git checkout --ours/"
+
+git st -s | grep "UU.*pom.xml" | sed "s/UU //" | tr '\n' ' ' | sed "s/^/git checkout --ours /"
+git checkout --ours `git st -s | grep "UU.*pom.xml" | sed -e':a;N;$!ba;s/\n/ /g' -e's/UU.//g'`
+
+# -----------------------------------------------------------------------------
+# retrieve commit where a file has been deleted 
+# -----------------------------------------------------------------------------
+git rev-list -n 1 HEAD -- <filepath>
+
+git show <commit>
+
+git checkout <commit hashtag>^ -- <filepath>
+
+# -----------------------------------------------------------------------------
+# generate a .gitignore for a maven eclipse project
+# -----------------------------------------------------------------------------
+git st | sed "s/\?? //" > .gitignore ; u2d .gitignore
+
+
+# -----------------------------------------------------------------------------
+# generate a git clone command from a refs text
+# -----------------------------------------------------------------------------
+for x in $(cat ref.txt); do echo "git clone ssh://gitosis@northdev/"$x; done | sort
+
+# -----------------------------------------------------------------------------
+# undoing things
+# -----------------------------------------------------------------------------
+# unstaging a file
+git reset HEAD <file>
+
+# undoing a modified file
+git checkout -- <filename>
+
+# remove one commit
+git revert <sha1>
+
+# -----------------------------------------------------------------------------
+# rollbak to a specific commit (git revert only works for one specific commit)
+# -----------------------------------------------------------------------------
+# reset the index to the desired tree
+git reset 56e05fced
+
+# move the branch pointer back to the previous HEAD
+git reset --soft HEAD@{1}
+
+git commit -m "Revert to 56e05fced"
+
+# Update working copy to reflect the new commit
+git reset --hard
+
+# -----------------------------------------------------------------------------
+# statistics
+# -----------------------------------------------------------------------------
+git log --shortstat  --since "2012-01-01" --until "2012-12-31" | grep "files changed" | awk '{files+=$1; inserted+=$4; deleted+=$6} END {print "files changed", files, "lines inserted:", inserted, "lines deleted:", deleted}'
+
+git log  --since "2012-01-01" --until "2012-12-31" --numstat --pretty=format: | grep ".\java" | gawk '{ add += $1 ; subs += $2 ; loc += $1 - $2 } END \
+{ printf "added lines: %s removed lines: %s total lines: %s\n",add,subs,loc }' -
