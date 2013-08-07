@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>banniere</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="docstyle.css">
+<style type="text/css"><!--
+			/*****************************************/
+			/* Menu horizontal (rendu en-ligne des <li>) */
+			/*****************************************/
+			#nav {
+				list-style: none ;
+				margin: 0 ;
+				padding: 0 ;
+				}
+			#nav li {
+				display: inline ;
+				margin-right: 1px ;
+				color: #fff ;
+				background: #c00 ;
+				}
+			#nav li a {
+				background: #c00 ;
+				color: #fff ;
+				border: 1px solid #600 ;
+				line-height: 1em ;
+				padding: 4px 20px ;
+				text-align: center ;
+				text-decoration: none ;
+				}
+			#nav li a:hover, #nav li a:focus, #nav li a:active {
+				background: #900 ;
+				text-decoration: underline ;
+				}
+			#nav li a img {
+				border: 1;
+				border-style: solid;
+				vertical-align:middle;
+				}
+			--></style>
+<script language="JavaScript">
+	function printPrincipal() {
+		parent.principal.focus();
+ 		parent.principal.print();
+ 	}
+</script>
+</head>
+
+<body>
+	<!-- attention, les li suivant doivent être tous sur la même ligne pour éviter un chevauchement (bug IE) -->
+	<ul id="nav"><li><a href="principal.html" target="principal">Page d'accueil</a></li><li><a href="bir/index.html" target="principal">BIR</a></li><li><a href="java/index.html" target="principal">java</a></li><li><a href="http://wwwdba/Docs/oracle8.1.7/doc/index.htm" target="principal">oracle</a></li><li><a href="svn/index.html" target="principal">SVN</a></li><li><a href="uml/index.html" target="principal">UML</a></li><li><a href="unix/index.html" target="principal">unix</a></li><li><a href="mercury/index.html" target="principal">Mercury</a></li><li><a href="dollar_universe/index.html" target="principal">$U</a></li><li><a href="JavaScript:printPrincipal()"><img src="print.gif" alt="imprimer"></a></li></ul>
+</div>
+</body>
+</html>
