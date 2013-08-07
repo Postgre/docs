@@ -1,0 +1,1226 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="index_files/filelist.xml">
+<title>Aide mémoire UNIX</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="time"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>cdomas</o:Author>
+  <o:LastAuthor>chdomas</o:LastAuthor>
+  <o:Revision>10</o:Revision>
+  <o:TotalTime>58</o:TotalTime>
+  <o:Created>2005-02-15T15:38:00Z</o:Created>
+  <o:LastSaved>2009-03-03T09:16:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>750</o:Words>
+  <o:Characters>4129</o:Characters>
+  <o:Company>Groupe CDC</o:Company>
+  <o:Lines>34</o:Lines>
+  <o:Paragraphs>9</o:Paragraphs>
+  <o:CharactersWithSpaces>4870</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"?l?r ??fc";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-update:auto;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#606420;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.TableauNormal
+	{mso-style-name:"Tableau Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.Grilledutableau
+	{mso-style-name:"Grille du tableau";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="6146"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=FR link=blue vlink="#606420" style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='margin-top:5.0pt;margin-right:0cm;
+margin-bottom:5.0pt;margin-left:0cm;text-align:center;page-break-after:avoid;
+mso-layout-grid-align:none;text-autospace:none'><b><span style='font-size:24.0pt;
+mso-font-kerning:18.0pt'>UNIX<o:p></o:p></span></b></p>
+
+<p class=MsoNormal>Bash&nbsp;: <a href="IntroProgBash.pdf">IntroProgBash.pdf</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Les pages <a href="http://jp.barralis.com/linux-man/">man</a>
+de Linux (attention aux différences part rapport aux autres unix) en français
+et en HTML (attention, ceci nécessite une connexion internet).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Les pages <a href="solaris_man.pdf">man</a> de Solaris (PDF
+en anglais).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>L’aide mémoire de <a href="#vi">vi</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm;page-break-after:avoid;mso-layout-grid-align:none;text-autospace:
+none'><b><span style='mso-bidi-font-size:24.0pt'>Aide mémoire </span></b><b><span
+style='mso-bidi-font-size:18.0pt'>Commandes unix<o:p></o:p></span></b></p>
+
+<table class=Grilledutableau border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>cat</b>
+  <i>fichier</i> <span style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>affiche
+  le contenu de <i>fichier</i> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>more</b>
+  <i>fichier</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>affiche
+  le contenu de <i>fichier</i> page par page </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>head</b>
+  -n <i>nombre</i> <i>fichier</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>affiche
+  les <i>nombre</i> premières lignes de <i>fichier</i> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>tail</b>
+  -n <i>nombre</i> <i>fichier</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>affiche
+  les <i>nombre</i> dernières lignes de <i>fichier</i> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>cp</b>
+  <i>fichier1</i> <i>fichier2</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>copie <i>fichier1</i>
+  dans <i>fichier2</i> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>mv</b>
+  <i>fichier1</i> <i>fichier2</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>renomme
+  <i>fichier1</i> en <i>fichier2</i> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>ln</b>
+  <i>fichier1</i> <i>fichier2</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>crée un
+  lien (<i>fichier2</i>) de <i>fichier1</i>. Il s'agit physiquement du même
+  fichier. </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>ln</b>
+  -s <i>fichier1</i> <i>fichier2</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>crée un
+  lien symbolique (<i>fichier2</i>) de <i>fichier1</i>. </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>rm</b>
+  <i>fichier</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>efface <i>fichier</i>
+  </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>ls
+  -l</b> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>affiche
+  le contenu du répertoire courant sous format long </p>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><span
+  lang=EN-GB style='font-family:"Courier New";mso-ansi-language:EN-GB'>-rw-r--r--
+  1 babafou skiff 94 Aug 11 18:02 toto<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span lang=EN-GB
+  style='font-size:12.0pt;font-family:"Times New Roman";mso-ansi-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal>Les différentes informations sont les suivantes : </p>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='font-family:
+  "Courier New"'>-rw-r--r-- </span>type et droits d'accès du fichier </p>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none'><o:p>&nbsp;</o:p></p>
+  <p class=MsoNormal>Le premier caractère représente le type du fichier : </p>
+  <table class=Grilledutableau border=0 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=40 valign=top style='width:30.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal><span style='font-family:"Courier New";mso-bidi-font-family:
+    "Times New Roman"'>- <o:p></o:p></span></p>
+    </td>
+    <td width=377 valign=top style='width:282.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>fichier normal </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=40 valign=top style='width:30.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal><span style='font-family:"Courier New";mso-bidi-font-family:
+    "Times New Roman"'>d <o:p></o:p></span></p>
+    </td>
+    <td width=377 valign=top style='width:282.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>répertoire </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width=40 valign=top style='width:30.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal><span style='font-family:"Courier New";mso-bidi-font-family:
+    "Times New Roman"'>l <o:p></o:p></span></p>
+    </td>
+    <td width=377 valign=top style='width:282.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>lien symbolique </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3'>
+    <td width=40 valign=top style='width:30.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal><span style='font-family:"Courier New";mso-bidi-font-family:
+    "Times New Roman"'>b <o:p></o:p></span></p>
+    </td>
+    <td width=377 valign=top style='width:282.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>fichier spécial de type bloc </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td width=40 valign=top style='width:30.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal><span style='font-family:"Courier New";mso-bidi-font-family:
+    "Times New Roman"'>c <o:p></o:p></span></p>
+    </td>
+    <td width=377 valign=top style='width:282.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>fichier spécial de type caractère </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+    <td width=40 valign=top style='width:30.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal><span style='font-family:"Courier New";mso-bidi-font-family:
+    "Times New Roman"'>s <o:p></o:p></span></p>
+    </td>
+    <td width=377 valign=top style='width:282.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>socket </p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none'>Les suivants représentent
+  les droits d'accès au fichier et se lisent par groupe de trois : le premier
+  concerne le propriétaire du fichier, le second son groupe et le troisième les
+  autres utilisateurs. <br>
+  Ces droits sont de trois types<span style='font-size:12.0pt;font-family:"Times New Roman"'>
+  : <o:p></o:p></span></p>
+  <table class=Grilledutableau border=0 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=28 valign=top style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>r</span><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=389 valign=top style='width:291.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>droit en lecture (possibilité de faire ls pour un
+    répertoire) </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=28 valign=top style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>w</span><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=389 valign=top style='width:291.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>droit en écriture (possibilité de créer et d'effacer des
+    fichiers pour un répertoire) </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+    <td width=28 valign=top style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>x</span><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=389 valign=top style='width:291.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>droit en exécution (possibilité de faire cd pour un
+    répertoire) </p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal>Un <span style='font-family:"Courier New"'>-</span> à la
+  place d'un droit indique que ce droit est refusé. <br>
+  Ainsi, dans notre exemple, le fichier <i>toto</i> est accessible en lecture
+  et en écriture (<span style='font-family:"Courier New"'>rw-</span>) à
+  l'utilisateur <i>babafou</i>, en lecture (<span style='font-family:"Courier New"'>r--</span>)
+  au groupe <i>skiff</i> et en lecture (<span style='font-family:"Courier New"'>r--</span>)
+  pour tous les autres utilisateurs. </p>
+  <table class=Grilledutableau border=0 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=112 valign=top style='width:84.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>1</span><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=305 valign=top style='width:228.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>nombre de liens sur le fichier </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=112 valign=top style='width:84.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>babafou<o:p></o:p></span></p>
+    </td>
+    <td width=305 valign=top style='width:228.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>propriétaire du fichier </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width=112 valign=top style='width:84.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>skiff</span><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=305 valign=top style='width:228.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>groupe du fichier </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3'>
+    <td width=112 valign=top style='width:84.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>94</span><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=305 valign=top style='width:228.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>taille du fichier </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td width=112 valign=top style='width:84.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>Aug 11 <st1:time Minute="2" Hour="18"
+    w:st="on">18:02</st1:time><o:p></o:p></span></p>
+    </td>
+    <td width=305 valign=top style='width:228.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>date de dernière modification du fichier </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+    <td width=112 valign=top style='width:84.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New"'>toto</span><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=305 valign=top style='width:228.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>nom du fichier </p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>chmod</b>
+  <i>mode</i> <i>fichier</i> </p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>modifie
+  les droits d'accès à <i>fichier</i> selon la valeur de <i>mode</i>. Ce mode
+  peut être spécifié de deux manières différentes : </p>
+  <p class=MsoNormal><u>en octal <o:p></o:p></u></p>
+  <table class=Grilledutableau border=0 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:14.85pt'>
+    <td width=65 style='width:48.55pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.85pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>1 <o:p></o:p></span></p>
+    </td>
+    <td width=353 style='width:264.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.85pt'>
+    <p class=MsoNormal>au droit d'exécution </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1;height:22.5pt'>
+    <td width=65 style='width:48.55pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>2 <o:p></o:p></span></p>
+    </td>
+    <td width=353 style='width:264.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+    <p class=MsoNormal>au droit d'écriture </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;height:22.5pt'>
+    <td width=65 style='width:48.55pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>4 <o:p></o:p></span></p>
+    </td>
+    <td width=353 style='width:264.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+    <p class=MsoNormal>au droit de lecture </p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal>et, pour chaque permission (propriétaire, groupe, autres),
+  on fait la somme des droits qui lui sont accordés. Ainsi, </p>
+  <p class=MsoNormal>rw-r--r-- s'écrit 644 et </p>
+  <p class=MsoNormal>rwxr-xr-x s'écrit 755. </p>
+  <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+  <p class=MsoNormal><u>sous forme symbolique <o:p></o:p></u></p>
+  <p class=MsoNormal>On précise les droits à appliquer sous la forme d'une
+  chaîne de caractères composée de trois parties : </p>
+  <p class=MsoNormal>la première indique pour qui on va modifier les droits
+  d'accès : </p>
+  <table class=Grilledutableau border=0 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=28 style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>u <o:p></o:p></span></p>
+    </td>
+    <td width=365 style='width:273.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>le propriétaire du fichier (user) </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=28 style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>g <o:p></o:p></span></p>
+    </td>
+    <td width=365 style='width:273.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>le groupe du fichier (group) </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width=28 style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>o <o:p></o:p></span></p>
+    </td>
+    <td width=365 style='width:273.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>les autres (others) </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+    <td width=28 style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>a <o:p></o:p></span></p>
+    </td>
+    <td width=365 style='width:273.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>tout le monde (all), c'est équivalent à ugo </p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal>la seconde indique s'il faut </p>
+  <table class=Grilledutableau border=0 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=28 style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>+<o:p></o:p></span></p>
+    </td>
+    <td width=389 style='width:291.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>ajouter des droits </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=28 style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>- <o:p></o:p></span></p>
+    </td>
+    <td width=389 style='width:291.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>supprimer des droits </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+    <td width=28 style='width:21.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>= <o:p></o:p></span></p>
+    </td>
+    <td width=389 style='width:291.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>fixer des droits </p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal>la troisième indique les droits à appliquer : </p>
+  <table class=Grilledutableau border=0 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=40 style='width:30.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>r <o:p></o:p></span></p>
+    </td>
+    <td width=353 style='width:264.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>lecture </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=40 style='width:30.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>w <o:p></o:p></span></p>
+    </td>
+    <td width=353 style='width:264.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>écriture </p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+    <td width=40 style='width:30.15pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+    5.0pt;margin-left:0cm;mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+    12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>x <o:p></o:p></span></p>
+    </td>
+    <td width=353 style='width:264.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal>exécution </p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none'>Ainsi, la commande <span
+  style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>chmod
+  go-rw</span> toto supprime les droits de lecture et d'écriture pour le groupe
+  et les autres sur le fichier toto<span style='font-size:12.0pt;font-family:
+  "Times New Roman"'>. <o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>mkdir</b>
+  <i>répertoire</i></p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>crée le
+  répertoire <i>répertoire</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>rmdir</b>
+  <i>répertoire</i></p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>efface
+  le répertoire vide <i>répertoire</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>cp
+  -R</b> <i>répertoire1</i> <i>répertoire2</i></p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>copie
+  le répertoire <i>répertoire1</i> et tout son contenu sous le nom <i>répertoire2</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;mso-yfti-lastrow:yes'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>rm
+  -r</b> <i>répertoire</i></p>
+  </td>
+  <td width=433 valign=top style='width:324.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>efface
+  le répertoire <i>répertoire</i> et tout ce qu'il contient</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm;page-break-after:avoid;mso-layout-grid-align:none;text-autospace:
+none'><a name=vi><b><span style='font-size:18.0pt'>vi</span></b></a><b><span
+style='font-size:18.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='mso-ansi-language:EN-US'><a href="memovif.pdf"><span lang=FR
+style='mso-ansi-language:FR'>Aide mémoire imprimable</span></a></span> (pdf) </p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b
+style='mso-bidi-font-weight:normal'>Aide mémoire simplifié<o:p></o:p></b></p>
+
+<table class=Grilledutableau border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>Esc</b></p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>passage
+  en mode commande </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>i</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>passage
+  en mode insertion à l'endroit du curseur </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>I<o:p></o:p></b></p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>passage
+  en mode insertion au début de la ligne </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>a</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>passage
+  en mode insertion après le curseur </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>A</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>passage
+  en mode insertion à la fin de la ligne </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>o</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>insère
+  une ligne vide après la ligne courante et passe en mode insertion au début de
+  cette ligne </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>O</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>insère
+  une ligne vide avant la ligne courante et passe en mode insertion au début de
+  cette ligne </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>h</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>déplace
+  le curseur d'un caractère vers la gauche </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>l</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>déplace
+  le curseur d'un caractère vers la droite </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>j</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>déplace
+  le curseur d'une ligne vers le bas </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>k</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>déplace
+  le curseur d'une ligne vers le haut </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>G</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>place
+  le curseur à la fin du fichier </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><i>nombre</i><b>G</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>place
+  le curseur à la ligne <i>nombre</i> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>x</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>efface
+  le caractère situé sous le curseur </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>r</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>remplace
+  le caractère situé sous le curseur par le caractère que l'on tape juste après
+  </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>cw</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>remplace
+  la fin du mot par ce que l'on tape </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>c$</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>remplace
+  la fin de la ligne par ce que l'on tape </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>dd</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>efface
+  la ligne sur laquelle se trouve le curseur </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>:w</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>sauvegarde
+  le document </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>:q</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>quitte
+  vi </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>:wq</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes'>
+  <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'><b>ZZ</b>
+  </p>
+  </td>
+  <td width=559 valign=top style='width:419.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:
+  5.0pt;margin-left:0cm;mso-layout-grid-align:none;text-autospace:none'>sauvegarde
+  le document et quitte vi </p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm;page-break-after:avoid;mso-layout-grid-align:none;text-autospace:
+none'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=FrontPage.Editor.Document>
+<meta name=Generator content="Microsoft FrontPage 4.0">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./ConnectionJDBC_fichiers/filelist.xml">
+<title>Architecture des bases sur DIA_DEV</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Domas.C</o:Author>
+  <o:LastAuthor>Domas.C</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>257</o:TotalTime>
+  <o:Created>1999-12-01T14:12:00Z</o:Created>
+  <o:LastSaved>1999-12-01T15:46:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>251</o:Words>
+  <o:Characters>1436</o:Characters>
+  <o:Company>DIA</o:Company>
+  <o:Lines>11</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1763</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="FR" VendorID="9" DLLVersion="512" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+tt
+	{mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1123379778;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1687089438 67895311 67895321 67895323 67895311 67895321 67895323 67895311 67895321 67895323;}
+@list l0:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body lang=FR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'>Connexions aux bases Oracle</h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h1>Les drivers</h1>
+
+<p class=MsoNormal>Il existe 3 solutions pour se connecter à Oracle depuis Java&nbsp;:</p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'>le
+     pont jdbc&nbsp;:odbc</li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'>le
+     driver Oracle JDBC OCI (Oracle Call Interface)</li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'>le
+     driver Oracle JDBC Thin</li>
+</ol>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>La documentation sur l’utilisation des 2 drivers Oracle se
+trouve dans le chapitre «&nbsp;Application Development&nbsp;» de la
+documentation en ligne de Oracle.</p>
+
+<p class=MsoNormal>Dans le cadre d’un serveur Web exécutant des servlets, vous
+ne devez en aucun cas utiliser les 2 premiers drivers. Ces drivers sont écris
+en C et tout «&nbsp;plantage&nbsp;» lors d’un appel aux fonctionnalités de ces
+drivers pourrait provoquer l’arrêt du serveur.</p>
+
+<h1><span lang=EN-GB style='mso-ansi-language:EN-GB'>Configuration de IBM
+Visual Age for Java<o:p></o:p></span></h1>
+
+<p class=MsoNormal>Pour que VA puisse utiliser ce driver, il faut ajouter dans
+les ressources le chemin d’accès aux classes de ce driver&nbsp;:</p>
+
+<p class=MsoNormal>Menu Fenêtre <span style='font-family:Wingdings;mso-ascii-font-family:
+Arial;mso-hansi-font-family:Arial;mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>
+Options <span style='font-family:Wingdings;mso-ascii-font-family:Arial;
+mso-hansi-font-family:Arial;mso-char-type:symbol;mso-symbol-font-family:Wingdings'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>
+Ressources</p>
+
+<p class=MsoNormal>Dans le champ «&nbsp;Chemin d’accès aux lasses pour l’espace
+de travail&nbsp;», tapez le chemin d’accès au fichier contenant le drivers.</p>
+
+<p class=MsoNormal>Pour les JVM 1.1, ce fichier existe sur le serveur dia_dev
+dans le répertoire \dev\oracle\jdbc\classes111.zip.</p>
+
+<h1>Utilisation du driver dans Java</h1>
+
+<p class=MsoNormal><tt><span style='font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>// charger le driver en mémoire<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>Class.forName(&quot;oracle.jdbc.driver.OracleDriver&quot;);<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>// obtenir une connexion<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span lang=EN-GB style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-GB'>Connection conn
+= DriverManager.getConnection(&quot;jdbc:oracle:thin:@machine:port:sid&quot;,
+&quot;userid&quot;, &quot;password&quot;);<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><span lang=EN-GB style='mso-ansi-language:EN-GB'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal>machine: <span style='mso-tab-count:1'>         </span>nom
+de la machine sur laquelle se trouve le moteur Oracle (machine de développement&nbsp;:
+dia_web)</p>
+
+<p class=MsoNormal>port&nbsp;:<span style='mso-tab-count:2'>                </span>port
+du listener de la base (en général 1521)</p>
+
+<p class=MsoNormal>sid&nbsp;:<span style='mso-tab-count:2'>                 </span>identifiant
+interne de la base à attaquer (sur la machine de développement&nbsp;: dev et
+hom)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Ces informations seront de préférences stockées dans un
+fichier «&nbsp;properties&nbsp;» (Cf java.util.properties). Elles ne doivent
+pas être codées «&nbsp;en dur&nbsp;» dans le source pour éviter les
+recompilations.</p>
+
+</div>
+
+</body>
+
+</html>

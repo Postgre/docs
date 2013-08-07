@@ -1,0 +1,236 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./ARCHIT~1_fichiers/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Domas.C</o:Author>
+  <o:LastAuthor>Domas.C</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>4</o:TotalTime>
+  <o:Created>1999-12-01T18:14:00Z</o:Created>
+  <o:LastSaved>2000-05-04T08:14:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>204</o:Words>
+  <o:Characters>1165</o:Characters>
+  <o:Company>DIA</o:Company>
+  <o:Lines>9</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1430</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<link rel=Stylesheet type="text/css" media=all href="..\docstyle.css">
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:18.0pt;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#0000CC;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.documentation, li.documentation, div.documentation
+	{mso-style-name:documentation;
+	margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body lang=FR link=blue vlink="#0000cc" style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span style='mso-bidi-font-family:
+Arial'>Architecture des bases sur DIA_DEV<o:p></o:p></span></h1>
+
+<h1><span style='mso-bidi-font-family:Arial'>Les bases<o:p></o:p></span></h1>
+
+<p class=MsoNormal>Le serveur de développement DIA_DEV héberge un moteur
+Oracle. Ce moteur gère 2 instances&nbsp;: une pour le développement et une pour
+l’homologation.</p>
+
+<p class=MsoNormal>L’instance de développement (DEV) permet au développeur de
+travailler, de faire des tests, de préparer des versions futurs de son
+application. </p>
+
+<p class=MsoNormal>L’instance d’homologation (HOM) permet aux personnes qui
+doivent valider une application de faire des tests avant la mise en production.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Chaque application a son propre schéma sur chacune des
+instances. Ce schéma a des droits DBA lui permettant de créer des objets et de
+les supprimer. </p>
+
+<p class=MsoNormal>L’application possède un identifiant unique de maximum 4
+lettres (exemple&nbsp;: WEB, DIAP…).<span style='font-size:12.0pt;font-family:
+"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Soit
+une application APP. Cette application possède un ensemble de schéma respectant
+la nomenclature suivante&nbsp;:<span style='font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0cm 3.5pt 0cm 3.5pt'>
+ <tr>
+  <td width=205 valign=top style='width:153.5pt;border:solid windowtext .5pt;
+  padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal align=center style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+  auto;text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal align=center style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+  auto;text-align:center'>DEV<span style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal align=center style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+  auto;text-align:center'>HOM<span style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:153.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 3.5pt 0cm 3.5pt'>
+  <p>Schéma propriétaire des objets</p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>APPDEV<span
+  style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>APPHOM<span
+  style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:153.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Compte
+  générique de test<span style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>APPUSR<span
+  style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>APPUSR<span
+  style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:153.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Autres
+  comptes<span style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>APP&lt;compte&gt;<span
+  style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>APP&lt;compte&gt;<span
+  style='font-size:12.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Il
+ne faudra donc qu’en <b>aucun cas</b> que l’application se connecte par défaut
+avec ce schéma (mais celui-ci vous permettra de créer des utilisateurs
+génériques).<span style='font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<h1><span style='mso-bidi-font-family:Arial'>Les droits<o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Un
+compte APPUSR voulant utiliser des objets de APPDEV doit posséder des droits
+sur ces objets. Pour des raisons de maintenabilité, Il ne faut en aucun cas
+attribuer ces droits directement à l’utilisateur. Les droits seront attribués à
+des rôles qui seront affectés aux utilisateurs.<span style='font-size:12.0pt;
+font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

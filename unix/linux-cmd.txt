@@ -1,0 +1,67 @@
+# =============================================================================
+# ims
+# =============================================================================
+
+# find an ims by its port
+netstat -pa | grep <port>
+==> <pid>
+ps -ef | grep <pid>
+
+# =============================================================================
+
+# retart an ims
+jps -lm | grep nm-test | cut -d" " -f1 | xargs kill -9; rm ./nm-test/nm-test.persistence -rf ; ./run.sh nm-test
+
+# =============================================================================
+ 
+# extract process time from iamapi
+grep "\[IAMAPI-SERVER-.*\].*order actions after process" server/target/iamapi.log | cut -d"-" -f12 | cut -d" " -f4 > "process-time.xls"
+
+# =============================================================================
+
+# remove caches for perf tests
+rm server/cache -rf && rm server/temp -rf && rm -rf /cygdrive/c/work/dev/others/quickfix-test/quickfix-test/target/client/
+
+# =============================================================================
+# cmd
+# =============================================================================
+
+# find a class in all jars
+for i in `find . -name "*.jar"`; do jar tvf $i | grep "search pattern" && echo $i ; done
+# =============================================================================
+
+# find files that contains 'Secured' string in core dir and display only the name
+# and remove the line that contains 'Secured'
+grep -r --include=*.java -l "Secured" ./core/ | xargs sed -i "/Secured/d"
+
+# =============================================================================
+
+# delete line in all properties files
+find $1 -name '*.properties' -exec sed -i '/basket.version/d' {} \;
+
+# find and replaces in files
+find . -name "ims.*.xml"  -exec sed -i 's/10504/10502/g' {} \;
+
+# copy orginial file
+#cp $1 $1.sav`date +\%Y\%m\%d_\%H\%M\%S`
+
+# replace and delete line with sed
+sed -i 's/iamapi_services/iamapi.server.services/g' $1
+sed -i '/iamapiauthorized_mode/d' $1
+
+# unix 2 dos on modified files
+$ git st | sed 's/ M /u2d/g'
+
+# =============================================================================
+# telnet
+# =============================================================================
+
+ctrl + $
+puis
+> quit
+
+# =============================================================================
+# cron with date (date format like date +"%M" does not work)
+# =============================================================================
+* * * * * echo "toto" > /export/home/northd/log/psdump/toto_$(date +\%M) 2>&1
+35 0 * * 0 /usr/bin/nohup /data/jenkins/start.sh >> /data/jenkins/crontab-logs/cronstart`date +\%Y\%m\%d_\%H\%M\%S`.log 2>&1
