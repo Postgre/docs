@@ -1,0 +1,402 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;&nbsp;
+<P>
+&nbsp;
+<H2 ALIGN=Left>
+</H2>
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Les vues dynamiques d'UML
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+  <FONT FACE="Verdane, Arial"><B><BR>
+  &nbsp;<BR>
+  DIAGRAMME &nbsp;D'ETATS-TRANSITIONS</B></FONT><BR>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Diagramme
+	d'&eacute;tats-transitions&nbsp;: s&eacute;mantique</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ce diagramme sert &agrave; repr&eacute;senter
+	    des automates d'&eacute;tats finis, sous forme de graphes d'&eacute;tats,
+	    reli&eacute;s par des arcs orient&eacute;s qui d&eacute;crivent les
+	    transitions.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes d'&eacute;tats-transitions
+	    permettent de d&eacute;crire les changements d'&eacute;tats d'un objet ou
+	    d'un composant, en r&eacute;ponse aux interactions avec d'autres
+	    objets/composants ou avec des acteurs.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <A NAME="state"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>Un &eacute;tat
+	    se caract&eacute;rise par sa dur&eacute;e et sa stabilit&eacute;, il
+	    repr&eacute;sente une conjonction instantan&eacute;e des valeurs des attributs
+	    d'un objet.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une transition repr&eacute;sente le passage
+	    instantan&eacute; d'un &eacute;tat vers un autre.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <A NAME="evt"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>Une transition
+	    est d&eacute;clench&eacute;e par un &eacute;v&eacute;nement. En d'autres
+	    termes&nbsp;: c'est l'arriv&eacute;e d'un &eacute;v&eacute;nement qui conditionne
+	    la transition.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les transitions peuvent aussi &ecirc;tre
+	    automatiques, lorsqu'on ne sp&eacute;cifie pas l'&eacute;v&eacute;nement
+	    qui la d&eacute;clenche.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>En plus de sp&eacute;cifier un
+	    &eacute;v&eacute;nement pr&eacute;cis, il est aussi possible de conditionner
+	    une transition, &agrave; l'aide de "gardes"&nbsp;: il s'agit d'expressions
+	    bool&eacute;ennes, exprim&eacute;es en langage naturel (et encadr&eacute;es
+	    de crochets).</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>&eacute;tats, transition et
+	&eacute;v&eacute;nement,&nbsp;notation&nbsp;:</B></SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/state1.gif" WIDTH="308" HEIGHT="49" ALT="&eacute;tats et transition"><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>transition conditionnelle
+	:</B></SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/st-cond.gif" WIDTH="139" HEIGHT="97" ALT="transition conditionnelle"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Super-Etat, historique et
+	souches</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Un super-&eacute;tat est un
+	    &eacute;l&eacute;ment de structuration des diagrammes d'&eacute;tats-transitions
+	    (il s'agit d'un &eacute;tat qui englobe d'autres &eacute;tats et
+	    transitions).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le symbole de mod&eacute;lisation
+	    "historique", m&eacute;morise le dernier sous-&eacute;tat actif d'un
+	    super-&eacute;tat, pour y revenir directement
+	    ult&eacute;rieurement.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Exemple :</B></SMALL></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Le diagramme d'&eacute;tats-transitions
+	ci-dessous, montre les diff&eacute;rents &eacute;tats par lesquels passe
+	une machine &agrave; laver les voitures.<BR>
+	En phase de lustrage ou de lavage, le client peut appuyer sur le bouton
+	d'arr&ecirc;t d'urgence. S'il appuie sur ce bouton, la machine se met en
+	attente. Il a alors deux minutes pour reprendre le lavage ou le lustrage
+	(la machine continue en&nbsp;phase de lavage ou de lustrage, suivant l'&eacute;tat
+	dans lequel elle a &eacute;t&eacute; interrompue), sans quoi la machine
+	s'arr&ecirc;te. En phase de s&eacute;chage, le client peut aussi interrompre
+	la machine. Mais dans ce cas, la machine s'arr&ecirc;tera d&eacute;finitivement
+	(avant de reprendre un autre cycle entier).</SMALL></FONT><BR>
+	<P>
+	<IMG SRC="../img/state2.gif" WIDTH="610" HEIGHT="432" ALT="super-&eacute;tat et historique"><BR>
+	<BR>
+	&nbsp;
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>souches</B>&nbsp;: afin d'introduire
+	    plus d'abstraction dans un diagramme d'&eacute;tats-transitions complexe,
+	    il est possible de r&eacute;duire la charge d'information, tout en
+	    mat&eacute;rialisant la pr&eacute;sence de sous-&eacute;tats, &agrave; l'aide
+	    de souches, comme dans l'exemple ci-dessous.</SMALL></FONT><BR>
+	    <BR>
+	    <IMG SRC="../img/state3.gif" WIDTH="409" HEIGHT="320" ALT="souche">
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Actions dans un
+	&eacute;tat</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>On peut aussi associer une action &agrave;
+	    <A HREF="p20.html#evt">l'&eacute;v&eacute;nement</A> qui d&eacute;clenche
+	    une transition.<BR>
+	    La syntaxe est alors la suivante&nbsp;:</SMALL></FONT>
+	    <FONT COLOR="#ffffff"><TT>&eacute;v&eacute;nement / action</TT></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ceci exprime que la transition
+	    (d&eacute;clench&eacute;e par l'&eacute;v&eacute;nement cit&eacute;)
+	    entra&icirc;ne l'ex&eacute;cution de l'action sp&eacute;cifi&eacute;e sur
+	    l'objet, &agrave; l'entr&eacute;e du nouvel &eacute;tat.<BR>
+	    Exemple : </SMALL></FONT><FONT COLOR="#ffffff"><TT>il pleut / ouvrir
+	    parapluie</TT></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une action correspond &agrave; une
+	    op&eacute;ration disponible dans l'objet dont on repr&eacute;sente les
+	    &eacute;tats.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les actions propres &agrave; un &eacute;tat
+	    peuvent aussi &ecirc;tre document&eacute;es directement &agrave;
+	    l'int&eacute;rieur de l'&eacute;tat.<BR>
+	    UML d&eacute;finit un certain nombre de champs qui permettent de d&eacute;crire
+	    les actions dans un &eacute;tat&nbsp;:</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT COLOR="#ffffff"><TT>entry / <I>action</I></TT></FONT><TT> &nbsp; &nbsp;
+		&nbsp; &nbsp;</TT><FONT FACE="Verdane, Arial"><SMALL>: action
+		ex&eacute;cut&eacute;e &agrave; l'entr&eacute;e de
+		l'&eacute;tat</SMALL></FONT>
+	      <LI>
+		<TT><FONT COLOR="#ffffff">exit / <I>action</I></FONT> &nbsp; &nbsp; &nbsp;
+		&nbsp; </TT><FONT FACE="Verdane, Arial"><SMALL>: action ex&eacute;cut&eacute;e
+		&agrave; la sortie de l'&eacute;tat</SMALL></FONT>
+	      <LI>
+		<FONT COLOR="#ffffff"><TT>on <I>&eacute;v&eacute;nement</I> /
+		<I>action</I></TT></FONT><TT> </TT><FONT FACE="Verdane, Arial"><SMALL>: action
+		ex&eacute;cut&eacute;e &agrave; chaque fois que l'&eacute;v&eacute;nement
+		cit&eacute; survient</SMALL></FONT>
+	      <LI>
+		<TT><FONT COLOR="#ffffff">do / <I>action</I> </FONT>&nbsp; &nbsp; &nbsp;
+		&nbsp; &nbsp;&nbsp;</TT><FONT FACE="Verdane, Arial"><SMALL>: action
+		r&eacute;currente ou significative, ex&eacute;cut&eacute;e dans
+		l'&eacute;tat</SMALL></FONT><BR>
+		<BR>
+	    </UL>
+	</UL>
+	<BLOCKQUOTE>
+	  <FONT FACE="Verdane, Arial"><SMALL>Exemple :</SMALL></FONT><BR>
+	  &nbsp;
+	  <BLOCKQUOTE>
+	    <IMG SRC="../img/state4.gif" WIDTH="232" HEIGHT="103" ALT="actions dans un &eacute;tat">
+	  </BLOCKQUOTE>
+	  <P>
+	  <FONT FACE="Verdane, Arial"><SMALL>Remarque :<BR>
+	  Attention, les actions attach&eacute;es aux clauses "entry" et "exit" ne
+	  sont pas ex&eacute;cut&eacute;es si l'&eacute;v&eacute;nement
+	  sp&eacute;cifi&eacute; dans la clause "on" survient. Pour indiquer qu'elles
+	  peuvent &ecirc;tre ex&eacute;cut&eacute;es plusieurs fois &agrave;
+	  l'arriv&eacute;e d'un &eacute;v&eacute;nement, repr&eacute;sentez l'arriv&eacute;e
+	  d'un &eacute;v&eacute;nement r&eacute;flexif, comme
+	  suit&nbsp;:</SMALL></FONT><BR>
+	  &nbsp;
+	  <BLOCKQUOTE>
+	    <IMG SRC="../img/state5.gif" WIDTH="343" HEIGHT="130" ALT="&eacute;v&eacute;nement r&eacute;flexif">
+	  </BLOCKQUOTE>
+	</BLOCKQUOTE>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Etats concurrents et barre de
+	synchronisation</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Pour repr&eacute;senter des &eacute;tats
+	concurrents sur un m&ecirc;me diagramme d'&eacute;tats-transitions, on utilise
+	la notation suivante&nbsp;:<BR>
+	<BR>
+	<IMG SRC="../img/state6.gif" WIDTH="598" HEIGHT="299" ALT="&eacute;tats concurrents"><BR>
+	<BR>
+	<BR>
+	Dans l'exemple ci-dessus, l'automate K est compos&eacute; des sous-automates
+	L et M.<BR>
+	<BR>
+	L et M s'activent simultan&eacute;ment et &eacute;voluent en parall&egrave;le.
+	Au d&eacute;part, l'objet dont on mod&eacute;lise les &eacute;tats par l'automate
+	K est dans l'&eacute;tat composite (E-L1, E-M1).<BR>
+	<BR>
+	Apr&egrave;s l'&eacute;v&eacute;nement Tr1, K passe dans l'&eacute;tat composite
+	(E-L2, E-M2). Par la suite, si l'&eacute;v&eacute;nement Tr2 survient, K
+	passe dans l'&eacute;tat composite (E-L3, E-M2). Si c'est Tr4 qui survient,
+	M ne passe pas dans l'&eacute;tat E-M1, car cette transition est contrainte
+	par l'&eacute;tat de L ("[in E-L3]").<BR>
+	<BR>
+	Dans l'&eacute;tat composite (E-L3, E-M2), si Tr3 survient, K passe dans
+	l'&eacute;tat composite (E-L2, E-M2). Si c'est Tr4 qui survient, K passe
+	dans l'&eacute;tat composite (E-L3, E-M1). Et ainsi de suite...<BR>
+	<BR>
+	Attention : <B>la num&eacute;rotation des &eacute;v&eacute;nements n'est
+	pas significative.</B> Pour synchroniser les sous-automates d'une
+	agr&eacute;gation d'&eacute;tats, il faut contraindre les transitions, comme
+	dans l'exemple ci-dessus ("[in E-L3]").<BR>
+	<BR>
+	On peut aussi utiliser un symbole sp&eacute;cial&nbsp;: "<B>la barre de
+	synchronisation</B>".</SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>La barre de synchronisation permet de
+	    repr&eacute;senter graphiquement des points de
+	    synchronisation.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les transitions automatiques qui partent
+	    d'une barre de synchronisation ont lieu en m&ecirc;me
+	    temps.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>On ne franchit une barre de synchronisation
+	    qu'apr&egrave;s r&eacute;alisation de toutes les transitions qui s'y
+	    rattachent.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<IMG SRC="../img/state7.gif" WIDTH="507" HEIGHT="190" ALT="barre de synchronisation"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Ev&eacute;nement
+	param&eacute;tr&eacute;</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>UML permet aussi de param&eacute;trer
+	les &eacute;v&eacute;nements, comme dans l'exemple suivant
+	:</SMALL></FONT><BR>
+	<BR>
+	<BR>
+	<IMG SRC="../img/state8.gif" WIDTH="547" HEIGHT="349" ALT="&eacute;v&eacute;nement param&eacute;tr&eacute;"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Echange de messages entre
+	automates</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Il est aussi possible de repr&eacute;senter
+	l'&eacute;change de messages entre automates dans un diagramme
+	d'&eacute;tats-transitions. Cette notation particuli&egrave;re n'est&nbsp;pas
+	pr&eacute;sent&eacute;e ici. Veuillez vous r&eacute;f&eacute;rer &agrave;
+	"<A HREF="../norme/uml_free_fr_norme.html#notation">l'UML notation
+	guide</A>".</SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p19.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p21.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

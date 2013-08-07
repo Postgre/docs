@@ -1,0 +1,349 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P ALIGN=Center>
+<H2 ALIGN=Center>
+  <FONT FACE="Arial" COLOR="#ff8080">Mod&eacute;liser avec UML</FONT>
+</H2>
+<P>
+&nbsp;
+<P ALIGN=Center>
+<IMG SRC="../img/model.jpg" WIDTH="570" HEIGHT="247" ALT="mod&egrave;le m&eacute;t&eacute;orologique">
+<BLOCKQUOTE>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="modele"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Qu'est-ce
+	qu'un mod&egrave;le ?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Un mod&egrave;le est une abstraction
+	    de la r&eacute;alit&eacute;</B><BR>
+	    <BR>
+	    </SMALL></FONT><A NAME="abs"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>L'abstraction
+	    est un des piliers de l'approche objet.</SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Il s'agit d'un processus qui consiste
+		&agrave; identifier les caract&eacute;ristiques int&eacute;ressantes d'une
+		entit&eacute;, en vue d'une utilisation pr&eacute;cise.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'abstraction d&eacute;signe aussi le
+		r&eacute;sultat de ce processus, c'est-&agrave;-dire l'ensemble des
+		caract&eacute;ristiques essentielles d'une entit&eacute;, retenues par un
+		observateur.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Un mod&egrave;le est une vue subjective
+	    mais pertinente de la r&eacute;alit&eacute;</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Un mod&egrave;le d&eacute;finit une
+		fronti&egrave;re entre la r&eacute;alit&eacute; et la perspective de
+		l'observateur. Ce n'est pas "la r&eacute;alit&eacute;", mais une vue tr&egrave;s
+		subjective de la r&eacute;alit&eacute;.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Bien qu'un mod&egrave;le ne repr&eacute;sente
+		pas une r&eacute;alit&eacute; absolue, un mod&egrave;le refl&egrave;te des
+		aspects importants de la r&eacute;alit&eacute;, il en donne donc une vue
+		juste et pertinente.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Quelques exemples de
+	    mod&egrave;les</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Mod&egrave;le m&eacute;t&eacute;orologique
+		:<BR>
+		&agrave; partir de donn&eacute;es d'observation (satellite ...), permet de
+		pr&eacute;voir les conditions climatiques pour les jours &agrave;
+		venir.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Mod&egrave;le &eacute;conomique&nbsp;:<BR>
+		peut par exemple permettre de simuler l'&eacute;volution de cours boursiers
+		en fonction d'hypoth&egrave;ses macro-&eacute;conomiques (&eacute;volution
+		du ch&ocirc;mage, taux de croissance...).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Mod&egrave;le
+		d&eacute;mographique&nbsp;:<BR>
+		d&eacute;finit la composition d'un panel d'une population et son comportement,
+		dans le but de fiabiliser des &eacute;tudes statistiques, d'augmenter l'impact
+		de d&eacute;marches commerciales, etc...</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Caract&eacute;ristiques fondamentales
+	    des mod&egrave;les</B><BR>
+	    <BR>
+	    Le caract&egrave;re abstrait d'un mod&egrave;le doit notamment
+	    permettre&nbsp;:</SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>de faciliter la compr&eacute;hension du
+		syst&egrave;me &eacute;tudi&eacute;<BR>
+		&gt; Un mod&egrave;le r&eacute;duit la complexit&eacute; du syst&egrave;me
+		&eacute;tudi&eacute;.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>de simuler le syst&egrave;me
+		&eacute;tudi&eacute;<BR>
+		&gt; Un mod&egrave;le repr&eacute;sente le syst&egrave;me &eacute;tudi&eacute;
+		et reproduit ses comportements.</SMALL></FONT>
+	    </UL>
+	    <P>
+	    <FONT FACE="Verdane, Arial"><SMALL>Un mod&egrave;le r&eacute;duit
+	    (d&eacute;compose) la r&eacute;alit&eacute;, dans le but de disposer
+	    d'&eacute;l&eacute;ments de travail exploitables par des moyens
+	    math&eacute;matiques ou informatiques&nbsp;:<BR>
+	    mod&egrave;le / r&eacute;alit&eacute; <U>~</U> &nbsp;digital /
+	    analogique</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="comm"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Comment
+	mod&eacute;liser avec UML ?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT COLOR="#ff8080"><FONT FACE="Verdane, Arial"><SMALL><B>UML est un langage
+	    qui permet de repr&eacute;senter des mod&egrave;les, mais il ne d&eacute;finit
+	    pas le processus d'&eacute;laboration des
+	    mod&egrave;les&nbsp;!</B></SMALL></FONT></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Cependant, dans le cadre de la
+	    mod&eacute;lisation d'une application informatique, les auteurs d'UML
+	    pr&eacute;conisent d'utiliser une d&eacute;marche&nbsp;:</SMALL></FONT><BR>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL><A HREF="p6.html#iter">it&eacute;rative
+		et incr&eacute;mentale</A>,</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL><A HREF="p6.html#besoin">guid&eacute;e
+		par les besoins des utilisateurs du syst&egrave;me</A>,</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL><A HREF="p6.html#archi">centr&eacute;e
+		sur l'architecture logicielle</A>.</SMALL></FONT><BR>
+	    </UL>
+	    <P>
+	    <FONT FACE="Verdane, Arial"><SMALL>D'apr&egrave;s les auteurs d'UML, un processus
+	    de d&eacute;veloppement qui poss&egrave;de ces qualit&eacute;s devrait favoriser
+	    la r&eacute;ussite d'un projet.</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="iter"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Une
+	d&eacute;marche it&eacute;rative et
+	incr&eacute;mentale&nbsp;?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'id&eacute;e est simple&nbsp;: pour
+	    mod&eacute;liser (comprendre et repr&eacute;senter) un syst&egrave;me complexe,
+	    il vaut mieux s'y prendre en plusieurs fois, en affinant son analyse par
+	    &eacute;tapes.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Cette d&eacute;marche devrait aussi
+	    s'appliquer au cycle de d&eacute;veloppement dans son ensemble, en favorisant
+	    le prototypage.</SMALL></FONT><BR>
+	    &nbsp;
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Le but est de mieux ma&icirc;triser la
+	part d'inconnu et d'incertitudes qui caract&eacute;risent les syst&egrave;mes
+	complexes.</SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="besoin"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Une
+	d&eacute;marche pilot&eacute;e par les besoins des
+	utilisateurs&nbsp;?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Avec UML, ce sont les utilisateurs
+	    qui guident la d&eacute;finition des
+	    mod&egrave;les&nbsp;:</B></SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Le p&eacute;rim&egrave;tre du syst&egrave;me
+		&agrave; mod&eacute;liser est d&eacute;fini par les besoins des utilisateurs
+		(les utilisateurs d&eacute;finissent ce que doit &ecirc;tre le
+		syst&egrave;me).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Le but du syst&egrave;me &agrave;
+		mod&eacute;liser est de r&eacute;pondre aux besoins de ses utilisateurs (les
+		utilisateurs sont les clients du syst&egrave;me).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Les besoins des utilisateurs servent
+	    aussi de fil rouge, tout au long du cycle de d&eacute;veloppement (it&eacute;ratif
+	    et incr&eacute;mental)&nbsp;:</B></SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>A chaque it&eacute;ration de la phase
+		d'analyse, on clarifie, affine et valide les besoins des
+		utilisateurs.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>A chaque it&eacute;ration de la phase
+		de conception et de r&eacute;alisation, on veille &agrave; la prise en compte
+		des besoins des utilisateurs.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>A chaque it&eacute;ration de la phase
+		de test, on v&eacute;rifie que les besoins des utilisateurs sont
+		satisfaits.</SMALL></FONT>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="archi"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Une
+	d&eacute;marche centr&eacute;e sur
+	l'architecture&nbsp;?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Une architecture adapt&eacute;e est
+	    la cl&eacute; de vo&ucirc;te du succ&egrave;s d'un
+	    d&eacute;veloppement.</B><BR>
+	    <BR>
+	    Elle d&eacute;crit des choix strat&eacute;giques qui d&eacute;terminent en
+	    grande partie les qualit&eacute;s du logiciel (adaptabilit&eacute;, performances,
+	    fiabilit&eacute;...).</SMALL></FONT><BR>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Ph. Kruchten propose diff&eacute;rentes
+	    perspectives, ind&eacute;pendantes et compl&eacute;mentaires, qui permettent
+	    de d&eacute;finir un mod&egrave;le d'architecture (publication IEEE,
+	    1995).</B><BR>
+	    <BR>
+	    Cette <A HREF="i-p7.html" TARGET="_top">vue ("4+1")</A> a fortement inspir&eacute;
+	    UML&nbsp;:</SMALL></FONT><BR>
+	    <BR>
+	    <IMG SRC="../img/4p1.gif" WIDTH="288" HEIGHT="116" ALT="vue 4+1 (Kruchten)">
+	</UL>
+      </TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p5.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p7.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

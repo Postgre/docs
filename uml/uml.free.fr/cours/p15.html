@@ -1,0 +1,344 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;&nbsp;
+<P>
+&nbsp;
+<H2 ALIGN=Left>
+</H2>
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Les vues statiques d'UML
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+  <FONT FACE="Verdane, Arial"><B><BR>
+  &nbsp;<BR>
+  DIAGRAMME DE CLASSES <SMALL>(suite...)</SMALL></B></FONT><BR>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="herit"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>H&eacute;ritage</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Les hi&eacute;rarchies de classes permettent
+	de g&eacute;rer la complexit&eacute;, en ordonnant les objets au sein
+	d'arborescences de classes, d'abstraction croissante.</SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Sp&eacute;cialisation</B></SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>D&eacute;marche descendante, qui consiste
+		&agrave; capturer les particularit&eacute;s d'un ensemble
+		<A HREF="p12.html#inst">d'objets</A>, non discrimin&eacute;s par les
+		<A HREF="i-p13.html" TARGET="_top">classes</A> d&eacute;j&agrave;
+		identifi&eacute;es.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Consiste &agrave; &eacute;tendre les
+		propri&eacute;t&eacute;s d'une <A HREF="i-p13.html" TARGET="_top">classe</A>,
+		sous forme de sous-classes, plus sp&eacute;cifiques (permet l'extension du
+		mod&egrave;le par r&eacute;utilisation).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>G&eacute;n&eacute;ralisation</B></SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>D&eacute;marche ascendante, qui consiste
+		&agrave; capturer les particularit&eacute;s communes d'un ensemble
+		<A HREF="p12.html#inst">d'objets</A>, issus de
+		<A HREF="i-p13.html" TARGET="_top">classes</A>
+		diff&eacute;rentes.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Consiste &agrave; factoriser les
+		propri&eacute;t&eacute;s d'un ensemble de
+		<A HREF="i-p13.html" TARGET="_top">classes</A>, sous forme d'une super-classe,
+		plus abstraite (permet de gagner en
+		g&eacute;n&eacute;ricit&eacute;).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Classification</B></SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'h&eacute;ritage (sp&eacute;cialisation
+		et g&eacute;n&eacute;ralisation) permet la classification des
+		objets.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Une bonne classification est stable et
+		extensible : ne classifiez pas les objets selon des crit&egrave;res instables
+		(selon ce qui caract&eacute;rise leur &eacute;tat) ou trop vagues (car cela
+		g&eacute;n&egrave;re trop de sous-classes).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les crit&egrave;res de classification
+		sont <B>subjectifs</B>.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Le principe de substitution (Liksow, 1987)
+		permet de d&eacute;terminer si une relation d'h&eacute;ritage est bien
+		employ&eacute;e pour la classification :<BR>
+		<B><I>"Il doit &ecirc;tre possible de substituer n'importe quel instance
+		d'une super-classe, par n'importe quel instance d'une de ses sous-classes,
+		sans que la s&eacute;mantique d'un programme &eacute;crit dans les termes
+		de la super-classe n'en soit affect&eacute;e."</I></B></SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Si Y h&eacute;rite de X, cela signifie
+		que "Y est une sorte de X" (analogies entre classification et th&eacute;orie
+		des ensembles).</SMALL></FONT><BR>
+		<BR>
+	    </UL>
+	</UL>
+	<P>
+	<IMG SRC="../img/herit.gif" ALT="h&eacute;ritage (sp&eacute;cialisation et g&eacute;n&eacute;ralisation)"
+	    WIDTH="551" HEIGHT="264"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="agreg"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Agr&eacute;gation</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'agr&eacute;gation est une association
+	    non sym&eacute;trique, qui exprime un couplage fort et une relation de
+	    subordination.<BR>
+	    Elle repr&eacute;sente une relation de type "ensemble&nbsp;/
+	    &eacute;l&eacute;ment".</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>UML ne d&eacute;finit pas ce qu'est une
+	    relation de type "ensemble&nbsp;/ &eacute;l&eacute;ment", mais il permet
+	    cependant d'exprimer cette vue <B>subjective</B> de mani&egrave;re
+	    explicite.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une agr&eacute;gation peut notamment (mais
+	    pas n&eacute;cessairement) exprimer :</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>qu'une classe (un "&eacute;l&eacute;ment")
+		fait partie d'une autre ("l'agr&eacute;gat"),</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>qu'un changement d'&eacute;tat d'une classe,
+		entra&icirc;ne un changement d'&eacute;tat d'une autre,</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>qu'une action sur une classe, entra&icirc;ne
+		une action sur une autre.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>A un m&ecirc;me moment, une instance
+	    d'&eacute;l&eacute;ment agr&eacute;g&eacute; peut &ecirc;tre li&eacute;e
+	    &agrave; plusieurs instances d'autres classes (l'&eacute;l&eacute;ment
+	    agr&eacute;g&eacute; peut &ecirc;tre partag&eacute;).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une instance d'&eacute;l&eacute;ment
+	    agr&eacute;g&eacute; peut exister sans agr&eacute;gat (et inversement) :
+	    les cycles de vies de l'agr&eacute;gat et de ses &eacute;l&eacute;ments
+	    agr&eacute;g&eacute;s peuvent &ecirc;tre
+	    ind&eacute;pendants.</SMALL></FONT><BR>
+	    <BR>
+	</UL>
+	<P>
+	<IMG SRC="../img/agreg2.gif" WIDTH="657" HEIGHT="301" ALT="agr&eacute;gation"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Composition</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <A NAME="prop"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>La composition
+	    est une <A HREF="p15.html#agreg">agr&eacute;gation</A> forte (agr&eacute;gation
+	    par valeur).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les cycles de vies des &eacute;l&eacute;ments
+	    (les "composants") et de l'agr&eacute;gat sont li&eacute;s : si l'agr&eacute;gat
+	    est d&eacute;truit (ou copi&eacute;), ses composants le sont
+	    aussi.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>A un m&ecirc;me moment, une instance de
+	    composant ne peut &ecirc;tre li&eacute;e qu'&agrave; un seul
+	    agr&eacute;gat.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les "objets composites" sont des instances
+	    de classes compos&eacute;es.</SMALL></FONT><BR>
+	    <BR>
+	</UL>
+	<P>
+	<IMG SRC="../img/compo.gif" WIDTH="375" HEIGHT="213" ALT="composition"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Agr&eacute;gation et composition
+	: rappel</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'agr&eacute;gation et la composition
+	    sont des vues subjectives.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Lorsqu'on repr&eacute;sente (avec UML)
+	    qu'une mol&eacute;cule est "compos&eacute;e" d'atomes, on sous-entend que
+	    la destruction d'une instance de la classe "Mol&eacute;cule", implique la
+	    destruction de ses composants, instances de la classe "Atome" (cf.
+	    <A HREF="p15.html#prop">propri&eacute;t&eacute;s de la
+	    composition</A>).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Bien qu'elle ne refl&egrave;te pas la
+	    r&eacute;alit&eacute; ("rien ne se perd, rien ne se cr&eacute;e, tout se
+	    transforme"), cette abstraction de la r&eacute;alit&eacute; nous satisfait
+	    si l'objet principal de notre mod&eacute;lisation est la
+	    mol&eacute;cule...</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>En conclusion, servez vous de
+	    l'agr&eacute;gation et de la composition pour ajouter de la s&eacute;mantique
+	    &agrave; vos mod&egrave;les lorsque cela est pertinent, m&ecirc;me si dans
+	    la "r&eacute;alit&eacute;" de tels liens n'existent pas !</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Interfaces</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une interface fournit une vue totale ou
+	    partielle d'un ensemble de services offerts par une
+	    <A HREF="i-p13.html" TARGET="_top">classe</A>, un
+	    <A HREF="i-p11.html" TARGET="_top">paquetage</A> ou un
+	    <A HREF="i-p17.html" TARGET="_top">composant</A>. Les &eacute;l&eacute;ments
+	    qui utilisent l'interface peuvent exploiter tout ou partie de
+	    l'interface.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Dans un mod&egrave;le UML, le symbole
+	    "interface" sert &agrave; identifier de mani&egrave;re explicite et symbolique
+	    les services offerts par un &eacute;l&eacute;ment et l'utilisation qui en
+	    est faite par les autres &eacute;l&eacute;ments.</SMALL></FONT><BR>
+	    <BR>
+	    <BR>
+	</UL>
+	<P>
+	<IMG SRC="../img/inter1.gif" WIDTH="471" HEIGHT="201" ALT="symbole d'interface"><BR>
+	<BR>
+	<BR>
+	<IMG SRC="../img/inter2.gif" WIDTH="424" HEIGHT="234" ALT="symbole d'interface"><BR>
+	<BR>
+	<BR>
+	<IMG SRC="../img/inter3.gif" WIDTH="635" HEIGHT="267" ALT="classe d'interface"></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p14.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p16.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

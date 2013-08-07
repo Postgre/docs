@@ -1,0 +1,343 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P>
+&nbsp;
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Approche fonctionnelle vs. approche objet
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+  &nbsp;
+  <P>
+  &nbsp;<BR>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="base"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>R&eacute;sum&eacute;
+	sur les concepts fondateurs de l'approche objet</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>la notion
+	    d'<A HREF="p3.html#obj">objet</A> et de <A HREF="p3.html#classe">classe</A>
+	    (d'objets)</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>l'<A HREF="p3.html#encap">encapsulation</A>
+	    (les <A HREF="p3.html#interf">interfaces</A> des objets)</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>l'<A HREF="p3.html#herit">h&eacute;ritage</A>
+	    (les hi&eacute;rarchies d'objets)</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>l'<A HREF="p3.html#agreg">agr&eacute;gation</A>
+	    (la construction d'objets &agrave; l'aide d'objets)</SMALL></FONT>
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Remarque :</SMALL></FONT>
+	<BLOCKQUOTE>
+	  <FONT FACE="Verdane, Arial"><SMALL>Les langages orient&eacute;s objet fournissent
+	  de nombreux autres m&eacute;canismes qui affinent ces concepts de base,
+	  favorisent la g&eacute;n&eacute;ricit&eacute; du code ou am&eacute;liorent
+	  sa robustesse.</SMALL></FONT>
+	</BLOCKQUOTE>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>L'approche objet, hier et
+	aujourd'hui</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Les concepts objet sont stables et
+	    &eacute;prouv&eacute;s (issus du terrain)</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Simula, 1<SUP>er</SUP> langage de
+		programmation &agrave; impl&eacute;menter le concept de type abstrait (&agrave;
+		l'aide de classes), date de 1967&nbsp;!</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>En 1976 d&eacute;j&agrave;, Smalltalk
+		impl&eacute;mente les concepts fondateurs de l'approche objet (encapsulation,
+		agr&eacute;gation, h&eacute;ritage) &agrave; l'aide de&nbsp;:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>classes</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>associations entre classes</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>hi&eacute;rarchies de
+		    classes</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>messages entre objets</SMALL></FONT>
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Le 1<SUP>er</SUP> compilateur C++ date
+		de 1980, et C++ est normalis&eacute; par l'ANSI</SMALL></FONT>.
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>De nombreux langages orient&eacute;s objets
+		acad&eacute;miques ont &eacute;tay&eacute;s les concepts objets&nbsp;: Eiffel,
+		Objective C, Loops...</SMALL></FONT><BR>
+	    </UL>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Les concepts objet sont anciens, mais
+	    ils n'ont jamais &eacute;t&eacute; autant d'actualit&eacute;</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'approche fonctionnelle n'est pas
+		adapt&eacute;e au d&eacute;veloppement d'applications qui &eacute;voluent
+		sans cesse et dont la complexit&eacute; croit continuellement.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'approche objet a &eacute;t&eacute;
+		invent&eacute;e pour faciliter l'&eacute;volution d'applications
+		complexes.</SMALL></FONT><BR>
+	    </UL>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>De nos jours, les outils orient&eacute;s
+	    objet sont fiables et performants</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les compilateurs C++ produisent un code
+		robuste et optimis&eacute;.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>De tr&egrave;s nombreux outils facilitent
+		le d&eacute;veloppement d'applications C++&nbsp;:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>g&eacute;n&eacute;rateurs d'IHM (Ilog
+		    Views, TeleUse...)</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>biblioth&egrave;ques (STL, USL, Rogue
+		    Wave, MFC...)</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>environnements de d&eacute;veloppement
+		    int&eacute;gr&eacute;s (Developper Studio, Sniff+...)</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>outils de qualim&eacute;trie et de tests
+		    (Cantata++, Insure++, Logiscope...)</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>bases de donn&eacute;es orient&eacute;es
+		    objet (O2, ObjectStore, Versant...)</SMALL></FONT>
+		</UL>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>L'approche objet : une solution
+	parfaite&nbsp;?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>En r&eacute;sum&eacute;, l'approche
+	    objet c'est&nbsp;:</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT COLOR="#00ff00"><FONT FACE="Verdane, Arial"><SMALL>Un ensemble de concepts
+		stables, &eacute;prouv&eacute;s et normalis&eacute;s.</SMALL></FONT></FONT>
+	      <LI>
+		<FONT COLOR="#00ff00"><FONT FACE="Verdane, Arial"><SMALL>Une solution
+		destin&eacute;e &agrave; faciliter l'&eacute;volution d'applications
+		complexes.</SMALL></FONT></FONT>
+	      <LI>
+		<FONT COLOR="#00ff00"><FONT FACE="Verdane, Arial"><SMALL>Une panoplie d'outils
+		et de langages performants pour le
+		d&eacute;veloppement.</SMALL></FONT></FONT>
+	    </UL>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Oui, MAIS...</B><BR>
+	    <BR>
+	    Malgr&eacute; les apparences, il est plus naturel pour nos esprits
+	    cart&eacute;siens, de d&eacute;composer un probl&egrave;me informatique sous
+	    forme d'une hi&eacute;rarchie de fonctions atomiques et de donn&eacute;es,
+	    qu'en terme d'objets et d'interaction entre ces objets. De plus, le vocabulaire
+	    pr&eacute;cis est un facteur d'&eacute;chec important dans la mise en oeuvre
+	    d'une approche objet.</SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial" COLOR="#ff8080"><SMALL>L'approche objet est moins
+		intuitive que l'approche fonctionnelle&nbsp;!</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Quels moyens utiliser pour faciliter l'analyse
+		    objet&nbsp;?</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Quels crit&egrave;res identifient une
+		    conception objet pertinente&nbsp;?</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Comment comparer deux solutions de
+		    d&eacute;coupe objet d'un syst&egrave;me&nbsp;?</SMALL></FONT>
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial" COLOR="#ff8080"><SMALL>L'application des concepts
+		objets n&eacute;cessite une grande rigueur&nbsp;!</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Le vocabulaire est pr&eacute;cis (risques
+		    d'ambigu&iuml;t&eacute;s, d'incompr&eacute;hensions).</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Comment d&eacute;crire la structure objet
+		    d'un syst&egrave;me de mani&egrave;re pertinente&nbsp;?</SMALL></FONT>
+		</UL>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Quels sont les rem&egrave;des aux
+	inconv&eacute;nients de l'approche objet&nbsp;?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Un langage pour exprimer les concepts
+	    objet qu'on utilise, afin de pouvoir&nbsp;:</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Repr&eacute;senter des concepts abstraits
+		(graphiquement par exemple)</SMALL></FONT>.
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Limiter les ambigu&iuml;t&eacute;s (parler
+		un langage commun)</SMALL></FONT>.
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Faciliter l'analyse (simplifier la comparaison
+		et l'&eacute;valuation de solutions)</SMALL></FONT>.
+	    </UL>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Une d&eacute;marche d'analyse et de
+	    conception objet, pour&nbsp;:</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Ne pas effectuer une analyse fonctionnelle
+		et se contenter d'une impl&eacute;mentation objet, mais penser objet d&egrave;s
+		le d&eacute;part.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>D&eacute;finir les vues qui permettent
+		de couvrir tous les aspects d'un syst&egrave;me, avec des concepts
+		objets</SMALL></FONT>.<BR>
+		&nbsp;
+	    </UL>
+	</UL>
+	<P>
+	<FONT COLOR="#ff8080"><FONT FACE="Verdane, Arial"><SMALL><B>Bref
+	:</B></SMALL></FONT></FONT>
+	<BLOCKQUOTE>
+	  <FONT COLOR="#ff8080"><FONT FACE="Verdane, Arial"><SMALL><B>il nous faut
+	  un outil qui apporte une dimension m&eacute;thodologique &agrave;&nbsp;l'approche
+	  objet, afin de mieux ma&icirc;triser sa richesse et sa
+	  complexit&eacute;.</B></SMALL></FONT></FONT>
+	</BLOCKQUOTE>
+      </TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p3.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p5.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

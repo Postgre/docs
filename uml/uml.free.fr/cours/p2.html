@@ -1,0 +1,371 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P>
+&nbsp;
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Approche fonctionnelle vs. approche objet
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+  &nbsp;
+  <P>
+  &nbsp;<BR>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>La s&eacute;paration des donn&eacute;es
+	et des traitements&nbsp;: le pi&egrave;ge&nbsp;!</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Examinons le probl&egrave;me de
+	l'&eacute;volution de code fonctionnel plus en d&eacute;tail...<BR>
+	<BR>
+	Faire &eacute;voluer une application de gestion de biblioth&egrave;que pour
+	g&eacute;rer une m&eacute;diath&egrave;que, afin de prendre en compte de
+	nouveaux types d'ouvrages (cassettes vid&eacute;o, CD-ROM, etc...),
+	n&eacute;cessite :</SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>de faire &eacute;voluer les structures
+	    de donn&eacute;es qui sont manipul&eacute;es par les
+	    fonctions,</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>d'adapter les traitements, qui ne manipulaient
+	    &agrave; l'origine qu'un seul type de document (des livres).</SMALL></FONT>
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Il faudra donc modifier toutes les portions
+	de code qui utilisent la base documentaire, pour g&eacute;rer les donn&eacute;es
+	et les actions propres aux diff&eacute;rents types de documents.<BR>
+	<BR>
+	Il faudra par exemple modifier la fonction qui r&eacute;alise l'&eacute;dition
+	des "lettres de rappel" (une lettre de rappel est une mise en demeure, qu'on
+	envoie automatiquement aux personnes qui tardent &agrave; rendre un ouvrage
+	emprunt&eacute;). Si l'on d&eacute;sire que le d&eacute;lai avant rappel
+	varie selon le type de document emprunt&eacute;, il faut pr&eacute;voir une
+	r&egrave;gle de calcul pour chaque type de document.<BR>
+	<BR>
+	En fait, c'est la quasi-totalit&eacute;&nbsp;de l'application qui devra
+	&ecirc;tre adapt&eacute;e, pour g&eacute;rer les nouvelles donn&eacute;es
+	et r&eacute;aliser les traitements correspondants. Et cela, &agrave; chaque
+	fois qu'on d&eacute;cidera de g&eacute;rer un nouveau type de
+	document&nbsp;!</SMALL></FONT><BR>
+	&nbsp;</TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLPADDING="0">
+    <TR>
+      <TD WIDTH=20>&nbsp;</TD>
+      <TD VALIGN="Top"><FONT COLOR="#ffffff"><TT>struct Document<BR>
+	{<BR>
+	&nbsp; char nom_doc[50];<BR>
+	&nbsp; </TT></FONT><FONT COLOR="#ff8080"><TT>Type_doc
+	type;</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	&nbsp; Bool est_emprunte;<BR>
+	&nbsp; char emprunteur[50];<BR>
+	&nbsp; struct tm date_emprunt;<BR>
+	} DOC[MAX_DOCS];</TT></FONT> <BR>
+	&nbsp;</TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLPADDING="0">
+    <TR>
+      <TD WIDTH=20>&nbsp;</TD>
+      <TD VALIGN="Top"><FONT COLOR="#ffffff"><TT>void lettres_de_rappel()<BR>
+	{<BR>
+	&nbsp; /* ... */<BR>
+	&nbsp; for (i = 0; i &lt; NB_DOCS; i++)<BR>
+	&nbsp; {<BR>
+	&nbsp; &nbsp; if (DOC[i].est_emprunte)<BR>
+	&nbsp; &nbsp; {<BR>
+	&nbsp; &nbsp; &nbsp; switch(DOC[i].type)<BR>
+	&nbsp; &nbsp; &nbsp; {<BR>
+	&nbsp; &nbsp; &nbsp; </TT></FONT><FONT COLOR="#ff8080"><TT>case
+	LIVRE:</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; delai_avant_rappel = 20;<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; break;<BR>
+	&nbsp; &nbsp; &nbsp; </TT></FONT><FONT COLOR="#ff8080"><TT>case
+	CASSETTE_VIDEO:</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; delai_avant_rappel = 7;<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;break;<BR>
+	&nbsp; &nbsp; &nbsp; </TT></FONT><FONT COLOR="#ff8080"><TT>case
+	CD_ROM:</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;delai_avant_rappel = 5;<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;break;<BR>
+	&nbsp; &nbsp; &nbsp; }<BR>
+	&nbsp; &nbsp; }<BR>
+	&nbsp; }<BR>
+	/* ... */<BR>
+	}</TT></FONT> <BR>
+	&nbsp;</TD>
+      <TD VALIGN="Top"><FONT COLOR="#ffffff"><TT>&nbsp; &nbsp;void mettre_a_jour(int
+	ref)<BR>
+	&nbsp; &nbsp;{<BR>
+	&nbsp; &nbsp; &nbsp;/* ... */<BR>
+	&nbsp; &nbsp; &nbsp;switch(DOC[ref].type)<BR>
+	&nbsp; &nbsp; &nbsp;{<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp;</TT></FONT><FONT COLOR="#ff8080"><TT>case
+	LIVRE:</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;maj_livre(DOC[ref]);<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp;</TT></FONT><FONT COLOR="#ff8080"><TT>case
+	CASSETTE_VIDEO:</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;maj_k7(DOC[ref]);<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp;</TT></FONT><FONT COLOR="#ff8080"><TT>case
+	CD_ROM:</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;maj_cd(DOC[ref]);<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;<BR>
+	&nbsp; &nbsp; &nbsp;}<BR>
+	&nbsp; &nbsp; &nbsp;/* ... */<BR>
+	&nbsp; &nbsp;}</TT></FONT>
+	<P>
+      </TD>
+    </TR>
+  </TABLE>
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR>
+      <TD>&nbsp;<BR>
+      </TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>1<SUP>&egrave;re</SUP>
+	am&eacute;lioration : rassembler les valeurs qui caract&eacute;risent un
+	type, dans le type</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Une solution relativement &eacute;l&eacute;gante
+	&agrave; la multiplication des branches conditionnelles et des redondances
+	dans le code (cons&eacute;quence logique d'une trop grande ouverture des
+	donn&eacute;es), consiste tout simplement &agrave;
+	<FONT COLOR="#00ff00">centraliser dans les structures de donn&eacute;es,
+	les valeurs qui leurs sont propres</FONT>&nbsp;:</SMALL></FONT><BR>
+	&nbsp;</TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><FONT COLOR="#ffffff"><TT>struct Document<BR>
+	{<BR>
+	&nbsp; char nom_doc[50];<BR>
+	&nbsp; Type_doc type;<BR>
+	&nbsp; Bool est_emprunte;<BR>
+	&nbsp; char emprunteur[50];<BR>
+	&nbsp; struct tm date_emprunt;<BR>
+	&nbsp; </TT></FONT><FONT COLOR="#00ff00"><TT>int
+	delai_avant_rappel;</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	} DOC[MAX_DOCS];</TT></FONT> <BR>
+	&nbsp;</TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><FONT COLOR="#ffffff"><TT>void lettres_de_rappel()<BR>
+	{<BR>
+	&nbsp; /* ... */<BR>
+	&nbsp; for (i = 0; i &lt; NB_DOCS; i++)<BR>
+	&nbsp; {<BR>
+	&nbsp; &nbsp; if (DOC[i].est_emprunte) /* SI LE DOC EST EMPRUNTE */<BR>
+	&nbsp; &nbsp; {<BR>
+	&nbsp; &nbsp; &nbsp; /* IMPRIME UNE LETTRE SI <B>SON</B><BR>
+	&nbsp; &nbsp; &nbsp; DELAI DE RAPPEL EST DEPASSE */<BR>
+	<BR>
+	&nbsp; &nbsp; &nbsp; if (date() &gt;=
+	(</TT></FONT><FONT COLOR="#00ff00"><TT>DOC[i].date_emprunt</TT></FONT><FONT
+	    COLOR="#ffffff"><TT> +
+	</TT></FONT><FONT COLOR="#00ff00"><TT>DOC[i].delai_avant_rappel</TT></FONT><FONT
+	    COLOR="#ffffff"><TT>))<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; imprimer_rappel(DOC[i]);<BR>
+	&nbsp; &nbsp; }<BR>
+	&nbsp; }<BR>
+	}</TT></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Quoi de plus logique ? En effet, le
+	"d&eacute;lai avant &eacute;dition d'une lettre de rappel" est bien une
+	caract&eacute;ristique propre &agrave; tous les ouvrages g&eacute;r&eacute;s
+	par notre application.</SMALL></FONT>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Mais cette solution n'est pas encore optimale
+	!</SMALL></FONT><BR>
+	&nbsp;</TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR>
+      <TD WIDTH=20>&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>2&egrave;me am&eacute;lioration
+	: centraliser les traitements associ&eacute;s &agrave; un type, aupr&egrave;s
+	du type</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Pourquoi ne pas aussi rassembler dans
+	une m&ecirc;me unit&eacute; physique les types de donn&eacute;es et tous
+	les traitements associ&eacute;s ?<BR>
+	<BR>
+	Que se passerait-il par exemple si l'on centralisait dans un m&ecirc;me fichier,
+	la structure de donn&eacute;es qui d&eacute;crit les documents et la fonction
+	de calcul du d&eacute;lai avant rappel ? Cela nous permettrait de retrouver
+	en un clin d'oeil le bout de code qui est charg&eacute; de calculer le
+	d&eacute;lai avant rappel d'un document, puisqu'il se trouve au plus pr&egrave;s
+	de la structure de donn&eacute;es concern&eacute;e.<BR>
+	<BR>
+	Ainsi, si notre m&eacute;diath&egrave;que devait g&eacute;rer un nouveau
+	type d'ouvrage, il suffirait de modifier une seule fonction (qu'on sait retrouver
+	instann&eacute;ment), pour assurer la prise en compte de ce nouveau type
+	de document dans le calcul du d&eacute;lai avant rappel. Plus besoin de fouiller
+	partout dans le code...</SMALL></FONT><BR>
+	&nbsp;</TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><FONT COLOR="#ffffff"><TT>struct Document<BR>
+	{<BR>
+	&nbsp; char nom_doc[50];<BR>
+	&nbsp; Type_doc type;<BR>
+	&nbsp; Bool est_emprunte;<BR>
+	&nbsp; char emprunteur[50];<BR>
+	&nbsp; struct tm date_emprunt;<BR>
+	&nbsp; </TT></FONT><FONT COLOR="#00ff00"><TT>int
+	delai_avant_rappel;</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	} DOC[MAX_DOCS];<BR>
+	<BR>
+	&nbsp; <BR>
+	</TT></FONT><FONT COLOR="#00ff00"><TT>int calculer_delai_rappel(Type_doc
+	type)</TT></FONT><FONT COLOR="#ffffff"><TT><BR>
+	{<BR>
+	&nbsp; switch(type)<BR>
+	&nbsp; {<BR>
+	&nbsp; &nbsp; case LIVRE:<BR>
+	&nbsp; &nbsp; &nbsp; return 20;<BR>
+	&nbsp; &nbsp; case CASSETTE_VIDEO:<BR>
+	&nbsp; &nbsp; &nbsp; return 7;<BR>
+	&nbsp; &nbsp; case CD_ROM:<BR>
+	&nbsp; &nbsp; &nbsp; return 5;<BR>
+	&nbsp; &nbsp; /* autres "case" bienvenus ici ! */<BR>
+	&nbsp; }<BR>
+	}</TT></FONT>
+	<P>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Ecrit en ces termes, notre logiciel sera
+	plus facile &agrave; maintenir et bien plus lisible. Le stockage et le calcul
+	du d&eacute;lai avant rappel des documents, est d&eacute;sormais assur&eacute;
+	par une seule et unique unit&eacute; physique (quelques lignes de code,
+	rapidement identifiables).<BR>
+	Pour acc&eacute;der &agrave; la caract&eacute;ristique "d&eacute;lai avant
+	rappel" d'un document, il suffit de r&eacute;cup&eacute;rer la valeur
+	correspondante parmi les champs qui d&eacute;crivent le document. Pour assurer
+	la prise en compte d'un nouveau type de document dans le calcul du d&eacute;lai
+	avant rappel, il suffit de modifier une seule fonction, situ&eacute;e au
+	m&ecirc;me endroit que la structure de donn&eacute;es qui d&eacute;crit les
+	documents :<BR>
+	</SMALL></FONT>&nbsp;</TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><FONT COLOR="#ffffff"><TT>void ajouter_document(int ref)<BR>
+	{<BR>
+	&nbsp; DOC[ref].est_emprunte = FAUX;<BR>
+	&nbsp; DOC[ref].nom_doc = saisir_nom();<BR>
+	&nbsp; DOC[ref].type = saisir_type();<BR>
+	&nbsp; DOC[ref].delai_avant_rappel =
+	</TT></FONT><FONT COLOR="#00ff00"><TT>calculer_delai_rappel(DOC[ref].type</TT></FONT><FONT
+	    COLOR="#ffffff"><TT>);<BR>
+	}<BR>
+	<BR>
+	void afficher_document(int ref)<BR>
+	{<BR>
+	&nbsp; printf("Nom du document: %s\n",DOC[ref].nom_doc);<BR>
+	<BR>
+	&nbsp; /* ... */<BR>
+	<BR>
+	&nbsp; printf("Delai avant rappel: %d
+	jours\n",</TT></FONT><FONT COLOR="#00ff00"><TT>DOC[ref].delai_avant_rappel</TT></FONT><FONT
+	    COLOR="#ffffff"><TT>);<BR>
+	<BR>
+	&nbsp; /* ... */<BR>
+	}</TT></FONT></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p1.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p3.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

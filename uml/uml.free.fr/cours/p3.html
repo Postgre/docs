@@ -1,0 +1,313 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P>
+&nbsp;
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Approche fonctionnelle vs. approche objet
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+  &nbsp;
+  <P>
+  &nbsp;<BR>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>R&eacute;capitulons...</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=15></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>En r&eacute;sum&eacute; : centraliser
+	les donn&eacute;es d'un type et les traitements associ&eacute;s, dans une
+	m&ecirc;me unit&eacute; physique, permet de limiter les points de maintenance
+	dans le code et facilite l'acc&egrave;s &agrave; l'information en cas
+	d'&eacute;volution du logiciel :</SMALL></FONT><BR>
+	&nbsp;</TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLPADDING="0">
+    <TR>
+      <TD WIDTH=20>&nbsp;</TD>
+      <TD><TT>&nbsp;&nbsp;&nbsp;
+	</TT><IMG SRC="../img/doc.gif" WIDTH="133" HEIGHT="143" ALT="document"></TD>
+      <TD VALIGN="Top"><TT>&nbsp;&nbsp;&nbsp;&nbsp;
+	</TT><IMG SRC="../img/doc2.gif" WIDTH="158" HEIGHT="156" ALT="donn&eacute;es + traitements"></TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="obj"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Objet
+	?</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Les modifications que nous avons apport&eacute;
+	&agrave; notre logiciel de gestion de m&eacute;diath&egrave;que, nous ont
+	amen&eacute; &agrave; transformer ce qui &eacute;tait &agrave; l'origine
+	<A HREF="p1.html#fct">une structure de donn&eacute;es, manipul&eacute;e par
+	des fonctions</A>, en une entit&eacute; autonome, qui regroupe un ensemble
+	de propri&eacute;t&eacute;s coh&eacute;rentes et de traitements associ&eacute;s.
+	Une telle entit&eacute; s'appelle... un <B>objet</B> et constitue le concept
+	fondateur de l'approche du m&ecirc;me nom !<BR>
+	<BR>
+	</SMALL></FONT>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL> Un objet est une entit&eacute; aux
+	    fronti&egrave;res pr&eacute;cises qui poss&egrave;de une identit&eacute;
+	    (un nom).</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL> Un ensemble d'attributs caract&eacute;rise
+	    l'&eacute;tat de l'objet.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL> Un ensemble d'op&eacute;rations
+	    (m&eacute;thodes) en d&eacute;finissent le comportement.</SMALL></FONT>
+	  <LI>
+	    <A NAME="classe"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL> Un objet
+	    est une instance de classe (une occurrence d'un type
+	    abstrait).</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL> Une classe est un type de donn&eacute;es
+	    abstrait, caract&eacute;ris&eacute; par des propri&eacute;t&eacute;s (attributs
+	    et m&eacute;thodes) communes &agrave; des objets et permettant de cr&eacute;er
+	    des objets poss&eacute;dant ces propri&eacute;t&eacute;s.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Exemple :</SMALL></FONT><BR>
+	&nbsp;
+	<P>
+        <IMG SRC="../img/cl.gif" WIDTH="408" HEIGHT="122" ALT="classe"><BR>
+        <IMG SRC="../img/obj.gif" WIDTH="341" HEIGHT="86" ALT="objet"></TD>
+    </TR>
+  </TABLE>
+  <P>
+  &nbsp;
+  <P>
+  &nbsp;
+  <P>
+  <B><FONT FACE="Verdane, Arial">Quels sont les autres concepts importants
+  de l'approche objet ?</FONT></B>
+  <P>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="encap"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Encapsulation</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Consiste &agrave; masquer les d&eacute;tails
+	    d'impl&eacute;mentation d'un objet, en d&eacute;finissant une
+	    interface.</SMALL></FONT>
+	  <LI>
+	    <A NAME="interf"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>L'interface
+	    est la vue externe d'un objet, elle d&eacute;finit les services accessibles
+	    (offerts) aux utilisateurs de l'objet.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'encapsulation facilite l'&eacute;volution
+	    d'une application car elle stabilise l'utilisation des objets : on peut modifier
+	    l'impl&eacute;mentation des attributs d'un objet sans modifier son
+	    interface.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'encapsulation garantit
+	    l'int&eacute;grit&eacute; des donn&eacute;es, car elle permet d'interdire
+	    l'acc&egrave;s direct aux attributs des objets (utilisation
+	    d'accesseurs).</SMALL></FONT>
+	</UL>
+	<P>
+      </TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+      </TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="herit"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>H&eacute;ritage
+	(et polymorphisme)</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'h&eacute;ritage est un m&eacute;canisme
+	    de transmission des propri&eacute;t&eacute;s d'une classe (ses attributs
+	    et m&eacute;thodes) vers une sous-classe.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une classe peut &ecirc;tre
+	    sp&eacute;cialis&eacute;e en d'autres classes, afin d'y ajouter des
+	    caract&eacute;ristiques sp&eacute;cifiques ou d'en adapter
+	    certaines.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Plusieurs classes peuvent &ecirc;tre
+	    g&eacute;n&eacute;ralis&eacute;es en une classe qui les factorise, afin de
+	    regrouper les caract&eacute;ristiques communes d'un ensemble de
+	    classes.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>La sp&eacute;cialisation et la
+	    g&eacute;n&eacute;ralisation permettent de construire des hi&eacute;rarchies
+	    de classes. L'h&eacute;ritage peut &ecirc;tre simple ou
+	    multiple.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'h&eacute;ritage &eacute;vite la duplication
+	    et encourage la r&eacute;utilisation.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le
+	    <A HREF="p3.html#poly">polymorphisme</A> repr&eacute;sente la facult&eacute;
+	    d'une m&eacute;thode &agrave; pouvoir s'appliquer &agrave; des objets de
+	    classes diff&eacute;rentes.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le polymorphisme augmente la
+	    g&eacute;n&eacute;ricit&eacute; du code.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Exemple d'une hi&eacute;rarchie de classes
+	:</SMALL></FONT>
+	<P>
+	<IMG SRC="../img/herit.gif" WIDTH="551" HEIGHT="264" ALT="h&eacute;ritage"><BR>
+	&nbsp;</TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLPADDING="0">
+    <TR VALIGN="Top">
+      <TD WIDTH=20>&nbsp;</TD>
+      <TD VALIGN="Top"><A NAME="poly"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>Polymorphisme,
+	exemple :</SMALL></FONT><FONT COLOR="#ffffff"><BR>
+	<BR>
+	<TT>Vehicule convoi[3] = {<BR>
+	&nbsp; Train("TGV"),<BR>
+	&nbsp; Voiture("twingo"),<BR>
+	&nbsp; Bateau("Titanic")<BR>
+	};<BR>
+	<BR>
+	for (int i = 0; i &lt; 3; i++)<BR>
+	{<BR>
+	&nbsp;
+	</TT></FONT><FONT COLOR="#00ff00"><TT>convoi[i].seDeplacer();</TT></FONT><FONT
+	    COLOR="#ffffff"><TT><BR>
+	}</TT></FONT>
+	<P>
+      </TD>
+      <TD><TT>&nbsp;&nbsp;
+	</TT><IMG SRC="../img/poly.gif" WIDTH="379" HEIGHT="267" ALT="polymorphisme"></TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+      </TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="agreg"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Agr&eacute;gation</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Il s'agit d'une relation entre deux classes,
+	    sp&eacute;cifiant que les objets d'une classe sont des composants de l'autre
+	    classe.<BR>
+	    Une relation d'agr&eacute;gation permet donc de d&eacute;finir des objets
+	    compos&eacute;s d'autres objets.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'agr&eacute;gation permet d'assembler
+	    des objets de base, afin de construire des objets plus
+	    complexes.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Agr&eacute;gation, exemple
+	:</SMALL></FONT><BR>
+	<BR>
+	<BR>
+	<TT>&nbsp;&nbsp;&nbsp;
+	</TT><IMG SRC="../img/agreg.gif" WIDTH="506" HEIGHT="148" ALT="agr&eacute;gation">&nbsp;</TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<P>
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p2.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p4.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

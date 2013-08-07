@@ -1,0 +1,477 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P ALIGN=Center>
+<H2 ALIGN=Center>
+  <FONT FACE="Arial" COLOR="#ff8080">Les m&eacute;thodes objet et<BR>
+  la gen&egrave;se d'UML</FONT>
+</H2>
+<P>
+&nbsp;
+<P>
+<BLOCKQUOTE>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>M&eacute;thodes
+	?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Les premi&egrave;res m&eacute;thodes
+	    d'analyse (ann&eacute;es 70)</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL><A HREF="p1.html#fct">D&eacute;coupe
+		cart&eacute;sienne</A> (fonctionnelle et hi&eacute;rarchique) d'un
+		syst&egrave;me.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>L'approche syst&eacute;mique (ann&eacute;es
+	    80)</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Mod&eacute;lisation des donn&eacute;es
+		+ mod&eacute;lisation des traitements (Merise, Axial,
+		IE...).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>L'&eacute;mergence des m&eacute;thodes
+	    objet (1990-1995)</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Prise de conscience de l'importance d'une
+		m&eacute;thode sp&eacute;cifiquement objet&nbsp;:<BR>
+		comment structurer un syst&egrave;me sans centrer l'analyse uniquement sur
+		les donn&eacute;es ou uniquement sur les traitements (mais sur les deux)
+		?</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Plus de 50 m&eacute;thodes objet sont
+		apparues durant cette p&eacute;riode (Booch, Classe-Relation, Fusion, HOOD,
+		OMT, OOA, OOD, OOM, OOSE...)&nbsp;!</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Aucun m&eacute;thode ne s'est r&eacute;ellement
+		impos&eacute;e.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Les premiers consensus
+	    (1995)</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL><B>OMT </B>(James Rumbaugh)&nbsp;: vues
+		statiques, dynamiques et fonctionnelles d'un syst&egrave;me</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Issue du centre de R&amp;D de General
+		    Electric.</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Notation graphique riche et
+		    lisible.</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL><B>OOD </B>(Grady Booch)&nbsp;: vues logiques
+		et physiques du syst&egrave;me</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>D&eacute;finie pour le DOD, afin de
+		    rationaliser de d&eacute;veloppement d'applications ADA, puis
+		    C++.</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Ne couvre pas la phase d'analyse dans
+		    ses 1<SUP>&egrave;res</SUP> versions (pr&eacute;conise SADT).</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Introduit le concept de package
+		    (&eacute;l&eacute;ment d'organisation des
+		    mod&egrave;les).</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL><B>OOSE </B>(Ivar Jacobson)&nbsp;: couvre
+		tout le cycle de d&eacute;veloppement</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Issue d'un centre de d&eacute;veloppement
+		    d'Ericsson, en Su&egrave;de.</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>La m&eacute;thodologie repose sur l'analyse
+		    des besoins des utilisateurs.</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>L'unification et la normalisation des
+	    m&eacute;thodes (1995-1997)</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML (Unified Modeling Langage), la fusion
+		et synth&egrave;se des m&eacute;thodes dominantes&nbsp;:</SMALL></FONT>
+	    </UL>
+	    <BLOCKQUOTE>
+	      <IMG SRC="../img/uml-hist.gif" WIDTH="598" HEIGHT="224" ALT="unification !"><BR>
+	      &nbsp;
+	      <P>
+	    </BLOCKQUOTE>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>UML aujourd'hui&nbsp;: un standard
+	    incontournable</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML est le r&eacute;sultat d'un large
+		consensus (industriels, m&eacute;thodologistes...).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML est le fruit d'un travail d'experts
+		reconnus.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML est issu du terrain.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML est riche (il couvre toutes les phases
+		d'un cycle de d&eacute;veloppement).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML est ouvert (il est ind&eacute;pendant
+		du domaine d'application et des langages
+		d'impl&eacute;mentation).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Apr&egrave;s l'unification et la
+		standardisation, bient&ocirc;t l'industrialisation d'UML&nbsp;:<BR>
+		les outils qui supportent UML se multiplient (GDPro, ObjectTeam, Objecteering,
+		OpenTool, Rational Rose, Rhapsody, STP, Visio, Visual Modeler,
+		WithClass...).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>XMI (format d'&eacute;change standard
+		de mod&egrave;les UML).<BR>
+		&nbsp; </SMALL></FONT>
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>UML &eacute;volue mais reste
+	    stable&nbsp;!</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'OMG RTF (nombreux acteurs industriels)
+		centralise et normalise les &eacute;volutions d'UML au niveau
+		international.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les groupes d'utilisateurs UML favorisent
+		le partage des exp&eacute;riences.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>De version en version, UML gagne en
+		maturit&eacute; et pr&eacute;cision, tout en restant stable.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML inclut des m&eacute;canismes standards
+		d'auto-extension.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>La description du
+		<A HREF="p5.html#meta">m&eacute;tamod&egrave;le</A> d'UML est standardis&eacute;e
+		(OMG-MOF).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	</UL>
+	<BLOCKQUOTE>
+	  <FONT FACE="Verdane, Arial" COLOR="#ff8080"><SMALL><B>&gt;&gt;&gt; UML n'est
+	  pas une mode, c'est un investissement fiable&nbsp;!</B></SMALL></FONT>
+	</BLOCKQUOTE>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>A quoi sert&nbsp;UML
+	?</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>UML n'est pas une m&eacute;thode ou
+	    un processus&nbsp;!</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Si l'on parle de m&eacute;thode objet
+		pour UML, c'est par abus de langage&nbsp;!</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Ce constat vaut aussi pour OMT ou d'autres
+		techniques / langages de mod&eacute;lisation.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Une m&eacute;thode propose aussi un processus,
+		qui r&eacute;git notamment l'encha&icirc;nement des activit&eacute;s de
+		production d'une entreprise.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML a &eacute;t&eacute; pens&eacute; pour
+		permettre de mod&eacute;liser les activit&eacute;s de l'entreprise, pas pour
+		les r&eacute;gir (ce n'est pas CMM ou SPICE).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Un processus de d&eacute;veloppement logiciel
+		universel est une utopie&nbsp;:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Impossible de prendre en compte toutes
+		    les organisations et cultures d'entreprises</SMALL></FONT>.
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>Un processus est adapt&eacute; (donc
+		    tr&egrave;s li&eacute;) au domaine d'activit&eacute; de
+		    l'entreprise</SMALL></FONT>.
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>M&ecirc;me si un processus constitue un
+		    cadre g&eacute;n&eacute;ral, il faut l'adapter de mani&egrave;re pr&eacute;cise
+		    au contexte de l'entreprise.<BR>
+		    </SMALL></FONT>
+		</UL>
+	    </UL>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>UML est un langage pseudo-formel</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<A NAME="meta"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>UML est fond&eacute;
+		sur un m&eacute;tamod&egrave;le, qui d&eacute;finit&nbsp;:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>les &eacute;l&eacute;ments de
+		    mod&eacute;lisation (les concepts manipul&eacute;s par le
+		    langage),</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>la s&eacute;mantique de ces
+		    &eacute;l&eacute;ments (leur d&eacute;finition et le sens de leur
+		    utilisation).</SMALL></FONT>
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Un m&eacute;tamod&egrave;le est une
+		description tr&egrave;s formelle de tous les concepts d'un langage. Il limite
+		les ambigu&iuml;t&eacute;s et encourage la construction
+		d'outils.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Le m&eacute;tamod&egrave;le d'UML permet
+		de classer les concepts du langage (selon leur niveau d'abstraction ou domaine
+		d'application) et expose sa structure.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Le m&eacute;tamod&egrave;le UML est
+		lui-m&ecirc;me d&eacute;crit par un m&eacute;ta-m&eacute;tamod&egrave;le
+		(OMG-MOF).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>UML propose aussi une notation, qui permet
+		de repr&eacute;senter graphiquement les &eacute;l&eacute;ments de
+		mod&eacute;lisation du m&eacute;tamod&egrave;le.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Cette notation graphique est le support
+		du langage UML.</SMALL></FONT><BR>
+	    </UL>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>UML cadre l'analyse objet, en
+	    offrant&nbsp;:</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>diff&eacute;rentes vues (perspectives)
+		compl&eacute;mentaires d'un syst&egrave;me, qui guident l'utilisation des
+		concept objets,</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>plusieurs niveaux d'abstraction, qui
+		permettent de mieux contr&ocirc;ler la complexit&eacute; dans l'expression
+		des solutions objets.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>UML est un support de
+	    communication</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Sa notation graphique permet d'exprimer
+		visuellement une solution objet.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'aspect formel de sa notation limite
+		les ambigu&iuml;t&eacute;s et les incompr&eacute;hensions.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Son aspect visuel facilite la comparaison
+		et l'&eacute;valuation de solutions.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Son ind&eacute;pendance (par rapport aux
+		langages d'impl&eacute;mentation, domaine d'application, processus...) en
+		font un langage universel.</SMALL></FONT>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="ptf"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Les points
+	forts d'UML</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>UML est un langage formel et
+	    normalis&eacute;</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>gain de pr&eacute;cision</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>gage de stabilit&eacute;</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>encourage l'utilisation
+		d'outils</SMALL></FONT>
+	    </UL>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>UML est un support de communication
+	    performant</B><BR>
+	    &nbsp;</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Il cadre l'analyse.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Il facilite la compr&eacute;hension de
+		repr&eacute;sentations abstraites complexes.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Son caract&egrave;re polyvalent et sa
+		souplesse en font un langage universel.</SMALL></FONT>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Les points faibles
+	d'UML</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>La mise en pratique d'UML n&eacute;cessite
+	    un apprentissage et passe par une p&eacute;riode d'adaptation.</B><BR>
+	    <BR>
+	    M&ecirc;me si l'Esp&eacute;ranto est une utopie, la n&eacute;cessit&eacute;
+	    de s'accorder sur des modes d'expression communs est vitale en informatique.
+	    UML n&nbsp;'est pas &agrave; l'origine des concepts objets, mais en constitue
+	    une &eacute;tape majeure, car il unifie les diff&eacute;rentes approches
+	    et en donne une d&eacute;finition plus formelle.<BR>
+	    </SMALL></FONT>
+	</UL>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Le processus (non couvert par UML)
+	    est une autre cl&eacute; de la r&eacute;ussite d'un projet.<BR>
+	    <BR>
+	    </B>Or, l'int&eacute;gration d'UML dans un processus n'est pas triviale et
+	    am&eacute;liorer un processus est un t&acirc;che complexe et
+	    longue.<FONT FACE="Verdane, Arial"><SMALL><BR>
+	    <BR>
+	    </SMALL></FONT>Les auteurs d'UML sont tout &agrave; fait conscients de
+	    l'importance du processus, mais l'acceptabilit&eacute; industrielle de la
+	    mod&eacute;lisation objet passe d'abord par la disponibilit&eacute; d'un
+	    langage d'analyse objet performant et standard.</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p4.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p6.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

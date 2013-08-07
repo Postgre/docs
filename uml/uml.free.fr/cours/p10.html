@@ -1,0 +1,389 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P ALIGN=Center>
+<H2 ALIGN=Center>
+  <FONT FACE="Arial" COLOR="#ff8080">Les vues statiques d'UML</FONT>
+</H2>
+<P>
+&nbsp;
+<P ALIGN=Center>
+<IMG SRC="../img/static.gif" WIDTH="193" HEIGHT="124" ALT="vues statiques">
+<P ALIGN=Center>
+<BLOCKQUOTE>
+  &nbsp;
+  <P>
+  &nbsp;
+  <P>
+  <FONT FACE="Verdane, Arial"><B>LES CAS D'UTILISATION</B></FONT><BR>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="concept"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>La
+	conceptualisation&nbsp;:
+	<A HREF="p8.html#concept">rappel</A></B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le but de la conceptualisation est de
+	    comprendre et structurer les besoins du client.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Il ne faut pas chercher l'exhaustivit&eacute;,
+	    mais clarifier, filtrer et organiser les besoins&nbsp;!</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une fois identifi&eacute;s et
+	    structur&eacute;s, ces besoins&nbsp;:</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>d&eacute;finissent le contour du syst&egrave;me
+		&agrave; mod&eacute;liser (ils pr&eacute;cisent le but &agrave;
+		atteindre),</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>permettent d'identifier les
+		fonctionnalit&eacute;s principales (critiques) du
+		syst&egrave;me.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le mod&egrave;le conceptuel doit permettre
+	    une meilleure compr&eacute;hension du syst&egrave;me.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le mod&egrave;le conceptuel doit servir
+	    d'interface entre tous les acteurs du projet.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les besoins des clients sont des
+	    &eacute;l&eacute;ments de tra&ccedil;abilit&eacute; dans un processus
+	    int&eacute;grant UML.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Le mod&egrave;le conceptuel joue un r&ocirc;le
+	central, il est capital de bien le d&eacute;finir&nbsp;!</SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="uc"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Cas
+	d'utilisation (use cases)</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Il s'agit de la solution UML pour
+	    repr&eacute;senter le <A HREF="p10.html#concept">mod&egrave;le
+	    conceptuel</A>.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les use cases permettent de structurer
+	    les besoins des utilisateurs et les objectifs correspondants d'un
+	    syst&egrave;me.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ils centrent l'expression des exigences
+	    du syst&egrave;me sur ses utilisateurs&nbsp;: ils partent du principe que
+	    les objectifs du syst&egrave;me sont tous motiv&eacute;s.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ils se limitent aux pr&eacute;occupations
+	    "r&eacute;elles" des utilisateurs&nbsp;; ils ne pr&eacute;sentent pas de
+	    solutions d'impl&eacute;mentation et ne forment pas un inventaire fonctionnel
+	    du syst&egrave;me.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ils identifient les utilisateurs du
+	    syst&egrave;me (<A HREF="p10.html#acteur">acteurs</A>) et leur interaction
+	    avec le syst&egrave;me.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ils permettent de classer les
+	    <A HREF="p10.html#acteur">acteurs</A> et structurer les objectifs du
+	    syst&egrave;me.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ils servent de base &agrave; la
+	    tra&ccedil;abilit&eacute; des exigences d'un syst&egrave;me dans un processus
+	    de d&eacute;veloppement int&eacute;grant UML.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Il &eacute;tait une
+	fois...</B></SMALL></FONT>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Le mod&egrave;le conceptuel est le&nbsp;type
+	de diagramme UML qui poss&egrave;de la notation la plus simple&nbsp;; mais
+	paradoxalement c'est aussi celui qui est le plus mal compris&nbsp;!<BR>
+	<BR>
+	Au d&eacute;but des ann&eacute;es 90, Ivar Jacobson (inventeur de OOSE, une
+	des m&eacute;thodes fondatrices d'UML) a &eacute;t&eacute; nomm&eacute; chef
+	d'un &eacute;norme projet informatique chez Ericsson. Le hic, c'est que ce
+	projet &eacute;tait rapidement devenu ing&eacute;rable, les ing&eacute;nieurs
+	d'Ericsson avaient accouch&eacute; d'un monstre. Personne ne savait vraiment
+	quelles &eacute;taient les fonctionnalit&eacute;s du produit, ni comment
+	elles &eacute;taient assur&eacute;es, ni comment les faire &eacute;voluer...<BR>
+	<BR>
+	Classique lorsque les commerciaux promettent monts et merveilles &agrave;
+	tous les clients qu'ils d&eacute;marchent, sans se soucier des contraintes
+	techniques, que les clients ne savent pas exprimer leurs besoins et que les
+	ing&eacute;nieurs n'ont pas les ressources pour d&eacute;velopper le mouton
+	&agrave; cinq pattes qui r&eacute;sulte de ce chaos.<BR>
+	<BR>
+	Pour &eacute;viter de foncer droit dans un mur et mener &agrave; bien ce
+	projet critique pour Ericsson, Jacobson a eu une id&eacute;e. Plut&ocirc;t
+	que de continuer &agrave; construire une tour de Babel, pourquoi ne pas remettre
+	&agrave; plat les objectifs r&eacute;els du projet&nbsp;? En d'autres
+	termes&nbsp;: quels sont les besoins r&eacute;els des clients, ceux qui
+	conditionneront la r&eacute;ussite du projet&nbsp;? Ces besoins critiques,
+	une fois identifi&eacute;s et structur&eacute;s, permettront enfin de cerner
+	"ce qui est important pour la r&eacute;ussite du projet".<BR>
+	<BR>
+	Le b&eacute;n&eacute;fice de cette d&eacute;marche simplificatrice est double.
+	D'une part, tous les acteurs du projet ont une meilleure compr&eacute;hension
+	du syst&egrave;me &agrave; d&eacute;velopper, d'autre part, les besoins des
+	utilisateurs, une fois clarifi&eacute;s, serviront de fil rouge, tout au
+	long du cycle de d&eacute;veloppement.<BR>
+	A chaque it&eacute;ration de la phase d'analyse, on clarifie, affine et valide
+	les besoins des utilisateurs&nbsp;; &agrave; chaque it&eacute;ration de la
+	phase de conception et de r&eacute;alisation, on veille &agrave; la prise
+	en compte des besoins des utilisateurs et &agrave; chaque it&eacute;ration
+	de la phase de test, on v&eacute;rifie que les besoins des utilisateurs sont
+	satisfaits.<BR>
+	<BR>
+	Simple mais g&eacute;nial. Pour la petite histoire, sachez que gr&acirc;ce
+	&agrave; cette d&eacute;marche initi&eacute;e par Jacobson, Ericsson a
+	r&eacute;ussi &agrave; mener &agrave; bien son projet et a gagn&eacute; une
+	notori&eacute;t&eacute; internationale dans le march&eacute; de la
+	commutation.<BR>
+	<BR>
+	Morale de cette histoire&nbsp;:<BR>
+	<BR>
+	<B>La d&eacute;termination et la compr&eacute;hension des besoins sont souvent
+	difficiles car les intervenants sont noy&eacute;s sous de trop grandes
+	quantit&eacute;s d'informations. Or, comment mener &agrave; bien un projet
+	si l'on ne sait pas o&ugrave; l'on va&nbsp;?<BR>
+	<BR>
+	Conclusion&nbsp;: il faut clarifier et organiser les besoins des clients
+	(les mod&eacute;liser).</B><BR>
+	<BR>
+	Jacobson identifie les caract&eacute;ristiques suivantes pour les
+	mod&egrave;les&nbsp;:</SMALL></FONT>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Un mod&egrave;le est une simplification
+	    de la r&eacute;alit&eacute;.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Il permet de mieux comprendre le syst&egrave;me
+	    qu'on doit d&eacute;velopper.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les meilleurs mod&egrave;les sont proches
+	    de la r&eacute;alit&eacute;.</SMALL></FONT>
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Les use cases, permettent de mod&eacute;liser
+	les besoins des clients d'un syst&egrave;me et doivent aussi poss&eacute;der
+	ces caract&eacute;ristiques.<BR>
+	<B>Ils ne doivent pas chercher l'exhaustivit&eacute;, mais clarifier, filtrer
+	et organiser les besoins&nbsp;!</B><BR>
+	<BR>
+	Une fois identifi&eacute;s et structur&eacute;s, ces
+	besoins&nbsp;:</SMALL></FONT>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>d&eacute;finissent le contour du syst&egrave;me
+	    &agrave; mod&eacute;liser (ils pr&eacute;cisent le but &agrave;
+	    atteindre),</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>permettent d'identifier les
+	    fonctionnalit&eacute;s principales (critiques) du
+	    syst&egrave;me.</SMALL></FONT>
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Les use cases ne doivent donc en aucun
+	cas d&eacute;crire des solutions d'impl&eacute;mentation. Leur but est justement
+	d'&eacute;viter de tomber dans la d&eacute;rive d'une approche fonctionnelle,
+	o&ugrave; l'on liste une litanie de fonctions que le syst&egrave;me doit
+	r&eacute;aliser.</B><BR>
+	<BR>
+	Bien entendu, rien n'interdit de g&eacute;rer &agrave; l'aide d'outils (Doors,
+	Requisite Pro, etc...) les exigences syst&egrave;mes &agrave; un niveau plus
+	fin et d'en assurer la tra&ccedil;abilit&eacute;, bien au contraire.<BR>
+	<BR>
+	Mais un mod&egrave;le conceptuel qui identifie les besoins avec un plus grand
+	niveau d'abstraction reste indispensable. Avec des syst&egrave;mes complexes,
+	filtrer l'information, la simplifier et mieux l'organiser, c'est rendre
+	l'information exploitable. Produisez de l'information &eacute;ph&eacute;m&egrave;re,
+	complexe et confuse, vous obtiendrez un joyeux "d&eacute;sordre" (pour rester
+	poli).<BR>
+	<BR>
+	Derni&egrave;re remarque&nbsp;:<BR>
+	<BR>
+	Utilisez les use cases tels qu'ils ont &eacute;t&eacute; pens&eacute; par
+	leurs cr&eacute;ateurs&nbsp;! UML est issu du terrain. Si vous utilisez les
+	use cases sans avoir en t&ecirc;te la d&eacute;marche sous-jacente, vous
+	n'en tirerez aucun b&eacute;n&eacute;fice.</SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>El&eacute;ments de base des cas
+	d'utilisation</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <A NAME="acteur"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Acteur</B>&nbsp;:
+	    entit&eacute; externe qui agit sur le syst&egrave;me (op&eacute;rateur, autre
+	    syst&egrave;me...).</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'acteur peut consulter ou modifier
+		l'&eacute;tat du syst&egrave;me.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>En r&eacute;ponse &agrave; l'action d'un
+		acteur, le syst&egrave;me fournit un service qui correspond &agrave; son
+		besoin.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les acteurs peuvent &ecirc;tre class&eacute;s
+		(<A HREF="p15.html#herit">hi&eacute;rarchis&eacute;s</A>).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Use case</B>&nbsp;: ensemble d'actions
+	    r&eacute;alis&eacute;es par le syst&egrave;me, en r&eacute;ponse &agrave;
+	    une action d'un acteur.</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les uses cases peuvent &ecirc;tre
+		structur&eacute;s.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les uses cases peuvent &ecirc;tre
+		organis&eacute;s en paquetages (packages).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'ensemble des use cases d&eacute;crit
+		les objectifs (le but) du syst&egrave;me.</SMALL></FONT>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Exemples</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Cas d'utilisation standard
+	:</B></SMALL></FONT><BR>
+	<BR>
+	<P>
+	<IMG SRC="../img/uc1.gif" WIDTH="685" HEIGHT="538" ALT="cas d'utilisation (exemple)">
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Relation d'utilisation
+	:</B></SMALL></FONT><BR>
+	<P>
+	<IMG SRC="../img/uc2.gif" WIDTH="635" HEIGHT="327" ALT="relation d'utilisation">
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Relation d'extension
+	:</B></SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/uc3.gif" WIDTH="606" HEIGHT="306" ALT="relation d'extension"></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p9.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p11.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

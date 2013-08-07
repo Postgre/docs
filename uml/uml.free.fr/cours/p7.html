@@ -1,0 +1,360 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P>
+&nbsp;
+<H2 ALIGN=Left>
+</H2>
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Mod&eacute;liser avec UML
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+  &nbsp;
+  <P>
+  &nbsp;<BR>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>D&eacute;finir une architecture
+	avec UML (d&eacute;tail de <A HREF="p6.html#archi">la "vue
+	4+1"</A>)</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <A NAME="vl"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>La vue
+	    logique</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Cette vue de haut niveau se concentre
+		sur <A HREF="p6.html#abs">l'abstraction</A> et
+		<A HREF="p3.html#encap">l'encapsulation</A>, elle mod&eacute;lise les
+		&eacute;l&eacute;ments et m&eacute;canismes principaux du
+		syst&egrave;me.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Elle identifie les &eacute;l&eacute;ments
+		du domaine, ainsi que les relations et interactions entre ces
+		&eacute;l&eacute;ments :</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>les &eacute;l&eacute;ments du domaine
+		    sont li&eacute;s au(x) m&eacute;tier(s) de l'entreprise,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>ils sont indispensables &agrave; la mission
+		    du syst&egrave;me,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>ils gagnent &agrave; &ecirc;tre
+		    r&eacute;utilis&eacute;s (ils repr&eacute;sentent un
+		    savoir-faire).</SMALL></FONT>
+		</UL>
+	      <LI>
+		<A NAME="categ"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>Cette vue
+		organise aussi (selon des crit&egrave;res purement logiques), les
+		&eacute;l&eacute;ments du domaine en <B><I>"cat&eacute;gories"</I></B>
+		:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>pour r&eacute;partir les t&acirc;ches
+		    dans les &eacute;quipes,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>regrouper ce qui peut &ecirc;tre
+		    g&eacute;n&eacute;rique,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>isoler ce qui est propre &agrave; une
+		    version donn&eacute;e, etc.</SMALL></FONT>..<BR>
+		    &nbsp;
+		</UL>
+	    </UL>
+	  <LI>
+	    <A NAME="vc"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>La vue des
+	    composants</B><BR>
+	    <BR>
+	    Cette vue de bas niveau (aussi appel&eacute;e "vue de r&eacute;alisation"),
+	    montre :</SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'allocation des &eacute;l&eacute;ments
+		de mod&eacute;lisation dans des modules (fichiers sources, biblioth&egrave;ques
+		dynamiques, bases de donn&eacute;es, ex&eacute;cutables,
+		etc...).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>En d'autres termes, cette vue identifie
+		les modules qui r&eacute;alisent (physiquement) les classes de la
+		<A HREF="p7.html#vl">vue logique</A>.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'organisation des composants,
+		c'est-&agrave;-dire la distribution du code en gestion de configuration,
+		les d&eacute;pendances entre les composants...</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les contraintes de d&eacute;veloppement
+		(biblioth&egrave;ques externes...).</SMALL></FONT>
+	      <LI>
+		<A NAME="ss"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>La vue des composants
+		montre aussi l'organisation des modules en
+		<B><I>"sous-syst&egrave;mes"</I></B>, les
+		<A HREF="p3.html#interf">interfaces</A> des sous-syst&egrave;mes et leurs
+		d&eacute;pendances (avec d'autres sous-syst&egrave;mes ou
+		modules).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>La vue des processus</B><BR>
+	    <BR>
+	    Cette vue est tr&egrave;s importante dans les environnements multit&acirc;ches
+	    ; elle montre :</SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>La d&eacute;composition du syst&egrave;me
+		en terme de processus (t&acirc;ches).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les interactions entre les processus (leur
+		communication).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>La synchronisation et la communication
+		des activit&eacute;s parall&egrave;les (threads).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <A NAME="vdep"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>La vue de
+	    d&eacute;ploiement</B><BR>
+	    <BR>
+	    Cette vue tr&egrave;s importante dans les environnements distribu&eacute;s,
+	    d&eacute;crit les ressources mat&eacute;rielles et la r&eacute;partition
+	    du logiciel dans ces ressources :</SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>La disposition et nature physique des
+		mat&eacute;riels, ainsi que leurs performances.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'implantation des modules principaux
+		sur les noeuds du r&eacute;seau.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les exigences en terme de performances
+		(temps de r&eacute;ponse, tol&eacute;rance aux fautes et
+		pannes...).</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>La vue des besoins des
+	    utilisateurs</B><BR>
+	    <BR>
+	    Cette vue (dont le nom exact est "vue des cas d'utilisation"), guide toutes
+	    les autres.</SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Dessiner le plan (l'architecture) d'un
+		syst&egrave;me informatique n'est pas suffisant, il faut le justifier
+		!</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Cette vue d&eacute;finit les besoins des
+		clients du syst&egrave;me et centre la d&eacute;finition de l'architecture
+		du syst&egrave;me sur la satisfaction (la r&eacute;alisation) de ces
+		besoins.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>A l'aide de sc&eacute;narios et de
+		<A HREF="p10.html#uc">cas d'utilisation</A>, cette vue conduit &agrave; la
+		d&eacute;finition d'un mod&egrave;le d'architecture pertinent et
+		coh&eacute;rent.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Cette vue est la "colle" qui unifie les
+		quatre autres vues de l'architecture.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Elle motive les choix, permet d'identifier
+		les <A HREF="p3.html#interf">interfaces</A> critiques et force &agrave; se
+		concentrer sur les probl&egrave;mes importants.</SMALL></FONT>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	<P>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>R&eacute;sumons la
+	d&eacute;marche...</B></SMALL></FONT><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>Mod&eacute;liser une application ?<BR>
+	<BR>
+	Mais comme UML n'est pas un processus...</I><BR>
+	<BR>
+	<I>Quelle d&eacute;marche utiliser ?</I></SMALL></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Trouver un "bon" mod&egrave;le est
+	une t&acirc;che difficile mais capitale !</B></SMALL></FONT><BR>
+	<OL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Optez pour une approche
+	    <A HREF="p6.html#iter">it&eacute;rative et
+	    incr&eacute;mentale</A>.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Centrez votre d&eacute;marche sur
+	    <A HREF="p6.html#besoin">l'analyse des besoins des
+	    utilisateurs</A>.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Prenez grand soin &agrave; la d&eacute;finition
+	    de l'architecture de votre application (<A HREF="p6.html#archi">l'approche
+	    "4+1"</A> permet de mieux la cerner).</SMALL></FONT>
+	</OL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>OK OK , mais en pratique
+	?</I></SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <A NAME="phases"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>Bien qu'UML
+	    n'est pas un processus, il facilite une d&eacute;marche d'analyse it&eacute;rative
+	    et incr&eacute;mentale, bas&eacute;e sur
+	    </SMALL></FONT><FONT COLOR="#00ff00"><FONT FACE="Verdane, Arial"><SMALL><B>les
+	    niveaux d'abstraction</B></SMALL></FONT></FONT>.
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les niveaux d'abstraction permettent de
+	    structurer les mod&egrave;les.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Un micro-processus r&eacute;git les
+	    it&eacute;rations &agrave; niveau d'abstraction constant.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Un macro-processus r&eacute;git le passage
+	    de niveau &agrave; niveau.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une d&eacute;marche incr&eacute;mentale
+	    consiste &agrave; construire les mod&egrave;les de sp&eacute;cification et
+	    de conception en plusieurs &eacute;tapes (cible =
+	    <A HREF="p7.html#categ">cat&eacute;gories</A>).</SMALL></FONT><BR>
+	    &nbsp;
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Le sch&eacute;ma ci-dessous montre les
+	niveaux d'abstraction principaux, qu'on peut identifier dans un processus
+	de d&eacute;veloppement logiciel :</SMALL></FONT><BR>
+	&nbsp;
+	<BLOCKQUOTE>
+	  <P ALIGN=Left>
+	  <IMG SRC="../img/demarche.gif" WIDTH="408" HEIGHT="339" ALT="d&eacute;marche d'analyse">
+	</BLOCKQUOTE>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="elab"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Elaboration
+	plut&ocirc;t que transformation</B></SMALL></FONT><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>UML opte pour l'&eacute;laboration des
+	mod&egrave;les, plut&ocirc;t que pour une approche qui impose une barri&egrave;re
+	stricte entre analyse et conception :</SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les mod&egrave;les d'analyse et de conception
+	    ne diff&egrave;rent que par leur niveau de d&eacute;tail, il n'y a pas de
+	    diff&eacute;rence dans les concepts utilis&eacute;s.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>UML n'introduit pas d'&eacute;l&eacute;ments
+	    de mod&eacute;lisation propres &agrave; une activit&eacute; (analyse,
+	    conception...) ; le langage reste le m&ecirc;me &agrave; tous les niveaux
+	    d'abstraction.</SMALL></FONT><BR>
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Cette approche simplificatrice facilite
+	le passage entre les niveaux d'abstraction.</SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'&eacute;laboration encourage une approche
+	    non lin&eacute;aire (les "retours en arri&egrave;re" entre niveaux d'abstraction
+	    diff&eacute;rents sont facilit&eacute;s).</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>La tra&ccedil;abilit&eacute; entre
+	    mod&egrave;les de niveaux diff&eacute;rents est assur&eacute;e par
+	    l'unicit&eacute; du langage.</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p6.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p8.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

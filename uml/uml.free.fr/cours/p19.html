@@ -1,0 +1,298 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;&nbsp;
+<P>
+&nbsp;
+<H2 ALIGN=Left>
+</H2>
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Les vues dynamiques d'UML
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+  <FONT FACE="Verdane, Arial"><B><BR>
+  &nbsp;<BR>
+  DIAGRAMME DE SEQUENCE</B></FONT><BR>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Diagramme de s&eacute;quence&nbsp;:
+	s&eacute;mantique</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes de s&eacute;quences permettent
+	    de repr&eacute;senter des <A HREF="p18.html#coll">collaborations</A> entre
+	    objets selon un point de vue temporel, on y met l'accent sur la chronologie
+	    des envois de messages.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Contrairement au
+	    <A HREF="p18.html#coll">diagramme de collaboration</A>, on n'y d&eacute;crit
+	    pas le contexte ou l'<A HREF="p20.html#state">&eacute;tat</A> des objets,
+	    la repr&eacute;sentation se concentre sur l'expression des
+	    interactions.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes de s&eacute;quences peuvent
+	    servir &agrave; illustrer un <A HREF="p10.html#uc">cas
+	    d'utilisation</A>.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'ordre d'envoi d'un message est
+	    d&eacute;termin&eacute; par sa position sur l'axe vertical du diagramme&nbsp;;
+	    le temps s'&eacute;coule "de haut en bas" de cet axe.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>La disposition des objets sur l'axe horizontal
+	    n'a pas de cons&eacute;quence pour la s&eacute;mantique du
+	    diagramme.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes de s&eacute;quences et
+	    les <A HREF="i-p20.html" TARGET="_top">diagrammes d'&eacute;tat-transitions</A>
+	    sont les vues dynamiques les plus importantes d'UML.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Exemple :</B></SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/seq1.gif" WIDTH="635" HEIGHT="369" ALT="diagramme de s&eacute;quence"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Types de
+	messages</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Comme vous pouvez le voir dans l'exemple
+	ci-dessus, UML propose un certain nombre de
+	<A HREF="p16.html#stereo">st&eacute;r&eacute;otypes</A> graphiques pour
+	d&eacute;crire la nature du message (ces st&eacute;r&eacute;otypes graphiques
+	s'appliquent &eacute;galement aux messages des
+	<A HREF="p18.html#coll">diagrammes de
+	collaborations</A>)&nbsp;:</SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>message simple</B><BR>
+	    Message dont on ne sp&eacute;cifie aucune caract&eacute;ristique d'envoi
+	    ou de r&eacute;ception particuli&egrave;re.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>message minut&eacute;</B> (timeout)<BR>
+	    Bloque l'exp&eacute;diteur pendant un temps donn&eacute; (qui peut &ecirc;tre
+	    sp&eacute;cifi&eacute; dans une <A HREF="p16.html#cont">contrainte</A>),
+	    en attendant la prise en compte du message par le r&eacute;cepteur.
+	    L'exp&eacute;diteur est lib&eacute;r&eacute; si la prise en compte n'a pas
+	    eu lieu pendant le d&eacute;lai sp&eacute;cifi&eacute;.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>message synchrone</B><BR>
+	    Bloque l'exp&eacute;diteur jusqu'&agrave; prise en compte du message par
+	    le destinataire. Le flot de contr&ocirc;le passe de l'&eacute;metteur au
+	    r&eacute;cepteur (l'&eacute;metteur devient passif et le r&eacute;cepteur
+	    actif) &agrave; la prise en compte du message.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>message asynchrone</B><BR>
+	    N'interrompt pas l'ex&eacute;cution de l'exp&eacute;diteur. Le message
+	    envoy&eacute; peut &ecirc;tre pris en compte par le r&eacute;cepteur &agrave;
+	    tout moment ou ignor&eacute; (jamais trait&eacute;).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>message d&eacute;robant<BR>
+	    </B>N'interrompt pas l'ex&eacute;cution de l'exp&eacute;diteur et ne
+	    d&eacute;clenche une op&eacute;ration chez le r&eacute;cepteur que s'il s'est
+	    pr&eacute;alablement mis en attente de ce message.</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Activation d'un
+	objet</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Sur un diagramme de s&eacute;quence, il
+	est aussi possible de repr&eacute;senter de mani&egrave;re explicite les
+	diff&eacute;rentes p&eacute;riodes d'activit&eacute; d'un objet au moyen
+	d'une bande rectangulaire superpos&eacute;e &agrave; la ligne de vie de
+	l'objet.<BR>
+	<BR>
+	On peut aussi repr&eacute;senter des messages r&eacute;cursifs, en
+	d&eacute;doublant la bande d'activation de l'objet concern&eacute;.<BR>
+	<BR>
+	Pour repr&eacute;senter de mani&egrave;re graphique une ex&eacute;cution
+	conditionnelle d'un message, on peut documenter un diagramme de s&eacute;quence
+	avec du pseudo-code et repr&eacute;senter des bandes d'activation
+	conditionnelles.</SMALL></FONT>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Exemple :</B></SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/activat.gif" WIDTH="570" HEIGHT="407" ALT="bande d'activation"><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Commentaires
+	:</B></SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ne confondez la p&eacute;riode d'activation
+	    d'un objet avec sa cr&eacute;ation ou sa destruction. Un objet peut &ecirc;tre
+	    actif plusieurs fois au cours de son existence (voir exemple
+	    ci-dessus).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le pseudo-code peut aussi &ecirc;tre
+	    utilis&eacute; pour indiquer des it&eacute;rations (avec incr&eacute;mentation
+	    d'un param&egrave;tre d'un message par exemple).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le retour des messages asynchrones devrait
+	    toujours &ecirc;tre mat&eacute;rialis&eacute;, lorsqu'il
+	    existe.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Notez qu'il est fortement recommand&eacute;
+	    de synchroniser vos messages, comme sur l'exemple qui
+	    suit...</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>L'exemple qui suit pr&eacute;sente aussi
+	    une alternative int&eacute;ressante pour la repr&eacute;sentation des
+	    branchements conditionnels. Cette notation est moins lourde que celle
+	    utilis&eacute;e dans l'exemple ci-dessus.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Pr&eacute;f&eacute;rez aussi l'utilisation
+	    de <A HREF="p16.html#cont">contraintes</A> &agrave; celle de pseudo-code,
+	    comme dans l'exemple qui suit.</SMALL></FONT>
+	</UL>
+	<P>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Exemple
+	complet</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Afin de mieux comprendre l'exemple ci-dessous,
+	veuillez vous r&eacute;f&eacute;rer aux chapitres sur la
+	<A HREF="p18.html#synch">synchronisation des messages</A>. Notez aussi
+	l'utilisation des <A HREF="p16.html#cont">contraintes</A> pour documenter
+	les conditions d'envoi de certains messages.</SMALL></FONT><BR>
+	&nbsp; <BR>
+	<BR>
+	<IMG SRC="../img/seq2.gif" WIDTH="674" HEIGHT="652" ALT="diagramme de s&eacute;quence"><BR>
+	<BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Commentaire
+	:</B></SMALL></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Un message r&eacute;flexif ne repr&eacute;sente
+	pas l'envoi d'un message, il repr&eacute;sente une activit&eacute; interne
+	&agrave; l'objet (qui peut &ecirc;tre d&eacute;taill&eacute;e dans un
+	<A HREF="i-p21.html" TARGET="_top">diagramme d'activit&eacute;s</A>) ou une
+	abstraction d'une autre interaction (qu'on peut d&eacute;tailler dans un
+	autre diagramme de s&eacute;quence).</SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p18.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p20.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

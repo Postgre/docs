@@ -1,0 +1,66 @@
+<HTML>
+<SCRIPT LANGUAGE="JavaScript">
+/*
+ * Storing this varible on the navigator object makes it truely global on NN4,
+ * but is no help on NN3, so we need the page global variable in NN3 which is
+ * the best we can do.  
+ */
+
+var search_win = navigator._searchWin;
+
+function loadApplet() {
+    if(navigator.appName == "Netscape") {
+	if(search_win == null || search_win.closed) {
+	    search_win = window.open("appletn.htm", "_appletWindow", "width=390,height=300,resizable=0,status=0,menubar=0,scrollbar=0");
+	    navigator._searchWin = search_win;
+	} 
+
+	search_win.opener = top;
+	search_win.focus();
+    } else if(top.loadApplet != null) {
+	top.loadApplet();
+    }
+}
+</SCRIPT>
+
+<BODY BGCOLOR="#336699" LEFTMARGIN="1" TOPMARGIN="1">
+
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+
+
+<tr>
+<td colspan="2" align="center"><A HREF="javascript:loadApplet()" TARGET="LEFT"><IMG SRC="gifsb/search.gif" BORDER="0"></A></td>
+</tr>
+
+<tr>
+<td><img src="gifsb/clear.gif" width="1" height="20"></td>
+<td><img src="gifsb/clear.gif" width="5" height="1"></td>
+</tr>
+
+<tr>
+<td align="right"><img src="gifsb/leftcont.gif" border="0" ismap usemap="#left"></td>
+
+</TABLE>
+
+<map name="left">
+<area shape="rect" coords="0,43,84,55" href="contents.htm#guide" target="TEXT">
+<area shape="rect" coords="4,62,84,73" href="contents.htm#chap1" target="TEXT">
+<area shape="rect" coords="5,77,85,91" href="contents.htm#chap2" target="TEXT">
+<area shape="rect" coords="11,96,85,115" href="contents.htm#chap3" target="TEXT">
+<area shape="rect" coords="11,119,84,139" href="contents.htm#chap4" target="TEXT">
+<area shape="rect" coords="5,143,84,166" href="contents.htm#chap5" target="TEXT">
+<area shape="rect" coords="6,169,83,181" href="contents.htm#chap6" target="TEXT">
+<area shape="rect" coords="6,184,85,195" href="contents.htm#chapA" target="TEXT">
+<area shape="rect" coords="2,198,84,210" href="contents.htm#chapB" target="TEXT">
+<area shape="rect" coords="9,212,84,234" href="contents.htm#chapC" target="TEXT">
+<area shape="rect" coords="8,237,85,251" href="contents.htm#bib" target="TEXT">
+<area shape="rect" coords="5,258,84,268" href="contents.htm#index" target="TEXT">
+<area shape="rect" coords="5,30,83,42" href="contents.htm#fore" target="TEXT">
+<area shape="rect" coords="2,12,86,25" href="contents.htm#pref2" target="TEXT">
+<area shape="rect" coords="8,0,83,8" href="contents.htm#preface" target="TEXT">
+<area shape="default" nohref>
+</map>
+</BODY>
+
+</HTML>
+

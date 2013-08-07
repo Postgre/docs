@@ -1,0 +1,377 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P>
+&nbsp;
+<H2 ALIGN=Left>
+</H2>
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Mod&eacute;liser avec UML
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+  &nbsp;
+  <P>
+  &nbsp;<BR>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>D&eacute;tail des diff&eacute;rents
+	niveaux d'abstraction<BR>
+	(phases du
+	<A HREF="p7.html#phases">macro-processus</A>)</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <A NAME="concept"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Conceptualisation</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'entr&eacute;e de l'analyse &agrave;
+		ce niveau, est le dossier d'expression des besoins client.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>A ce niveau d'abstraction, on doit capturer
+		les besoins principaux des utilisateurs.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Il ne faut pas chercher l'exhaustivit&eacute;,
+		mais clarifier, filtrer et organiser les besoins&nbsp;!</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Le but de la conceptualisation est
+		:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>de d&eacute;finir le contour du syst&egrave;me
+		    &agrave; mod&eacute;liser (de sp&eacute;cifier le "quoi"),</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>de capturer les fonctionnalit&eacute;s
+		    principales du syst&egrave;me, afin d'en fournir une meilleure
+		    compr&eacute;hension (le mod&egrave;le produit sert d'interface entre les
+		    acteurs du projet),</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>de fournir une base &agrave; la planification
+		    du projet.</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Analyse du
+	    domaine</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>L'entr&eacute;e de l'analyse &agrave;
+		ce niveau, est le mod&egrave;le des besoins clients (les
+		"<A HREF="p10.html#uc">cas d'utilisation</A>" UML).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Il s'agit de mod&eacute;liser les
+		&eacute;l&eacute;ments et m&eacute;canismes principaux du
+		syst&egrave;me.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>On identifie les &eacute;l&eacute;ments
+		du domaine, ainsi que les relations et interactions entre ces
+		&eacute;l&eacute;ments&nbsp;:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>les &eacute;l&eacute;ments du domaine
+		    sont li&eacute;s au(x) m&eacute;tier(s) de l'entreprise,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>ils sont indispensables &agrave; la mission
+		    du syst&egrave;me,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>ils gagnent &agrave; &ecirc;tre
+		    r&eacute;utilis&eacute;s (ils repr&eacute;sentent un
+		    savoir-faire).</SMALL></FONT>
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>A ce stade, on organise aussi (selon des
+		crit&egrave;res purement logiques), les &eacute;l&eacute;ments du domaine
+		en <B><I>"cat&eacute;gories"</I></B>&nbsp;:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>pour r&eacute;partir les t&acirc;ches
+		    dans les &eacute;quipes,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>regrouper ce qui peut &ecirc;tre
+		    g&eacute;n&eacute;rique, etc...</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Analyse
+	    applicative</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>A ce niveau, on mod&eacute;lise les aspects
+		informatiques du syst&egrave;me, sans pour autant rentrer dans les d&eacute;tails
+		d'impl&eacute;mentation.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les interfaces des &eacute;l&eacute;ments
+		de mod&eacute;lisation sont d&eacute;finis (cf.
+		<A HREF="p3.html#encap">encapsulation</A>).</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les relations entre les &eacute;l&eacute;ments
+		des mod&egrave;les sont d&eacute;finies.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les &eacute;l&eacute;ments de
+		mod&eacute;lisation utilis&eacute;s peuvent &ecirc;tre propres &agrave; une
+		version du syst&egrave;me.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B>Conception</B></SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>On y mod&eacute;lise tous les rouages
+		d'impl&eacute;mentation et on d&eacute;taille tous les &eacute;l&eacute;ments
+		de mod&eacute;lisation issus des niveaux sup&eacute;rieurs.</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>Les mod&egrave;les sont optimis&eacute;s,
+		car destin&eacute;s &agrave; &ecirc;tre
+		impl&eacute;ment&eacute;s.</SMALL></FONT>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	<P>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Activit&eacute;s des
+	<A HREF="p7.html#phases">micro-processus d'analyse</A><BR>
+	(niveau d'abstraction constant)</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><P>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>A chaque niveau d'abstraction, un
+	    micro-processus r&eacute;git la construction des
+	    mod&egrave;les.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>UML ne r&eacute;git pas les activit&eacute;s
+	    des micro-processus, c'est le principe d'abstraction qui permet
+	    l'&eacute;laboration it&eacute;rative et incr&eacute;mentale des
+	    mod&egrave;les.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Exemple de micro-processus de construction
+	    d'un mod&egrave;le&nbsp;:</SMALL></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>identifiez les classes (d'objets)
+		:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>recherchez les classes candidates
+		    (diff&eacute;rentes suivant le niveau d'abstraction) &agrave; l'aide de
+		    <A HREF="p12.html#dobj">diagrammes d'objets
+		    </A>(&eacute;bauches),</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>filtrez les classes redondantes, trop
+		    sp&eacute;cifiques ou vagues, qui ne repr&eacute;sentent qu'une op&eacute;ration
+		    ou un attribut,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>documentez les caract&eacute;ristiques
+		    des classes retenues (persistances, nombre maximum d'instances,
+		    etc.).</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>identifiez les
+		<A HREF="p14.html#asso">associations entre classes</A> / interactions entre
+		objets (instances)&nbsp;:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>recherchez les connexions s&eacute;mantiques
+		    et les relations d'utilisation,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL><A HREF="p14.html#docasso">documentez
+		    les relations</A> (nom, cardinalit&eacute;s, contraintes, r&ocirc;les des
+		    classes...),</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>en sp&eacute;cification, filtrez les relations
+		    instables ou d'impl&eacute;mentation,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>d&eacute;finissez la dynamique des relations
+		    entre objets (les <A HREF="p18.html#coll">interactions</A> entre instances
+		    de classes et les <A HREF="i-p21.html" TARGET="_top">activit&eacute;s</A>
+		    associ&eacute;es).</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>identifiez les attributs et les
+		op&eacute;rations des classes&nbsp;:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>recherchez les attributs dans les
+		    <A HREF="i-p18.html" TARGET="_top">mod&egrave;les dynamiques</A> (recherchez
+		    les donn&eacute;es qui caract&eacute;risent les
+		    <A HREF="p20.html#state">&eacute;tats</A> des objets),</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>filtrez les attributs complexes (faites-en
+		    des objets) et au niveau sp&eacute;cification, ne repr&eacute;sentez pas
+		    les valeurs internes propres aux m&eacute;canismes
+		    d'impl&eacute;mentation,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>recherchez les op&eacute;rations parmi
+		    les <A HREF="i-p21.html" TARGET="_top">activit&eacute;s</A> et actions des
+		    objets (ne pas rentrer dans le d&eacute;tail au niveau
+		    sp&eacute;cification).</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>optimisez les mod&egrave;les
+		:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>choisissez vos crit&egrave;res d'optimisation
+		    (g&eacute;n&eacute;ricit&eacute;, &eacute;volutivit&eacute;, pr&eacute;cision,
+		    lisibilit&eacute;, simplicit&eacute;...),</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>utilisez <A HREF="p15.html#herit">la
+		    g&eacute;n&eacute;ralisation et la sp&eacute;cialisation</A>
+		    (classification),</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>documentez et d&eacute;taillez vos
+		    mod&egrave;les,
+		    <A HREF="p3.html#encap">encapsulez</A>.</SMALL></FONT><BR>
+		    &nbsp;
+		</UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>validez les mod&egrave;les
+		:</SMALL></FONT>
+		<UL>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>v&eacute;rifiez la coh&eacute;rence, la
+		    compl&eacute;tude et l'homog&eacute;n&eacute;it&eacute; des
+		    mod&egrave;les,</SMALL></FONT>
+		  <LI>
+		    <FONT FACE="Verdane, Arial"><SMALL>confrontez les mod&egrave;les &agrave;
+		    la critique (comit&eacute; de relecture...).</SMALL></FONT>
+		</UL>
+	    </UL>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Synth&egrave;se de la
+	d&eacute;marche</B></SMALL></FONT><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Mod&eacute;liser une application n'est
+	pas une activit&eacute; lin&eacute;aire.<BR>
+	Il s'agit d'une t&acirc;che tr&egrave;s complexe, qui n&eacute;cessite une
+	approche&nbsp;:</SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B><A HREF="p6.html#iter">it&eacute;rative
+	    et incr&eacute;mentale</A></B> (gr&acirc;ce aux
+	    <A HREF="p7.html#phases">niveaux d'abstraction</A>), car il est plus efficace
+	    de construire et valider par &eacute;tapes, ce qui est difficile &agrave;
+	    cerner et ma&icirc;triser,</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B><A HREF="p6.html#archi">centr&eacute;e
+	    sur l'architecture</A></B> (d&eacute;finie par
+	    <A HREF="i-p7.html" TARGET="_top">la vue "4+1"</A>), car il s'agit de la
+	    cl&eacute; de vo&ucirc;te qui conditionne la plupart des qualit&eacute;s
+	    d'une application informatique,</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><B><A HREF="p6.html#besoin">guid&eacute;e
+	    par la prise en compte des besoins des utilisateurs</A></B> (&agrave; l'aide
+	    des <A HREF="p10.html#uc">cas d'utilisation</A>), car ce qui motive l'existence
+	    m&ecirc;me du syst&egrave;me &agrave; concevoir, c'est la satisfaction des
+	    besoins de ses utilisateurs.</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p7.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p9.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

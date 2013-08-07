@@ -1,0 +1,564 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="La page française de la modélisation objet et d'UML. Présentation d'UML, cours UML, analyse objet, liens web.">
+   <meta name="keywords" content="UML, objet, modélisation, méthode, diagrammes, cours, analyse, conception, approche objet, modèle, notation, OMG, OMA, Objectory, OMT, Booch, OOSE, CORBA, métamodèle, processus">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title>UML en fran&ccedil;ais</title>
+<script LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  imgOn = new Image();
+  imgOn.src = "../img/d-on.gif";
+  imgOff = new Image();
+  imgOff.src = "../img/d.gif";
+  }
+  function imgIsOn(imgName) {
+        if (document.images) {
+            document[imgName].src = imgOn.src; }}
+  function imgIsOff(imgName) {
+        if (document.images) {
+            document[imgName].src = imgOff.src; }}
+  //-->
+  </script>
+</head>
+<body text="#FFFF80" bgcolor="#000000" link="#80FFFF" vlink="#8080FF">
+
+<center><img SRC="../img/uml-free-fr-black.jpg" ALT="UML en français ®" height=125 width=250>
+<p><img SRC="../img/en-fr-black.jpg" height=55 width=283>
+<br>&nbsp;
+</center>
+
+<blockquote>&nbsp;
+<br><font face="Verdana,Arial"><font size=-1>UML (Unified Modeling Language,
+traduisez "<b>langage de mod&eacute;lisation objet unifi&eacute;</b>")
+est n&eacute; de la fusion des trois m&eacute;thodes qui ont le plus influenc&eacute;
+la mod&eacute;lisation objet au milieu des ann&eacute;es 90 : OMT, Booch
+et OOSE.</font></font>
+<br><font face="Verdana,Arial"><font size=-1>Issu "du terrain" et fruit
+d'un travail d'experts reconnus, UML est le r&eacute;sultat d'un large
+consensus. De tr&egrave;s nombreux acteurs industriels de renom ont adopt&eacute;
+UML et participent &agrave; son d&eacute;veloppement.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>En l'espace d'une poign&eacute;e
+d'ann&eacute;es seulement, UML est devenu un standard incontournable. La
+presse sp&eacute;cialis&eacute;e foisonne d'articles exalt&eacute;s et
+&agrave; en croire certains, utiliser les technologies objet sans UML rel&egrave;ve
+de l'h&eacute;r&eacute;sie. Lorsqu'on poss&egrave;de un esprit un tant
+soit peu critique, on est en droit de s'interroger sur les raisons qui
+expliquent un engouement si soudain et massif ! UML est-il r&eacute;volutionnaire
+?</font></font>
+<p><font face="Verdana,Arial"><font size=-1>L'approche objet est pourtant
+loin d'&ecirc;tre une id&eacute;e r&eacute;cente. Simula, premier langage
+de programmation &agrave; impl&eacute;menter le concept de type abstrait
+&agrave; l'aide de classes, date de 1967 ! En 1976 d&eacute;j&agrave;,
+Smalltalk impl&eacute;mente les concepts fondateurs de l'approche objet
+: encapsulation, agr&eacute;gation, h&eacute;ritage. Les premiers compilateurs
+C++ datent du d&eacute;but des ann&eacute;es 80 et de nombreux langages
+orient&eacute;s objets "acad&eacute;miques" ont &eacute;tay&eacute;s les
+concepts objets (Eiffel, Objective C, Loops...).</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Il y donc d&eacute;j&agrave;
+longtemps que l'approche objet est devenue une r&eacute;alit&eacute;. Les
+concepts de base de l'approche objet sont stables et largement &eacute;prouv&eacute;s.
+De nos jours, programmer "objet", c'est b&eacute;n&eacute;ficier d'une
+panoplie d'outils et de langages performants. L'approche objet est une
+solution technologique incontournable. Ce n'est plus une mode, mais un
+r&eacute;flexe quasi-automatique d&egrave;s lors qu'on cherche &agrave;
+concevoir des logiciels complexes qui doivent "r&eacute;sister" &agrave;
+des &eacute;volutions incessantes.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Oui, mais... Tout n'est pas
+si rose. Beaucoup on c&eacute;d&eacute; aux sir&egrave;nes de l'orient&eacute;
+objet et leur aveuglement a fait couler bien des projets...</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Premier hic : l'approche objet
+est moins intuitive que l'approche fonctionnelle. Malgr&eacute; les apparences,
+il est plus naturel pour l'esprit humain de d&eacute;composer un probl&egrave;me
+informatique sous forme d'une hi&eacute;rarchie de fonctions atomiques
+et de donn&eacute;es, qu'en terme d'objets et d'interaction entre ces objets.</font></font>
+<p><font face="Verdana,Arial"><font size=-1><b>Or, rien dans les concepts
+de base de l'approche objet ne dicte comment mod&eacute;liser la structure
+objet d'un syst&egrave;me de mani&egrave;re pertinente.</b> Quels moyens
+doit-on alors utiliser pour mener une analyse qui respecte les concepts
+objet ? Sans un cadre m&eacute;thodologique appropri&eacute;, la d&eacute;rive
+fonctionnelle de la conception est in&eacute;vitable... Beaucoup l'ont
+appris &agrave; leurs d&eacute;pens.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Autre probl&egrave;me critique
+: <b>l'application des concepts objet n&eacute;cessite une tr&egrave;s
+grande rigueur</b>. Le vocabulaire pr&eacute;cis est un facteur d'&eacute;chec
+important dans la mise en oeuvre d'une approche objet (risques d'ambigu&iuml;t&eacute;s
+et d'incompr&eacute;hensions). Beaucoup de d&eacute;veloppeurs (m&ecirc;me
+exp&eacute;riment&eacute;s) ne pensent souvent objet qu'&agrave; travers
+un langage de programmation. Or les langages orient&eacute;s objet ne sont
+que des outils qui proposent une mani&egrave;re particuli&egrave;re d'impl&eacute;menter
+certains concepts objet. Ils ne valident en rien l'utilisation de ces moyens
+techniques pour concevoir un syst&egrave;me conforme &agrave; la philosophie
+objet.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Conna&icirc;tre C++ ou Java
+n'est donc pas une fin en soi, il faut aussi savoir se servir de ces langages
+&agrave; bon escient. La question est donc de savoir "qui va nous guider
+dans l'utilisation des concepts objet, si ce ne sont pas les langages orient&eacute;s
+objet ?".</font></font>
+<br><font face="Verdana,Arial"><font size=-1>Pour finir : comment comparer
+deux solutions de d&eacute;coupe objet d'un syst&egrave;me si l'on ne dispose
+pas d'un moyen de repr&eacute;sentation ad&eacute;quat ? Il est tr&egrave;s
+simple de d&eacute;crire le r&eacute;sultat d'une analyse fonctionnelle,
+mais qu'en est-il d'une d&eacute;coupe objet ?</font></font>
+<br>&nbsp;
+<p><font face="Verdana,Arial"><font size=-1>Pour rem&eacute;dier &agrave;
+ces inconv&eacute;nients majeurs de l'approche objet, il nous faut donc
+:</font></font>
+<p><font face="Verdana,Arial"><font size=-1>1)&nbsp; un langage (pour s'exprimer
+clairement &agrave; l'aide des concepts objets), qui doit permettre de</font></font>
+<ul>
+<li>
+<font face="Verdana,Arial"><font size=-1>repr&eacute;senter des concepts
+abstraits (graphiquement par exemple),</font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana,Arial"><font size=-1>limiter les ambigu&iuml;t&eacute;s
+(parler un langage commun, au vocabulaire pr&eacute;cis, ind&eacute;pendant
+des langages orient&eacute;s objet),</font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana,Arial"><font size=-1>faciliter l'analyse (simplifier
+la comparaison et l'&eacute;valuation de solutions)</font></font>.</li>
+</ul>
+<font face="Verdana,Arial"><font size=-1>2)&nbsp; une d&eacute;marche d'analyse
+et de conception objet, pour</font></font>
+<ul>
+<li>
+<font face="Verdana,Arial"><font size=-1>ne pas effectuer une analyse fonctionnelle
+et se contenter d'une impl&eacute;mentation objet, mais penser objet d&egrave;s
+le d&eacute;part,</font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana,Arial"><font size=-1>d&eacute;finir les vues qui permettent
+de d&eacute;crire tous les aspects d'un syst&egrave;me avec des concepts
+objets</font></font>.</li>
+</ul>
+
+<p><br><font face="Verdana,Arial"><font size=-1>En d'autres termes : <b>il
+faut disposer d'un outil qui donne une dimension m&eacute;thodologique
+&agrave; l'approche objet et qui permette de mieux ma&icirc;triser sa richesse</b>.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>La prise de conscience de l'importance
+d'une m&eacute;thode sp&eacute;cifiquement objet ("comment structurer un
+syst&egrave;me sans centrer l'analyse uniquement sur les donn&eacute;es
+ou uniquement sur les traitements, mais sur les deux"), ne date pas d'hier.
+Plus de 50 m&eacute;thodes objet sont apparues durant le milieu des ann&eacute;es
+90 (Booch, Classe-Relation, Fusion, HOOD, OMT, OOA, OOD, OOM, OOSE...).
+Aucune ne s'est r&eacute;ellement impos&eacute;e.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>L'absence de consensus sur
+une m&eacute;thode d'analyse objet a longtemps frein&eacute; l'essor des
+technologies objet. Ce n'est que r&eacute;cemment que les grands acteurs
+du monde informatique ont pris conscience de ce probl&egrave;me. L'unification
+et la normalisation des m&eacute;thodes objet dominantes (OMT, Booch et
+OOSE) ne datent que de 1995. UML est le fruit de cette fusion.</font></font>
+<br><font face="Verdana,Arial"><font size=-1>UML, ainsi que les m&eacute;thodes
+dont il est issu, s'accordent sur un point : une analyse objet passe par
+une mod&eacute;lisation objet.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Mod&eacute;lisation, mod&egrave;le
+?</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Un mod&egrave;le est une abstraction
+de la r&eacute;alit&eacute;. L'abstraction est un des piliers de l'approche
+objet. Il s'agit d'un processus qui consiste &agrave; identifier les caract&eacute;ristiques
+int&eacute;ressantes d'une entit&eacute; en vue d'une utilisation pr&eacute;cise.
+L'abstraction d&eacute;signe aussi le r&eacute;sultat de ce processus,
+c'est-&agrave;-dire l'ensemble des caract&eacute;ristiques essentielles
+d'une entit&eacute;, retenues par un observateur.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Un mod&egrave;le est une vue
+subjective, mais pertinente de la r&eacute;alit&eacute;. Un mod&egrave;le
+d&eacute;finit une fronti&egrave;re entre la r&eacute;alit&eacute; et la
+perspective de l'observateur. Ce n'est pas "la r&eacute;alit&eacute;",
+mais une vue tr&egrave;s subjective de la r&eacute;alit&eacute;. Bien qu'un
+mod&egrave;le ne repr&eacute;sente pas une r&eacute;alit&eacute; absolue,
+un mod&egrave;le refl&egrave;te des aspects importants de la r&eacute;alit&eacute;,
+il en donne donc une vue juste et pertinente.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Le caract&egrave;re abstrait
+d'un mod&egrave;le doit notamment permettre de faciliter la compr&eacute;hension
+du syst&egrave;me &eacute;tudi&eacute;. Il r&eacute;duit la complexit&eacute;
+du syst&egrave;me &eacute;tudi&eacute;, permet de simuler le syst&egrave;me,
+le repr&eacute;sente et reproduit ses comportements. Concr&egrave;tement,
+un mod&egrave;le r&eacute;duit (d&eacute;compose) la r&eacute;alit&eacute;,
+dans le but de disposer d'&eacute;l&eacute;ments de travail exploitables
+par des moyens math&eacute;matiques ou informatiques.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>UML permet donc de mod&eacute;liser
+une application selon une vision objet. Mais plus concr&egrave;tement,
+qu'est UML ?</font></font>
+<p><font face="Verdana,Arial"><font size=-1>UML poss&egrave;de plusieurs
+facettes. C'est une norme, un langage de mod&eacute;lisation objet, un
+support de communication, un cadre m&eacute;thodologique. UML est tout
+cela &agrave; la fois, ce qui semble d'ailleurs engendrer quelques confusions...</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Je vous invite maintenant &agrave;
+d&eacute;couvrir ces diff&eacute;rents visages d'UML et par l&agrave; m&ecirc;me,
+&agrave; vous forger votre propre opinion...</font></font>
+<br>&nbsp;
+<br>&nbsp;
+<p><b><i><font face="Arial"><font color="#FF8080">UML, OMG, OMA et c<sup>ie</sup>.</font></font></i></b>
+<br>&nbsp;
+<p><font face="Verdana,Arial"><font size=-1>Fin 1997, UML est devenu <b>une
+norme <a href="http://www.omg.org/" TARGET="_blank">OMG</a></b> (Object
+Management Group). Cela vous semble certainement sans importance, mais
+pourtant...</font></font>
+<p><font face="Verdana,Arial"><font size=-1>L'OMG est un organisme &agrave;
+but non lucratif, cr&eacute;&eacute; en 1989 &agrave; l'initiative de grandes
+soci&eacute;t&eacute;s (HP, Sun, Unisys, American Airlines, Philips...).
+Aujourd'hui, l'OMG f&eacute;d&egrave;re plus de 850 acteurs du monde informatique.
+Son r&ocirc;le est de promouvoir des standards qui garantissent l'interop&eacute;rabilit&eacute;
+entre applications orient&eacute;es objet, d&eacute;velopp&eacute;es sur
+des r&eacute;seaux h&eacute;t&eacute;rog&egrave;nes.</font></font>
+<p><a NAME="CORBA"></a><!-- --><font face="Verdana,Arial"><font size=-1>L'OMG
+propose notamment l'architecture CORBA (Common Object Request Broker Architecture),
+un mod&egrave;le standard pour la construction d'applications &agrave;
+objets distribu&eacute;s (r&eacute;partis sur un r&eacute;seau). Pour rester
+simple, on peut consid&eacute;rer CORBA comme une g&eacute;n&eacute;ralisation
+de l'architecture clients/serveurs aux objets.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Au centre de l'architecture
+CORBA, un routeur de messages (ORB : Object Request Broker) permet &agrave;
+des objets clients d'envoyer des requ&ecirc;tes et de recevoir des r&eacute;ponses,
+sans avoir &agrave; se pr&eacute;occuper des d&eacute;tails techniques
+propres &agrave; l'infrastructure du r&eacute;seau. L'ORB se charge de
+transmettre les requ&ecirc;tes aux objets concern&eacute;s, o&ugrave; qu'ils
+se trouvent (dans le m&ecirc;me processus, dans un autre, sur un autre
+noeud du r&eacute;seau...). Le bus CORBA (dont l'ORB est le composant central)
+permet d'assurer la transparence des invocations de m&eacute;thodes ; les
+requ&ecirc;tes aux objets semblent toujours &ecirc;tre locales.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>De plus, l'ORB assure une coop&eacute;ration
+entre objets qui est ind&eacute;pendante des langages de programmation.
+Le mod&egrave;le CORBA permet en effet de se focaliser sur les interfaces
+des objets, qu'on exprime en IDL (Interface Definition Language). L'IDL
+d&eacute;crit de mani&egrave;re standard l'interface d'un objet, en faisant
+abstraction des d&eacute;tails qui rel&egrave;vent de son d'impl&eacute;mentation.
+Avec CORBA, il n'est donc pas n&eacute;cessaire de savoir comment les objets
+sont cod&eacute;s pour utiliser leurs services. L'utilisation d'IDL comme
+langage pivot dans la construction d'une architecture, permet de g&eacute;rer
+l'h&eacute;t&eacute;rog&eacute;n&eacute;it&eacute;.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Cette approche, qui consiste
+&agrave; masquer les couches techniques du r&eacute;seau (syst&egrave;me
+d'exploitation, processeur, langage de programmation...), permet d'assurer
+l'interop&eacute;rabilit&eacute; de toute application &agrave; objets distribu&eacute;s,
+conforme au mod&egrave;le CORBA.</font></font>
+<p><a NAME="OMA"></a><!-- --><font face="Verdana,Arial"><font size=-1>CORBA
+fait partie d'une vision globale de la construction d'applications r&eacute;parties,
+appel&eacute;e OMA (Object Management Architecture) et d&eacute;finie par
+l'OMG. Sans rentrer dans les d&eacute;tails, on peut r&eacute;sumer cette
+vision par la volont&eacute; de<b> favoriser l'essor industriel des technologies
+objet</b>, en offrant un ensemble de <b>solutions technologiques non propri&eacute;taires</b>,
+qui suppriment les clivages techniques.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>UML a &eacute;t&eacute; adopt&eacute;
+(normalis&eacute;) par l'OMG et int&eacute;gr&eacute; &agrave; l'OMA, car
+il participe &agrave; cette vision et parce qu'il r&eacute;pond &agrave;
+la "philosophie" OMG.</font></font>
+<br>&nbsp;
+<br>&nbsp;
+<p><b><i><font face="Arial"><font color="#FF8080">Penser objet avec UML,
+pour concevoir objet.</font></font></i></b>
+<br>&nbsp;
+<p><font face="Verdana,Arial"><font size=-1>Pour penser et concevoir objet,
+il faut savoir "prendre de la hauteur", jongler avec des concepts abstraits,
+ind&eacute;pendants des langages d'impl&eacute;mentation et des contraintes
+purement techniques. Les langages de programmation ne sont pas un support
+d'analyse ad&eacute;quat pour "concevoir objet". Ils ne permettent pas
+de d&eacute;crire des solutions en terme de concepts abstraits et constituent
+un cadre trop rigide pour mener une analyse it&eacute;rative.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Pour conduire une analyse objet
+coh&eacute;rente, il ne faut pas directement penser en terme de pointeurs,
+d'attributs et de tableaux, mais en terme d'association, de propri&eacute;t&eacute;s
+et de cardinalit&eacute;s... Utiliser le langage de programmation comme
+support de conception ne revient bien souvent qu'&agrave; juxtaposer de
+mani&egrave;re fonctionnelle un ensemble de m&eacute;canismes d'impl&eacute;mentation,
+pour r&eacute;soudre un probl&egrave;me qui n&eacute;cessite en r&eacute;alit&eacute;
+une mod&eacute;lisation objet.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Au risque d'en d&eacute;courager
+certains et d'en d&eacute;cevoir d'autres, l'approche objet n&eacute;cessite
+une analyse r&eacute;fl&eacute;chie, qui passe par diff&eacute;rentes phases
+exploratoires ! Bien que raisonner en terme d'objets semble naturel, l'approche
+fonctionnelle reste la plus intuitive pour nos esprits cart&eacute;siens...
+Voil&agrave; pourquoi il ne faut pas se contenter d'une impl&eacute;mentation
+objet, mais se discipliner &agrave; "penser objet" au cours d'une phase
+d'analyse pr&eacute;alable.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Toutes les d&eacute;rives fonctionnelles
+de code objet ont pour origine le non respect des concepts de base de l'approche
+objet (encapsulation...) ou une utilisation d&eacute;tourn&eacute;e de
+ces concepts (h&eacute;ritage sans classification...). Ces d&eacute;rives
+ne sont pas dues &agrave; de mauvaises techniques de programmation ; la
+racine du mal est bien plus profonde ! Bref, programmer en C++ ou en Java
+n'implique pas forc&eacute;ment concevoir objet...</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Les difficult&eacute;s de mise
+en oeuvre d'une approche "r&eacute;ellement objet" ont engendr&eacute;
+bien souvent des d&eacute;ceptions, ce qui a longtemps constitu&eacute;
+un obstacle important &agrave; l'essor des technologies objet. Beaucoup
+ont c&eacute;d&eacute; au leurre des langages de programmation orient&eacute;s
+objet et oubli&eacute; que le code n'est qu'un "moyen". Le respect des
+concepts fondamentaux de l'approche objet prime sur la mani&egrave;re dont
+on les impl&eacute;mente. Ne penser qu'&agrave; travers un langage de programmation
+objet est un mirage qui vous d&eacute;tourne de l'essentiel.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Pour sortir les technologies
+objet de cette impasse fatale, l'OMG propose UML.</font></font>
+<p><b><font face="Verdana,Arial"><font size=-1>UML comble une lacune importante
+des technologies objet. Il permet d'exprimer et d'&eacute;laborer des mod&egrave;les
+objet, ind&eacute;pendamment de tout langage de programmation.</font></font></b><font face="Verdana,Arial"><font size=-1>
+Il a &eacute;t&eacute; pens&eacute; pour servir de support &agrave; une
+analyse bas&eacute;e sur les concepts objet.</font></font>
+<p><a NAME="metamodele"></a><!-- --><font face="Verdana,Arial"><font size=-1>Mais
+UML offre bien plus encore ! C'est un<b> langage formel</b>, d&eacute;fini
+par un <b>m&eacute;tamod&egrave;le</b>.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Le m&eacute;tamod&egrave;le
+d'UML d&eacute;crit de mani&egrave;re tr&egrave;s pr&eacute;cise tous les
+&eacute;l&eacute;ments de mod&eacute;lisation (les concepts v&eacute;hicul&eacute;s
+et manipul&eacute;s par le langage) et la s&eacute;mantique de ces &eacute;l&eacute;ments
+(leur d&eacute;finition et le sens de leur utilisation).</font></font>
+<br><font face="Verdana,Arial"><font size=-1>En d'autres termes : <b>UML
+normalise les concepts objet</b>.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Un m&eacute;tamod&egrave;le
+permet de limiter les ambigu&iuml;t&eacute;s et encourage la construction
+d'outils. Il permet aussi de classer les diff&eacute;rents concepts du
+langage (selon leur niveau d'abstraction ou leur domaine d'application)
+et expose ainsi clairement sa structure. Enfin, on peut noter que le m&eacute;tamod&egrave;le
+d'UML est lui-m&ecirc;me d&eacute;crit par un m&eacute;ta-m&eacute;tamod&egrave;le
+de mani&egrave;re standardis&eacute;e, &agrave; l'aide de MOF (Meta Object
+Facility : norme OMG de description des m&eacute;tamod&egrave;les). Cela
+vous semble peut-&ecirc;tre anecdotique, mais prouve si n&eacute;cessaire
+le soin apport&eacute; par l'OMG pour d&eacute;finir UML.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>V&eacute;ritable cl&eacute;
+de vo&ucirc;te de l'OMA, UML est donc un outil indispensable pour tous
+ceux qui ont compris que programmer objet, c'est d'abord concevoir objet.
+UML n'est pas &agrave; l'origine des concepts objets, mais il en constitue
+une <b>&eacute;tape majeure</b>, car il unifie les diff&eacute;rentes approches
+et en donne une d&eacute;finition plus formelle.</font></font>
+<br>&nbsp;
+<br>&nbsp;
+<p><b><i><font face="Arial"><font color="#FF8080">Un langage universel
+et visuel.</font></font></i></b>
+<br>&nbsp;
+<p><font face="Verdana,Arial"><font size=-1>UML est avant tout <b>un support
+de communication performant</b>, qui facilite la repr&eacute;sentation
+et la compr&eacute;hension de solutions objet :</font></font>
+<ul>
+<li>
+<font face="Verdana,Arial"><font size=-1>Sa notation graphique permet d'<b>exprimer
+visuellement une solution objet</b>, ce qui <b>facilite la comparaison
+et l'&eacute;valuation</b> de solutions.</font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana,Arial"><font size=-1>L'aspect formel de sa notation,
+<b>limite
+les ambigu&iuml;t&eacute;s </b>et les incompr&eacute;hensions.</font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana,Arial"><font size=-1>Son <b>ind&eacute;pendance</b>
+par rapport aux langages de programmation, aux domaines d'application et
+aux processus, en font un langage universel.</font></font></li>
+</ul>
+<font face="Verdana,Arial"><font size=-1>Petit apart&eacute; :</font></font>
+<blockquote><font face="Verdana,Arial"><font size=-1>La notation graphique
+d'UML n'est que le support du langage. La v&eacute;ritable force d'UML,
+c'est qu'il repose sur un <a href="#metamodele">m&eacute;tamod&egrave;le</a>.</font></font>
+<br><font face="Verdana,Arial"><font size=-1>En d'autres termes : <b>la
+puissance et l'int&eacute;r&ecirc;t d'UML, c'est qu'il normalise la s&eacute;mantique
+des concepts qu'il v&eacute;hicule !</b></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Qu'une association d'h&eacute;ritage
+entre deux classes soit repr&eacute;sent&eacute;e par une fl&egrave;che
+termin&eacute;e par un triangle ou un cercle, n'a que peu d'importance
+par rapport au sens que cela donne &agrave; votre mod&egrave;le. La notation
+graphique est essentiellement guid&eacute;e par des consid&eacute;rations
+esth&eacute;tiques, m&ecirc;me si elle a &eacute;t&eacute; pens&eacute;e
+dans ses moindres d&eacute;tails.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>Par contre, utiliser une relation
+d'h&eacute;ritage, refl&egrave;te l'intention de donner &agrave; votre
+mod&egrave;le un sens particulier. Un "bon" langage de mod&eacute;lisation
+doit permettre &agrave; n'importe qui de d&eacute;chiffrer cette intention
+de mani&egrave;re non &eacute;quivoque ! Il est donc primordial de s'accorder
+sur la s&eacute;mantique des &eacute;l&eacute;ments de mod&eacute;lisation,
+bien avant de s'int&eacute;resser &agrave; la mani&egrave;re de les repr&eacute;senter.</font></font>
+<br><font face="Verdana,Arial"><font size=-1>Le m&eacute;tamod&egrave;le
+UML apporte une solution &agrave; ce probl&egrave;me fondamental.</font></font>
+<p><font face="Verdana,Arial"><font size=-1>UML est donc bien plus qu'un
+simple outil qui permet de "dessiner" des repr&eacute;sentations mentales...
+<b>Il
+permet de parler un langage commun</b>, normalis&eacute; mais accessible,
+car visuel. Il repr&eacute;sente un juste milieu entre langage math&eacute;matique
+et naturel, pas trop complexe mais suffisamment rigoureux, car bas&eacute;
+sur un m&eacute;tamod&egrave;le.</font></font>
+<br>&nbsp;</blockquote>
+<br>&nbsp;<br>
+<b><i><font face="Arial"><font color="#FF8080">UML comme cadre d'une
+analyse objet.</font></font></i></b>
+<p><font face="Verdana,Arial"><font size=-1>Une autre caract&eacute;ristique
+importante d'UML, est qu'il cadre l'analyse. UML permet de repr&eacute;senter
+un syst&egrave;me selon diff&eacute;rentes vues compl&eacute;mentaires
+: les diagrammes. Un diagramme UML est une repr&eacute;sentation graphique,
+qui s'int&eacute;resse &agrave; un aspect pr&eacute;cis du mod&egrave;le
+; c'est une perspective du mod&egrave;le.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Chaque type de diagramme UML
+poss&egrave;de une structure (les types des &eacute;l&eacute;ments de mod&eacute;lisation
+qui le composent sont pr&eacute;d&eacute;finis) et v&eacute;hicule une
+s&eacute;mantique pr&eacute;cise (il offre toujours la m&ecirc;me vue d'un
+syst&egrave;me).</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Combin&eacute;s, les diff&eacute;rents
+types de diagrammes UML offrent une vue compl&egrave;te des aspects statiques
+et dynamiques d'un syst&egrave;me. Les diagrammes permettent donc d'inspecter
+un mod&egrave;le selon diff&eacute;rentes perspectives et guident l'utilisation
+des &eacute;l&eacute;ments de mod&eacute;lisation (les concepts objet),
+car ils poss&egrave;dent une structure.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Une caract&eacute;ristique
+importante des diagrammes UML, est qu'ils <b>supportent l'abstraction</b>.
+Cela permet de mieux contr&ocirc;ler la complexit&eacute; dans l'expression
+et l'&eacute;laboration des solutions objet.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><a NAME="elaboration"></a><!-- --><font face="Verdana,Arial"><font size=-1>UML
+opte en effet pour <b>l'&eacute;laboration des mod&egrave;les</b>, plut&ocirc;t
+que pour une approche qui impose une barri&egrave;re stricte entre analyse
+et conception. Les mod&egrave;les d'analyse et de conception ne diff&egrave;rent
+que par leur niveau de d&eacute;tail, il n'y a pas de diff&eacute;rence
+dans les concepts utilis&eacute;s. UML n'introduit pas d'&eacute;l&eacute;ments
+de mod&eacute;lisation propres &agrave; une activit&eacute; (analyse, conception...)
+; le langage reste le m&ecirc;me &agrave; tous les niveaux d'abstraction.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Cette approche simplificatrice
+facilite le passage entre les niveaux d'abstraction. L'&eacute;laboration
+encourage une approche non lin&eacute;aire, les "retours en arri&egrave;re"
+entre niveaux d'abstraction diff&eacute;rents sont facilit&eacute;s et
+la tra&ccedil;abilit&eacute; entre mod&egrave;les de niveaux diff&eacute;rents
+est assur&eacute;e par l'unicit&eacute; du langage.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>UML favorise donc le prototypage,
+et c'est l&agrave; une de ses forces. En effet, mod&eacute;liser une application
+n'est pas une activit&eacute; lin&eacute;aire. Il s'agit d'une t&acirc;che
+tr&egrave;s complexe, qui n&eacute;cessite une approche it&eacute;rative,
+car il est plus efficace de construire et valider par &eacute;tapes, ce
+qui est difficile &agrave; cerner et ma&icirc;triser.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>UML permet donc non seulement
+de repr&eacute;senter et de manipuler les concepts objet, il sous-entend
+une d&eacute;marche d'analyse qui permet de concevoir une solution objet
+de mani&egrave;re it&eacute;rative, gr&acirc;ce aux diagrammes, qui supportent
+l'abstraction.</font></font>
+<br>&nbsp;
+<br>&nbsp;
+<p><b><i><font face="Arial"><font color="#FF8080">UML : le chemin vers
+l’unification des processus.</font></font></i></b>
+<br>&nbsp;
+<p><font face="Verdana,Arial"><font size=-1>Gr&acirc;ce au principe d'<a href="#elaboration">&eacute;laboration</a>
+des mod&egrave;les, UML permet de mieux ma&icirc;triser la part d'inconnu
+et d'incertitudes qui caract&eacute;risent les syst&egrave;mes complexes.
+Mais cet aspect m&eacute;thodologique d'UML ne doit pas vous induire en
+erreur. UML est un langage qui permet de repr&eacute;senter des mod&egrave;les,
+mais il ne d&eacute;finit pas le processus d'&eacute;laboration des mod&egrave;les
+! Qualifier UML de "m&eacute;thode objet" n'est donc pas tout &agrave;
+fait appropri&eacute;.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Une m&eacute;thode propose
+aussi un processus, qui r&eacute;git notamment l'encha&icirc;nement des
+activit&eacute;s de production d'une entreprise. Or UML n'a pas &eacute;t&eacute;
+pens&eacute; pour r&eacute;gir les activit&eacute;s de l'entreprise ; ce
+n'est pas DOD-STD-2167A ou CMM.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Les auteurs d'UML sont tout
+&agrave; fait conscients de l'importance du processus, mais ce sujet a
+&eacute;t&eacute; intentionnellement exclu des travaux de l'OMG. Comment
+prendre en compte toutes les organisations et cultures d'entreprises ?
+Un processus est adapt&eacute; (donc tr&egrave;s li&eacute;) au domaine
+d'activit&eacute; de l'entreprise ; m&ecirc;me s'il constitue un cadre
+g&eacute;n&eacute;ral, il faut l'adapter au contexte de l'entreprise. Bref,
+am&eacute;liorer un processus est une discipline &agrave; part enti&egrave;re,
+c'est un objectif qui d&eacute;passe tr&egrave;s largement le cadrede l'<a href="#OMA">OMA</a></font></font>.
+<p><font face="Verdana,Arial"><font size=-1>Cependant, m&ecirc;me si pour
+l'OMG, l'acceptabilit&eacute; industrielle de la mod&eacute;lisation objet
+passe d'abord par la disponibilit&eacute; d'un langage d'analyse objet
+performant et standard, les auteurs d'UML pr&eacute;conisent d'utiliser
+une d&eacute;marche :</font></font>
+<ul>
+<li>
+<font face="Verdana,Arial"><font size=-1>guid&eacute;e par les besoins
+des utilisateurs du syst&egrave;me,</font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana,Arial"><font size=-1>centr&eacute;e sur l'architecture
+logicielle,</font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="Verdana,Arial"><font size=-1>it&eacute;rative et incr&eacute;mentale.</font></font></li>
+</ul>
+<font face="Verdana,Arial"><font size=-1>D'apr&egrave;s les auteurs d'UML,
+un processus de d&eacute;veloppement qui poss&egrave;de ces qualit&eacute;s
+fondamentales "devrait" favoriser la r&eacute;ussite d'un projet.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Une source fr&eacute;quente
+de malentendus sur UML a pour origine la facult&eacute; d'UML de mod&eacute;liser
+un processus, pour le documenter et l'optimiser par exemple. En fin de
+compte, qu'est-ce qu'un processus ? Un ensemble d'activit&eacute;s coordonn&eacute;es
+et r&eacute;gul&eacute;es, en partie ordonn&eacute;es, dont le but est
+de cr&eacute;er un produit (mat&eacute;riel ou intellectuel). UML permet
+tout &agrave; fait de mod&eacute;liser les activit&eacute;s (c'est-&agrave;-dire
+la dynamique) d'un processus, de d&eacute;crire le r&ocirc;le des acteurs
+du processus, la structure des &eacute;l&eacute;ments manipul&eacute;s
+et produits, etc...</font></font>
+<br><font face="Verdana,Arial"><font size=-1>Une extension d'UML ("UML
+extension for business modeling") propose d'ailleurs un certain nombre
+de st&eacute;r&eacute;otypes standards (extensions du m&eacute;tamod&egrave;le)
+pour mieux d&eacute;crire les processus.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Le RUP ("<b>Rational Unified
+Process</b>"), processus de d&eacute;veloppement "cl&eacute; en main",
+propos&eacute; par Rational Software, est lui aussi mod&eacute;lis&eacute;
+(document&eacute;) avec UML. Il offre un cadre m&eacute;thodologique g&eacute;n&eacute;rique
+qui repose sur UML et la suite d'outils Rational.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Plus r&eacute;cemment, VALtech
+propose le 2TUP ("<b>2 Tracks Unified Process</b>", cf. "<a href="../index-biblio.html" TARGET="_top">UML
+en action</a>", ed. Eyrolles), un processus unifi&eacute; (c’est-&agrave;-dire
+construit sur UML, it&eacute;ratif, centr&eacute; sur l’architecture et
+conduit par les cas d’utilisation), qui apporte une r&eacute;ponse aux
+contraintes de changement continuel impos&eacute;es aux syst&egrave;mes
+d’informations des entreprises.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>L’axiome fondateur du 2TUP
+a &eacute;t&eacute; le constat que toute &eacute;volution impos&eacute;e
+au syst&egrave;me d’information peut se d&eacute;composer et se traiter
+parall&egrave;lement, suivant un axe fonctionnel et un axe technique. A
+l’issue des &eacute;volutions du mod&egrave;le fonctionnel et de l’architecture
+technique, la r&eacute;alisation du syst&egrave;me consiste &agrave; fusionner
+les r&eacute;sultats de ces deux branches du processus.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Bien qu’un processus universel
+soit une utopie, la capitalisation des meilleures pratiques, &agrave; travers
+une famille de processus unifi&eacute;s (tels que le RUP et le 2TUP), devient
+donc une r&eacute;alit&eacute;.</font></font>
+<br>&nbsp;
+<br>&nbsp;
+<p><b><i><font face="Arial"><font color="#FF8080">Conclusion.</font></font></i></b>
+<br>&nbsp;
+<p><font face="Verdana,Arial"><font size=-1>Comme UML n'impose pas de m&eacute;thode
+de travail particuli&egrave;re, il peut &ecirc;tre int&eacute;gr&eacute;
+&agrave; n'importe quel processus de d&eacute;veloppement logiciel de mani&egrave;re
+transparente. UML est une sorte de bo&icirc;te &agrave; outils, qui permet
+d'am&eacute;liorer progressivement vos m&eacute;thodes de travail, tout
+en pr&eacute;servant vos modes de fonctionnement.</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Int&eacute;grer UML par &eacute;tapes
+dans un processus, de mani&egrave;re pragmatique, est tout &agrave; fait
+possible. La facult&eacute; d'UML de se fondre dans le processus courant,
+tout en v&eacute;hiculant une d&eacute;marche m&eacute;thodologique, facilite
+son int&eacute;gration et limite de nombreux risques (rejet des utilisateurs,
+co&ucirc;ts...).</font></font><font face="Verdana,Arial"><font size=-1></font></font>
+<p><font face="Verdana,Arial"><font size=-1>Int&eacute;grer UML dans un
+processus ne signifie donc pas r&eacute;volutionner ses m&eacute;thodes
+de travail, mais cela devrait &ecirc;tre l’occasion de se remettre en question,
+en s’inspirant des meilleures pratiques, capitalis&eacute;es &agrave; travers
+les processus unifi&eacute;s (RUP et 2TUP).</font></font>
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="Arial"><font color="#FFFFFF"><font size=-1>&copy; <a href="../index-me.html" TARGET="_top">uml@free.fr</a></font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="15%" >
+<tr>
+<td>
+<center><a href="../index-cours.html" onMouseOver="imgIsOn('nxt')" onMouseOut="imgIsOff('nxt')" TARGET="_top"><img SRC="../img/d.gif" NAME="nxt" ALT="suite..." BORDER=0 height=32 width=40></a>
+<br><font face="Arial"><font color="#FFFFFF"><font size=-2>vers les cours
+UML</font></font></font></center>
+</td>
+</tr>
+</table>
+</blockquote>
+
+</body>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</html>

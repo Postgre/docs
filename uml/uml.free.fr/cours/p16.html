@@ -1,0 +1,392 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;&nbsp;
+<P>
+&nbsp;
+<H2 ALIGN=Left>
+</H2>
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Les vues statiques d'UML
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+  <FONT FACE="Verdane, Arial"><B><BR>
+  &nbsp;<BR>
+  DIAGRAMME DE CLASSES <SMALL>(suite...)</SMALL></B></FONT><BR>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Association
+	d&eacute;riv&eacute;e</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les associations d&eacute;riv&eacute;es
+	    sont des associations redondantes, qu'on peut d&eacute;duire d'une autre
+	    association ou d'un ensemble d'autres associations.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Elles permettent d'indiquer des chemins
+	    de navigation "calcul&eacute;s", sur un
+	    <A HREF="i-p14.html" TARGET="_top">diagramme de
+	    classes</A>.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Elles servent beaucoup &agrave; la
+	    compr&eacute;hension de la navigation (comment joindre telles instances d'une
+	    classe &agrave; partir d'une autre).</SMALL></FONT><BR>
+	    &nbsp;<BR>
+	</UL>
+	<P>
+	<IMG SRC="../img/asso-der.gif" WIDTH="518" HEIGHT="432" ALT="association d&eacute;riv&eacute;e"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Contrainte sur une
+	association</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD>&nbsp;</TD>
+      <TD><UL>
+	  <LI>
+	    <A NAME="cont"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL>Les contraintes
+	    sont des expressions qui pr&eacute;cisent le r&ocirc;le ou la port&eacute;e
+	    d'un &eacute;l&eacute;ment de mod&eacute;lisation (elles permettent
+	    d'&eacute;tendre ou pr&eacute;ciser sa
+	    s&eacute;mantique).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Sur une association, elles peuvent par
+	    exemple restreindre le nombre d'instances vis&eacute;es (ce sont alors des
+	    "expressions de navigation").</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les contraintes peuvent s'exprimer en
+	    langage naturel. Graphiquement, il s'agit d'un texte encadr&eacute;
+	    d'accolades.</SMALL></FONT><BR>
+	    &nbsp;<BR>
+	</UL>
+	<P>
+	<IMG SRC="../img/ctr-asso.gif" WIDTH="428" HEIGHT="179" ALT="contrainte sur une association"><BR>
+	<BR>
+	<BR>
+	<IMG SRC="../img/ctr-asso2.gif" WIDTH="684" HEIGHT="252" ALT="contrainte sur une association"><BR>
+	<BR>
+	<BR>
+	<BR>
+	<IMG SRC="../img/ctr-asso3.gif" WIDTH="505" HEIGHT="125" ALT="contrainte sur une association"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="ocl"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>OCL</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD>&nbsp;</TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>UML formalise l'expression des
+	    <A HREF="p16.html#cont">contraintes</A> avec OCL (Object Constraint
+	    Language).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>OCL est une contribution d'IBM &agrave;
+	    UML 1.1.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ce langage formel est volontairement simple
+	    d'acc&egrave;s et poss&egrave;de une grammaire &eacute;l&eacute;mentaire
+	    (OCL peut &ecirc;tre interpr&eacute;t&eacute; par des
+	    outils).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Il repr&eacute;sente un juste milieu,
+	    entre langage naturel et langage math&eacute;matique. OCL permet ainsi de
+	    limiter les ambigu&iuml;t&eacute;s, tout en restant
+	    accessible.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL><A NAME="inv"><!-- --></A>OCL permet de
+	    d&eacute;crire des invariants dans un mod&egrave;le, sous forme de
+	    pseudo-code&nbsp;:</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>pr&eacute; et post-conditions pour une
+		op&eacute;ration,</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>expressions de navigation,</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>expressions bool&eacute;ennes,
+		etc...</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>OCL est largement utilis&eacute; dans
+	    la d&eacute;finition du <A HREF="p5.html#meta">m&eacute;tamod&egrave;le</A>
+	    UML.</SMALL></FONT><BR>
+	    &nbsp;
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL>Nous allons nous baser sur une &eacute;tude
+	de cas, pour introduire bri&egrave;vement OCL.<BR>
+	<BR>
+	Monsieur Formulain, directeur d'une cha&icirc;ne d'h&ocirc;tels, vous demande
+	de concevoir une application de gestion pour ses h&ocirc;tels. Voici ce que
+	vous devez mod&eacute;liser&nbsp;:<BR>
+	<BR>
+	Un h&ocirc;tel Formulain est constitu&eacute; d'un certain nombre de chambres.
+	Un responsable de l'h&ocirc;tel g&egrave;re la location des chambres. Chaque
+	chambre se loue &agrave; un prix donn&eacute; (suivant ses prestations).<BR>
+	<BR>
+	L'acc&egrave;s aux salles de bain est compris dans le prix de la location
+	d'une chambre. Certaines chambres comportent une salle de bain, mais pas
+	toutes. Les h&ocirc;tes de chambres sans salle de bain peuvent utiliser une
+	salle de bain sur le palier. Ces derni&egrave;res peuvent &ecirc;tre
+	utilis&eacute;es par plusieurs h&ocirc;tes.<BR>
+	<BR>
+	Les pi&egrave;ces de l'h&ocirc;tel qui ne sont ni des chambres, ni des salles
+	de bain (hall d'accueil, cuisine...) ne font pas partie de l'&eacute;tude
+	(hors sujet).<BR>
+	<BR>
+	Des personnes peuvent louer une ou plusieurs chambres de l'h&ocirc;tel, afin
+	d'y r&eacute;sider. En d'autre termes&nbsp;: l'h&ocirc;tel h&eacute;berge
+	un certain nombre de personnes, ses h&ocirc;tes (il s'agit des personnes
+	qui louent au moins une chambre de l'h&ocirc;tel...).<BR>
+	<BR>
+	Le diagramme UML ci-dessous pr&eacute;sente les classes qui interviennent
+	dans la mod&eacute;lisation d'un h&ocirc;tel Formulain, ainsi que les relations
+	entre ces classes.<BR>
+	<BR>
+	Attention&nbsp;: le mod&egrave;le a &eacute;t&eacute; r&eacute;duit &agrave;
+	une vue purement statique. La dynamique de l'interaction entre instances
+	n'est pas donn&eacute;e ici, pour simplifier l'exemple. Lors d'une
+	mod&eacute;lisation compl&egrave;te, <A HREF="p9.html#vd">les vues
+	dynamiques</A> compl&eacute;mentaires ne devraient pas &ecirc;tre omises
+	(tout comme la <A HREF="p10.html#concept">conceptualisation</A> pr&eacute;alable
+	par des <A HREF="p10.html#uc">use cases</A>)...<BR>
+	<BR>
+	Remarque&nbsp;: cet exemple est inspir&eacute; d'un article paru dans JOOP
+	(Journal of Object Oriented Programming), en mai 99.<BR>
+	<BR>
+	<BR>
+	<IMG SRC="../img/ocl.gif" WIDTH="619" HEIGHT="346" ALT="vue statique"><BR>
+	<BR>
+	<BR>
+	OCL permet d'enrichir ce diagramme, en d&eacute;crivant toutes les contraintes
+	et tous les <A HREF="p16.html#inv">invariants</A> du mod&egrave;le
+	pr&eacute;sent&eacute;, de mani&egrave;re normalis&eacute;e et explicite
+	(&agrave; l'int&eacute;rieur d'une note rattach&eacute;e &agrave; un
+	&eacute;l&eacute;ment de mod&eacute;lisation du diagramme).<BR>
+	Voici quelques exemples de contraintes qu'on pourrait d&eacute;finir sur
+	ce diagramme, avec la syntaxe OCL
+	correspondante.</SMALL></FONT><FONT FACE="Verdane, Arial" COLOR="#ff8080"><SMALL><BR>
+	<BR>
+	Attention !<BR>
+	Les exemples de syntaxe OCL ci-dessous ne sont pas d&eacute;taill&eacute;s,
+	r&eacute;f&eacute;rez-vous au document de la norme UML ad&eacute;quat
+	("<A HREF="../norme/uml_free_fr_norme.html#ocl">OCL sp&eacute;cification</A>").
+	Il ne s'agit l&agrave; que d'un tr&egrave;s rapide aper&ccedil;u du pouvoir
+	d'abstraction d'OCL...</SMALL></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>Un h&ocirc;tel Formulain ne contient
+	jamais d'&eacute;tage num&eacute;ro 13 (superstition
+	oblige).</I></SMALL></FONT><BR>
+	<BR>
+	<FONT COLOR="#ffffff"><TT>&nbsp;context Chambre inv:<BR>
+	&nbsp;self._&eacute;tage &lt;&gt; 13<BR>
+	<BR>
+	&nbsp;context SalleDeBain inv:<BR>
+	&nbsp;self._&eacute;tage &lt;&gt; 13</TT></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>Le nombre de personnes par chambre
+	doit &ecirc;tre inf&eacute;rieur ou &eacute;gal au nombre de lits dans la
+	chambre lou&eacute;e. Les enfants (accompagn&eacute;s) de moins de 4 ans
+	ne "comptent pas" dans cette r&egrave;gle de calcul (&agrave; hauteur d'un
+	enfant de moins de&nbsp;4 ans maximum par
+	chambre).</I></SMALL></FONT><BR>
+	<BR>
+	<FONT COLOR="#ffffff"><TT>&nbsp;context Chambre inv:<BR>
+	&nbsp;client-&gt;size &lt;= _nbDeLits or<BR>
+	&nbsp; &nbsp;(client-&gt;size = _nbDeLits + 1 and<BR>
+	&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	&nbsp;&nbsp;client-&gt;exists(p : Personne | p._&acirc;ge &lt;
+	4))</TT></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>L'&eacute;tage de chaque chambre est
+	compris entre le premier et le dernier &eacute;tage de
+	l'h&ocirc;tel.</I></SMALL></FONT><BR>
+	<BR>
+	<FONT COLOR="#ffffff"><TT>&nbsp;context H&ocirc;tel inv:<BR>
+	&nbsp;self.chambre-&gt;forAll(c : Chambre | c._&eacute;tage &lt;=
+	self._&eacute;tageMax and<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c._&eacute;tage &gt;=
+	self._&eacute;tageMin)</TT></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>Chaque &eacute;tage poss&egrave;de
+	au moins une chambre (sauf l'&eacute;tage 13, qui n'existe
+	pas...).</I></SMALL></FONT><BR>
+	<FONT COLOR="#ffffff"><TT><BR>
+	&nbsp;context H&ocirc;tel inv:<BR>
+	&nbsp;Sequence{_&eacute;tageMin.._&eacute;tageMax}-&gt;forAll(i : Integer
+	|<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if i &lt;&gt; 13 then<BR>
+	&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;self.chambre-&gt;select(c
+	: Chambre | c._&eacute;tage = i)-&gt;notEmpty)<BR>
+	&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;endif)</TT></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>On ne peut repeindre une chambre que
+	si elle n'est pas lou&eacute;e. Une fois repeinte, une chambre co&ucirc;te
+	10% de plus.</I></SMALL></FONT><FONT COLOR="#ffffff"><BR>
+	<BR>
+	<TT>&nbsp;context Chambre::repeindre(c : Couleur)<BR>
+	&nbsp;pre: client-&gt;isEmpty<BR>
+	&nbsp;post: _prix = _prix@pre * 1.1</TT></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>Une salle de bain privative ne peut
+	&ecirc;tre utilis&eacute;e que par les personnes qui louent la chambre contenant
+	la salle de bain et une salle de bain sur le palier ne peut &ecirc;tre
+	utilis&eacute;e que par les clients qui logent sur le m&ecirc;me
+	palier.</I></SMALL></FONT><FONT COLOR="#ffffff"><BR>
+	<BR>
+	<TT>&nbsp;context SalleDeBain::utiliser(p : Personne)<BR>
+	&nbsp;pre: if chambre-&gt;notEmpty then<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;chambre.client-&gt;includes(p)<BR>
+	&nbsp; &nbsp; &nbsp;&nbsp;else<BR>
+	&nbsp; &nbsp; &nbsp; &nbsp; p.chambre._&eacute;tage = self._&eacute;tage<BR>
+	&nbsp; &nbsp; &nbsp; endif<BR>
+	&nbsp;post: _nbUtilisateurs = _nbUtilisateurs@pre + 1</TT></FONT><BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><I>Le loyer de l'h&ocirc;tel est &eacute;gal
+	&agrave; la somme du prix de toutes les chambres
+	lou&eacute;es.</I></SMALL></FONT><FONT COLOR="#ffffff"><BR>
+	<BR>
+	<TT>&nbsp;context H&ocirc;tel::calculerLoyer() : r&eacute;el<BR>
+	&nbsp;pre:<BR>
+	&nbsp;post: result =
+	self.chambre-&gt;select(client-&gt;notEmpty)._prix-&gt;sum</TT></FONT></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="stereo"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>St&eacute;r&eacute;otypes</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les st&eacute;r&eacute;otypes permettent
+	    d'&eacute;tendre la s&eacute;mantique des &eacute;l&eacute;ments de
+	    mod&eacute;lisation&nbsp;: il s'agit d'un m&eacute;canisme d'extensibilit&eacute;
+	    du <A HREF="p5.html#meta">m&eacute;tamod&egrave;le</A>
+	    d'UML.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les st&eacute;r&eacute;otypes permettent
+	    de d&eacute;finir de nouvelles classes d'&eacute;l&eacute;ments de
+	    mod&eacute;lisation, en plus du noyau pr&eacute;d&eacute;fini par
+	    UML.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Utilisez les st&eacute;r&eacute;otypes
+	    avec mod&eacute;ration et de mani&egrave;re concert&eacute;e (notez aussi
+	    qu'UML propose de nombreux st&eacute;r&eacute;otypes
+	    standards).</SMALL></FONT><BR>
+	    &nbsp;<BR>
+	</UL>
+	<P>
+	<IMG SRC="../img/stereo1.gif" WIDTH="221" HEIGHT="213" ALT="classe st&eacute;r&eacute;otyp&eacute;e"><BR>
+	<IMG SRC="../img/stereo2.gif" WIDTH="513" HEIGHT="281" ALT="classe st&eacute;r&eacute;otyp&eacute;e"></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p15.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p17.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

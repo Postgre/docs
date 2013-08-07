@@ -1,0 +1,178 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;&nbsp;
+<P>
+&nbsp;
+<H2 ALIGN=Left>
+</H2>
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Les vues statiques d'UML
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+  <FONT FACE="Verdane, Arial"><B><BR>
+  &nbsp;<BR>
+  DIAGRAMMES DE COMPOSANTS ET DE DEPLOIEMENT</B></FONT><BR>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Diagramme de
+	composants</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes de composants permettent
+	    de d&eacute;crire l'architecture physique et statique d'une application en
+	    terme de modules&nbsp;: fichiers sources, librairies, ex&eacute;cutables,
+	    etc.<BR>
+	    Ils montrent la mise en oeuvre physique des mod&egrave;les de la
+	    <A HREF="p7.html#vl">vue logique</A> avec l'environnement de
+	    d&eacute;veloppement.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les
+	    <A HREF="p14.html#dep">d&eacute;pendances</A> entre composants permettent
+	    notamment d'identifier les contraintes de compilation et de mettre en
+	    &eacute;vidence la r&eacute;utilisation de composants.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le composants peuvent &ecirc;tre
+	    organis&eacute;s en <A HREF="i-p11.html" TARGET="_top">paquetages</A>, qui
+	    d&eacute;finissent des <A HREF="p7.html#ss">sous-syst&egrave;mes</A>. Les
+	    sous-syst&egrave;mes organisent la <A HREF="p7.html#vc">vue des composants</A>
+	    (de r&eacute;alisation) d'un syst&egrave;me. Ils permettent de g&eacute;rer
+	    la complexit&eacute;, par <A HREF="p3.html#encap">encapsulation</A> des
+	    d&eacute;tails d'impl&eacute;mentation.</SMALL></FONT><BR>
+	    &nbsp;
+	</UL>
+	<P>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Modules
+	(notation)&nbsp;:</B></SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/modules.gif" WIDTH="607" HEIGHT="200" ALT="modules (notation)">
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Diagramme de composants
+	(exemple)&nbsp;:</B></SMALL></FONT>
+	<P>
+	<IMG SRC="../img/comp.gif" WIDTH="673" HEIGHT="516" ALT="diagramme de composants"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="depl"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Diagramme
+	de d&eacute;ploiement</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD>&nbsp;</TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes de d&eacute;ploiement montrent
+	    la disposition physique des mat&eacute;riels qui composent le syst&egrave;me
+	    et la r&eacute;partition des composants sur ces
+	    mat&eacute;riels.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les ressources mat&eacute;rielles sont
+	    repr&eacute;sent&eacute;es sous forme de noeuds.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les noeuds sont connect&eacute;s entre
+	    eux, &agrave; l'aide d'un support de communication.<BR>
+	    La nature des lignes de communication et leurs caract&eacute;ristiques peuvent
+	    &ecirc;tre pr&eacute;cis&eacute;es.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes de d&eacute;ploiement peuvent
+	    montrer des instances de noeuds (un mat&eacute;riel pr&eacute;cis), ou des
+	    classes de noeuds.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes de d&eacute;ploiement
+	    correspondent &agrave; la <A HREF="p7.html#vdep">vue de d&eacute;ploiement</A>
+	    d'une architecture logicielle (<A HREF="p6.html#archi">vue
+	    "4+1"</A>).</SMALL></FONT><BR>
+	    &nbsp;
+	</UL>
+	<P>
+	<IMG SRC="../img/depl.gif" WIDTH="599" HEIGHT="552" ALT="diagramme de d&eacute;ploiement"></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p16.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p18.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

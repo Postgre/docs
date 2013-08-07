@@ -1,0 +1,206 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;&nbsp;
+<P>
+&nbsp;
+<H2 ALIGN=Left>
+</H2>
+<BLOCKQUOTE>
+  <B><FONT FACE="Verdane, Arial">Les vues dynamiques d'UML
+  <SMALL>(suite...)</SMALL></FONT></B><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+  <FONT FACE="Verdane, Arial"><B><BR>
+  &nbsp;<BR>
+  DIAGRAMME &nbsp;D'ACTIVITES</B></FONT><BR>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Diagramme d'activit&eacute;s&nbsp;:
+	s&eacute;mantique</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>UML permet de repr&eacute;senter graphiquement
+	    le comportement d'une m&eacute;thode ou le d&eacute;roulement d'un
+	    <A HREF="p10.html#uc">cas d'utilisation</A>, &agrave; l'aide de diagrammes
+	    d'activit&eacute;s (une variante des
+	    <A HREF="i-p20.html" TARGET="_top">diagrammes
+	    d'&eacute;tats-transitions</A>).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Une activit&eacute; repr&eacute;sente
+	    une ex&eacute;cution d'un m&eacute;canisme, un d&eacute;roulement d'&eacute;tapes
+	    s&eacute;quentielles.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Le passage d'une activit&eacute; vers
+	    une autre est mat&eacute;rialis&eacute; par une
+	    transition.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les transitions sont d&eacute;clench&eacute;es
+	    par la fin d'une activit&eacute; et provoquent le d&eacute;but imm&eacute;diat
+	    d'une autre (elles sont automatiques).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>En th&eacute;orie, tous les m&eacute;canismes
+	    dynamiques pourraient &ecirc;tre d&eacute;crits par un diagramme
+	    d'activit&eacute;s, mais seuls les m&eacute;canismes complexes ou
+	    int&eacute;ressants m&eacute;ritent d'&ecirc;tre
+	    repr&eacute;sent&eacute;s.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>activit&eacute;s et transition,
+	notation&nbsp;:</B></SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/act1.gif" WIDTH="343" HEIGHT="94" ALT="activit&eacute;s et transitions"><BR>
+	<BR>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Pour repr&eacute;senter des <B>transitions
+	conditionnelles</B>, utilisez des gardes (expressions bool&eacute;ennes
+	exprim&eacute;es en langage naturel), comme dans l'exemple
+	suivant&nbsp;:</SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/act2.gif" WIDTH="515" HEIGHT="193" ALT="transition conditionnelle"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Synchronisation</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Il est possible de synchroniser les
+	transitions &agrave; l'aide des "<B>barres de synchronisation</B>" (comme
+	dans les <A HREF="i-p20.html" TARGET="_top">diagrammes
+	d'&eacute;tats-transitions</A>).<BR>
+	<BR>
+	Une barre de synchronisation permet d'ouvrir et de fermer des branches
+	parall&egrave;les au sein d'un flot
+	d'ex&eacute;cution&nbsp;:</SMALL></FONT><BR>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les transitions qui partent d'une barre
+	    de synchronisation ont lieu en m&ecirc;me temps.</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>On ne franchit une barre de synchronisation
+	    qu'apr&egrave;s r&eacute;alisation de toutes les transitions qui s'y
+	    rattachent.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL>L'exemple suivant illustre l'utilisation
+	des barres de synchronisation&nbsp;:</SMALL></FONT><BR>
+	<P>
+	<IMG SRC="../img/act3.gif" WIDTH="634" HEIGHT="302" ALT="barres de synchronisation"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Couloirs
+	d'activit&eacute;s</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Afin d'organiser un diagramme
+	d'activit&eacute;s selon les diff&eacute;rents responsables des actions
+	repr&eacute;sent&eacute;es, il est possible de d&eacute;finir des "couloirs
+	d'activit&eacute;s".<BR>
+	<BR>
+	Il est m&ecirc;me possible d'identifier les objets principaux, qui sont
+	manipul&eacute;s d'activit&eacute;s en activit&eacute;s et de visualiser
+	leur changement
+	d'<A HREF="p20.html#state">&eacute;tat</A>.</SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/act4.gif" WIDTH="593" HEIGHT="481" ALT="couloirs d'activit&eacute;s"></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p20.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p22.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

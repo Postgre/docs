@@ -1,0 +1,436 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT Language="Javascript"><!--hide old browser
+  if (document.images) {
+  imgOn = new Image();
+  imgOn.src = "../img/d-on.gif";
+  imgOff = new Image();
+  imgOff.src = "../img/d.gif";
+  }
+  function imgIsOn(imgName) {
+        if (document.images) {
+            document[imgName].src = imgOn.src; }}
+  function imgIsOff(imgName) {
+        if (document.images) {
+            document[imgName].src = imgOff.src; }}
+  var goodbrowser=false;
+  var ver=parseInt(navigator.appVersion);
+  if((navigator.appName=="Netscape" && ver>=3) || (navigator.appName=="Microsoft Internet Explorer" && ver>=4))
+   goodbrowser=true;
+  function validate()
+  {
+   if(document.form.EMAIL.value=="")
+   {
+    alert("Indiquez votre e-mail svp...\n\nSans quoi je ne pourrai pas vous repondre.");
+    return false;
+   }
+   if(document.form.CV[0].checked==true)
+   {
+    if((document.form.CVHTML.checked==false) && (document.form.CVRTF.checked==false))
+     alert("Choisissez le format du CV svp.\n\nCochez HTML, RTF (ou les deux).");
+    return false;
+   }
+  return true;
+  }
+  //-->
+</SCRIPT>
+  <!-- Created with AOLpress/2.0 -->
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;<BR>
+&nbsp;<BR>
+<P ALIGN=Center>
+<IMG WIDTH="459" HEIGHT="64" ALT="liens web" SRC="../img/liens.jpg"><BR>
+&nbsp;<BR>
+<P>
+&nbsp;<BR>
+<P>
+<BLOCKQUOTE>
+  <TABLE BORDER CELLSPACING="1" CELLPADDING="5" WIDTH="90%">
+    <TR BGCOLOR="#408080" VALIGN="Middle">
+      <TD>
+	<P ALIGN=Center>
+	<FONT FACE="Verdana, Arial" COLOR="#ffffff"><SMALL><B>sites de
+	r&eacute;f&eacute;rencement</B></SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.cetus-links.org/"
+	    TARGET="_blank">http://www.cetus-links.org/</A> (The CETUS links)<BR>
+	<BR>
+	Plus de 15 000 r&eacute;f&eacute;rences de sites sur l'OO ! Exhaustif et
+	bien organis&eacute;.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<A NAME="bao"><!-- --></A><FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.stm.tj/objet/"
+	    TARGET="_blank">http://www.stm.tj/objet/</A> (La bo&icirc;te &agrave;
+	objets)<BR>
+	<BR>
+	Site francophone qui aborde de nombreux sujets&nbsp;:</SMALL></FONT>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>les m&eacute;thodes/notations de
+	    mod&eacute;lisation</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>description des concepts du paradigme
+	    objet (encapsulation, h&eacute;ritage, agr&eacute;gation...)</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>la notation UML, OMT</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>la r&eacute;utilisabilit&eacute;&nbsp;:
+	    Patterns et Frameworks</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>forum de discussion</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>les AGL (ateliers de g&eacute;nie
+	    logiciel)</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>les normes de qualit&eacute;</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.essaim.univ-mulhouse.fr/uml"
+	    TARGET="_blank">http://www.essaim.univ-mulhouse.fr/uml</A> (site de
+	l'ESSAIM)<BR>
+	<BR>
+	Le site web de l'ESSAIM (Ecole sup&eacute;rieure des sciences appliqu&eacute;es
+	pour l'ing&eacute;nieur - Mulhouse), propose de nombreuses informations sur
+	UML.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://jeffsutherland.org/" TARGET="_blank">http://jeffsutherland.org/</A>
+	(Jeff Sutherland)<BR>
+	<BR>
+	Malgr&eacute; un look un peu folklorique, il s'agit l&agrave; d'une tr&egrave;s
+	bonne source d'information.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.isg.de/people/marc/UmlDocCollection/UMLDocCollection.html"
+	    TARGET="_blank">http://www.isg.de/people/marc/UmlDocCollection/UMLDocCollection.html</A><BR>
+	<BR>
+	Collection de liens (annot&eacute;s), vers des documents traitant
+	d'UML.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.krumbach.de/home/jeckle/unified.htm"
+	    TARGET="_blank">http://www.krumbach.de/home/jeckle/unified.htm</A> (Jeckle
+	UML publications available online)<BR>
+	<BR>
+	Liens, articles, livres, AGL...</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.objectnews.com/" TARGET="_blank">http://www.objectnews.com/</A><BR>
+	<BR>
+	Un grand classique. Nombreux liens. Revues de livres.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.rational.com/uml"
+	    TARGET="_blank">http://www.rational.com/uml</A> (Les pages UML de Rational
+	Software)<BR>
+	<BR>
+	Propose notamment quelques articles int&eacute;ressants sur
+	UML.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://iamwww.unibe.ch/~scg/OOinfo/"
+	    TARGET="_blank">http://iamwww.unibe.ch/~scg/OOinfo/</A> (Object-Oriented
+	Information Sources)<BR>
+	<BR>
+	Liens web int&eacute;ressants. Propose aussi un moteur de
+	recherche.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.laas.fr/~delatour/Igloo/index_image_fr.html"
+	    TARGET="_blank">http://www.laas.fr/~delatour/Igloo/index_image_fr.html</A>
+	(page LIGLOO)<BR>
+	<BR>
+	Liens sur le G&eacute;nie Logiciel Orient&eacute;
+	Objet&nbsp;:</SMALL></FONT>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>AGL</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>m&eacute;thodes objets</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>pointeurs sur les principales m&eacute;thodes
+	    objet, cours, livres...</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>support de cours, tutoriaux, transparents
+	    disponibles sur le Web, en fran&ccedil;ais ou en anglais</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>recherche objet</SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL>liens objet</SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+    <TR BGCOLOR="#408080" VALIGN="Middle">
+      <TD>
+	<P ALIGN=Center>
+	<FONT FACE="Verdana, Arial" COLOR="#ffffff"><SMALL><B>AGLs, formations,
+	activit&eacute;s de conseil et d'expertise<BR>
+	<SMALL>(par ordre alphab&eacute;tique)</SMALL> </B></SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.aonix.fr/" TARGET="_blank">www.aonix.fr</A><BR>
+	<BR>
+	Aonix est &eacute;diteur de l'AGL de mod&eacute;lisation UML "StP" (Software
+	through Pictures).</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.ilogix.com/" TARGET="_blank">www.ilogix.com</A><BR>
+	<BR>
+	Cr&eacute;&eacute; par David Harel ("inventeur" des statecharts) en 1987,
+	I-Logix propose notamment Rhapsody, un AGL de mod&eacute;lisation UML qui
+	permet de g&eacute;n&eacute;rer du code objet de mani&egrave;re tr&egrave;s
+	param&eacute;trable et de tracer l'ex&eacute;cution des mod&egrave;les UML
+	dont il est issu.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.mega.fr/" TARGET="_blank">www.mega.fr</A><BR>
+	<BR>Un AGL tr&egrave;s complet (qui supporte la notation UML de mani&egrave;re
+    quasi-exhaustive) et qui <i>parle fran&ccedil;ais</i> ! A d&eacute;couvrir.<BR>
+	</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.rational.com/">www.rational.com</A><BR>
+	<BR>
+	Les pages UML du site de Rational sont bien fournies (norme, articles, etc.)
+	et mises &agrave; jour r&eacute;guli&egrave;rement. Vous pourrez aussi y
+	contacter James Rumbaugh, Grady Booch et Ivar Jacobson.<BR>
+	Bien s&ucirc;r, Rational propose
+	<A HREF="http://www.rosearchitect.com/" TARGET="_blank">Rose</A>, un AGL de
+	mod&eacute;lisation UML qu'on ne pr&eacute;sente plus, mais aussi le RUP
+	("Rational Unified Process").&nbsp;Ce processus de d&eacute;veloppement
+	"cl&eacute; en main" offre un cadre m&eacute;thodologique g&eacute;n&eacute;rique,
+	qui repose sur UML et la suite d'outils Rational.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.softeam.fr/" TARGET="_blank">www.softeam.fr</A><BR>
+	<BR>
+	Softeam est membre actif de l'OMG (par l'interm&eacute;diaire de Philippe
+	Desfray).<BR>
+	Notez aussi que la derni&egrave;re version de l'AGL de mod&eacute;lisation
+	UML "<A HREF="http://www.objecteering.com/" TARGET="_blank">Objecteering</A>"
+	de Softeam est gratuite (en &eacute;dition personnelle)&nbsp;!<BR>
+	</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.togethersoft.com/" TARGET="_blank">www.togethersoft.com</A><BR>
+	<BR>A mon go&ucirc;t, <B>Together J</B> est l’AGL de mod&eacute;lisation UML qui offre
+    les fonctionnalit&eacute;s les plus puissantes. Son ergonomie et ses performances
+    ont maintenant de quoi faire rougir plus d’un &eacute;diteur d’AGL... A essayer sans tarder !<BR>
+	</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.valtech.com/" TARGET="_blank">www.valtech.com</A><BR>
+	<BR>
+	Valtech s'est forg&eacute; une tr&egrave;s forte r&eacute;putation, par la
+	qualit&eacute; et la vari&eacute;t&eacute; de ses formations aux technologies
+	objet et de l'e-business (Java, C++, UML, CORBA...).<BR>
+	Mais Valtech n'est pas un organisme de formation ("seulement" 25% de son
+	C.A.).<BR>
+	Valtech intervient en entreprise pour des prestations de consulting (transfert
+	d'expertise) et assite ses clients dans la r&eacute;alisation de projets
+	innovants et critiques mettant en oeuvre des technologies de pointe (WAP,
+	XML, EJB...).</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR BGCOLOR="#408080" VALIGN="Middle">
+      <TD>
+	<P ALIGN=Center>
+	<FONT FACE="Verdana, Arial" COLOR="#ffffff"><SMALL><B>sp&eacute;cifications
+	d'UML</B></SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL>Voir la page d&eacute;di&eacute;e &agrave;
+	<A HREF="../index-norme.html" TARGET="_top">la norme UML sur
+	uml.free.fr</A>.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR BGCOLOR="#408080" VALIGN="Middle">
+      <TD>
+	<P ALIGN=Center>
+	<FONT FACE="Verdana, Arial" COLOR="#ffffff"><SMALL><B>librairies
+	sp&eacute;cialis&eacute;es</B></SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.lmet.fr/" TARGET="_blank">http://www.lmet.fr</A>
+	: la&nbsp;librairie "le monde en tique", Paris</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.infotheque.com/" TARGET="_blank">http://www.infotheque.com</A>
+	: librairie parisienne</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.eyrolles.fr/" TARGET="_blank">http://www.eyrolles.fr</A>
+	: &eacute;ditions Eyrolles</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.awl.com/" TARGET="_blank">http://www.awl.com</A>
+	: &eacute;ditions Addison-Wesley</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.amazon.com/" TARGET="_blank">http://www.amazon.com</A>
+	: pour tout trouver (ou presque)</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.cbooks.com/" TARGET="_blank">http://www.cbooks.com</A>
+	: sp&eacute;cialis&eacute; dans les livres d'informatique</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR BGCOLOR="#408080" VALIGN="Middle">
+      <TD>
+	<P ALIGN=Center>
+	<FONT FACE="Verdana, Arial" COLOR="#ffffff"><SMALL><B>listes de diffusion
+	(mailing lists)</B></SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL>Liste de diffusion fran&ccedil;aise sur
+	UML, h&eacute;berg&eacute;e par
+	l'<A HREF="http://www.essaim.univ-mulhouse.fr/uml" TARGET="_blank">ESSAIM</A>.<BR>
+	Pour s'abonner, envoyer un message contenant le texte
+	</SMALL><FONT COLOR="#ffffff"><TT>subscribe uml</TT></FONT><SMALL> &agrave;
+	<A HREF="mailto:majordomo@essaim.univ-mulhouse.fr">majordomo@essaim.univ-mulhouse.fr</A>.<BR>
+	<BR>
+	Remarque : liste tr&egrave;s active o&ugrave; les profils des intervenants
+	sont vari&eacute;s.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL>Mailing-list de <A HREF="#bao">la bo&icirc;te
+	&agrave; objets</A>.<BR>
+	<BR>
+	Pour envoyer un message &agrave; la mailing-list, &eacute;crire &agrave;
+	<A HREF="mailto:objet@egroups.com">objet@egroups.com</A>.<BR>
+	<BR>
+	Pour s'inscrire &agrave; la mailing-list, envoyer un simple e-mail &agrave;
+	<A HREF="mailto:objet-subscribe@egroups.com">objet-subscribe@egroups.com</A>
+	(ni sujet, ni corps de message ne sont n&eacute;cessaires) ou remplir le
+	formulaire sur la page
+	<A HREF="http://www.stm.tj/objet/mailing_list.htm" TARGET="_blank">http://www.stm.tj/objet/mailing_list.htm</A>.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL>Listes de l'OTUG (Object Technology Users
+	Group), d&eacute;di&eacute;es &agrave; UML et h&eacute;berg&eacute;es par
+	<A HREF="http://www.rational.com/" TARGET="_blank">Rational Software</A>.<BR>
+	S'abonner via la page
+	<A HREF="http://www.rational.com/uml/usergroups" TARGET="_blank">http://www.rational.com/uml/usergroups</A>.<BR>
+	<BR>
+	Remarque : listes internationales, &agrave; r&eacute;server aux anglophones
+	et aux utilisateurs exp&eacute;riment&eacute;s d'UML.</SMALL></FONT>
+      </TD>
+    </TR>
+    <TR BGCOLOR="#408080" VALIGN="Middle">
+      <TD>
+	<P ALIGN=Center>
+	<FONT FACE="Verdana, Arial" COLOR="#ffffff"><SMALL><B>groupes de
+	discussion</B></SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL><A HREF="../me/uml_free_fr_me.html#forums">Les groupes de discussion
+    d'UML.FREE.FR !</A></SMALL></FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+	<FONT FACE="Verdana, Arial"><SMALL>Par les moyens de votre fournisseur
+	d'acc&egrave;s (lecteur de news requis)&nbsp;:</SMALL></FONT>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL><A HREF="news:fr.comp.objet">news:fr.comp.objet</A></SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL><A HREF="news:comp.objet">news:comp.objet</A></SMALL></FONT>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL><A HREF="news:comp.software-eng">news:comp.software-eng</A></SMALL></FONT>
+	</UL>
+	<P>
+	<FONT FACE="Verdana, Arial"><SMALL>Si votre fournisseur d'acc&egrave;s ne
+	propose pas ces groupes, consultez-les via le Web sur&nbsp;:</SMALL></FONT>
+	<UL>
+	  <LI>
+	    <FONT FACE="Verdana, Arial"><SMALL><A HREF="http://www.deja.com/" TARGET="_blank">http://www.deja.com</A></SMALL></FONT>
+	</UL>
+      </TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;<BR>
+<P>
+&nbsp;<BR>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="15%">
+  <TR>
+    <TD>
+      <P ALIGN=Center>
+      <A HREF="../index-me.html" onMouseOver="imgIsOn('nxt')" onMouseOut="imgIsOff('nxt')"
+	  TARGET="_top">
+      <IMG NAME="nxt" BORDER="0" HEIGHT="32" WIDTH="40" ALT="suite..." SRC="../img/d.gif"></A><BR>
+      <FONT COLOR="#ffffff"><FONT FACE="Arial"><SMALL><SMALL>vers la page
+      "auteur"</SMALL></SMALL></FONT></FONT>
+    </TD>
+  </TR>
+</TABLE>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

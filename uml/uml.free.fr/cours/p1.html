@@ -1,0 +1,183 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P ALIGN=Center>
+<H2 ALIGN=Center>
+  <FONT FACE="Arial" COLOR="#ff8080">Un peu d'Histoire...</FONT>
+</H2>
+<P>
+&nbsp;
+<P ALIGN=Center>
+<IMG SRC="../img/history.jpg" WIDTH="392" HEIGHT="146" ALT="&eacute;volution ?"
+    BORDER="0">
+<P>
+<BLOCKQUOTE>
+  &nbsp;
+  <P>
+  &nbsp;
+  <P>
+  <B><FONT FACE="Verdane, Arial">Approche fonctionnelle vs. approche
+  objet</FONT></B><BR>
+  <P>
+  &nbsp;<BR>
+  <TABLE BORDER="0" CELLPADDING="0">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="fct"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>La
+	d&eacute;coupe fonctionnelle d'un probl&egrave;me informatique&nbsp;: une
+	approche intuitive</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;</TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Exemple de d&eacute;coupe fonctionnelle
+	d'un logiciel d&eacute;di&eacute; &agrave; la gestion d'une
+	biblioth&egrave;que&nbsp;:</SMALL></FONT><BR>
+	&nbsp;</TD>
+    </TR>
+  </TABLE>
+  <BLOCKQUOTE>
+    <IMG SRC="../img/fct1.gif" WIDTH="574" HEIGHT="269" ALT="d&eacute;coupe fonctionnelle (exemple)"
+	BORDER="0">
+  </BLOCKQUOTE>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR>
+      <TD WIDTH=20>&nbsp;</TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Le logiciel est compos&eacute; d'une
+	hi&eacute;rarchie de fonctions, qui ensemble, fournissent les services
+	d&eacute;sir&eacute;s, ainsi que de donn&eacute;es qui repr&eacute;sentent
+	les &eacute;l&eacute;ments manipul&eacute;s (livres, etc&#133;). Logique,
+	coh&eacute;rent et intuitif.</SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD>&nbsp;
+	<P>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Le "plus" de l'approche
+	fonctionnelle&nbsp;: la factorisation des comportements</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Une d&eacute;coupe fonctionnelle
+	"intelligente" consiste &agrave; factoriser certains comportements communs
+	du logiciel. En d'autres termes&nbsp;: pour r&eacute;aliser une fonction
+	du logiciel, on peut utiliser un ensemble d'autres fonctions, d&eacute;j&agrave;
+	disponibles, pour peu qu'on rende ces derni&egrave;res un tant soit peu
+	g&eacute;n&eacute;riques. G&eacute;nial&nbsp;!</SMALL></FONT><BR>
+	&nbsp;</TD>
+    </TR>
+  </TABLE>
+  <BLOCKQUOTE>
+    <IMG SRC="../img/fct2.gif" WIDTH="574" HEIGHT="269" ALT="factorisation des comportements"
+	BORDER="0">
+  </BLOCKQUOTE>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR>
+      <TD WIDTH=20>&nbsp;
+	<P>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><FONT FACE="Verdane, Arial"><SMALL><B>Le revers de la m&eacute;daille
+	: maintenance complexe en cas d'&eacute;volution</B></SMALL></FONT></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><BR>
+	<FONT FACE="Verdane, Arial"><SMALL>Factoriser les comportements n'a
+	malheureusement pas que des avantages. Les fonctions sont devenues
+	interd&eacute;pendantes&nbsp;: une simple mise &agrave; jour du logiciel
+	&agrave; un point donn&eacute;, peut impacter en cascade une multitude d'autres
+	fonctions. On peut minorer cet impact, pour peu qu'on utilise des fonctions
+	plus g&eacute;n&eacute;riques et des structures de donn&eacute;es ouvertes.
+	Mais respecter ces contraintes rend l'&eacute;criture du logiciel et sa
+	maintenance plus complexe.<BR>
+	<BR>
+	En cas d'&eacute;volution majeure du logiciel (passage de la gestion d'une
+	biblioth&egrave;que &agrave; celle d'une m&eacute;diath&egrave;que par exemple),
+	le sc&eacute;nario est encore pire. M&ecirc;me si la structure
+	g&eacute;n&eacute;rale du logiciel reste valide, la multiplication des points
+	de maintenance, engendr&eacute;e par le cha&icirc;nage des fonctions, rend
+	l'adaptation tr&egrave;s laborieuse. Le logiciel doit &ecirc;tre retouch&eacute;
+	dans sa globalit&eacute;&nbsp;:</SMALL></FONT><BR>
+	&nbsp;</TD>
+    </TR>
+  </TABLE>
+  <BLOCKQUOTE>
+    <IMG SRC="../img/fct3.gif" WIDTH="587" HEIGHT="272" ALT="&eacute;volution complexe"
+	BORDER="0">
+  </BLOCKQUOTE>
+  <P>
+  &nbsp;
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p2.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>

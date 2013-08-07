@@ -1,0 +1,315 @@
+<HTML>
+
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  <!--
+  if (document.images) {
+  gOn = new Image();
+  gOn.src = "../img/g-on.gif";
+  hOn = new Image();
+  hOn.src = "../img/h-on.gif";
+  dOn = new Image();
+  dOn.src = "../img/d-on.gif";
+
+  gOff = new Image();
+  gOff.src = "../img/g.gif";
+  hOff = new Image();
+  hOff.src = "../img/h.gif";
+  dOff = new Image();
+  dOff.src = "../img/d.gif";
+  }
+  function imgOn(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "On.src"); }}
+  function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "Off.src"); }}
+  //-->
+  </SCRIPT>
+  <TITLE>UML en fran&ccedil;ais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#ffff80" LINK="#80ffff" VLINK="#8080ff">
+<P>
+&nbsp;
+<P ALIGN=Center>
+<H2 ALIGN=Center>
+  <FONT FACE="Arial" COLOR="#ff8080">Les vues dynamiques d'UML</FONT>
+</H2>
+<P>
+&nbsp;
+<P ALIGN=Center>
+<IMG SRC="../img/dyna.gif" WIDTH="96" HEIGHT="156" ALT="vues dynamiques">
+<P ALIGN=Center>
+<BLOCKQUOTE>
+  &nbsp;
+  <P>
+  &nbsp;
+  <P>
+  <FONT FACE="Verdane, Arial"><B>COLLABORATION ET MESSAGES</B></FONT><BR>
+  &nbsp;
+  <P>
+  <TABLE BORDER="0" CELLPADDING="0" WIDTH="90%">
+    <TR VALIGN="Top">
+      <TD WIDTH=20 VALIGN="Top"><P ALIGN=Left>
+	<FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="coll"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Diagramme
+	de collaboration</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Les diagrammes de collaboration montrent
+	    des interactions entre <A HREF="p12.html#inst">objets</A> (instances de classes
+	    et <A HREF="p10.html#acteur">acteurs</A>).</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Ils permettent de repr&eacute;senter le
+	    contexte d'une interaction, car on peut y pr&eacute;ciser les
+	    <A HREF="p20.html#state">&eacute;tats</A> des objets qui
+	    interagissent.</SMALL></FONT>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Exemples :</B></SMALL></FONT><BR>
+	<BR>
+	<IMG SRC="../img/collab1.gif" WIDTH="547" HEIGHT="269" ALT="diagramme de collaboration"><BR>
+	<BR>
+	<IMG SRC="../img/collab2.gif" WIDTH="695" HEIGHT="372" ALT="diagramme de collaboration"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="synch"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Synchronisation
+	des messages</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>UML permet de sp&eacute;cifier de
+	    mani&egrave;re tr&egrave;s pr&eacute;cise l'ordre et les conditions d'envoi
+	    des messages sur un diagramme dynamique.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Pour chaque message, il est possible
+	    d'indiquer&nbsp;:</SMALL></FONT>
+	    <UL>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>les clauses qui conditionnent son
+		envoi,</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>son rang (son num&eacute;ro d'ordre par
+		rapport aux autres messages),</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>sa r&eacute;currence,</SMALL></FONT>
+	      <LI>
+		<FONT FACE="Verdane, Arial"><SMALL>ses arguments.</SMALL></FONT><BR>
+		&nbsp;
+	    </UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>La syntaxe d'un message est la
+	    suivante&nbsp;:</SMALL></FONT><FONT COLOR="#ffffff"><BR>
+	    <BR>
+	    <TT>[</TT></FONT><FONT COLOR="#00ff00"><TT>pr&eacute;</TT></FONT><FONT COLOR="#ffffff"><TT>
+	    </TT></FONT><FONT COLOR="#ff80ff"><TT>"/"</TT></FONT><FONT COLOR="#ffffff"><TT>]
+	    [[</TT></FONT><FONT COLOR="#ff80ff"><TT>"["</TT></FONT><FONT COLOR="#00ff00"><TT>cond</TT></FONT><FONT
+		COLOR="#ff80ff"><TT>"]"</TT></FONT><FONT COLOR="#ffffff"><TT>]
+	    [</TT></FONT><FONT COLOR="#00ff00"><TT>s&eacute;q</TT></FONT><FONT COLOR="#ffffff"><TT>]
+	    [</TT></FONT><FONT COLOR="#ff80ff"><TT>"*"</TT></FONT><FONT COLOR="#ffffff"><TT>[</TT></FONT><FONT
+		COLOR="#ff80ff"><TT>"||"</TT></FONT><FONT COLOR="#ffffff"><TT>][</TT></FONT><FONT
+		COLOR="#ff80ff"><TT>"["</TT></FONT><FONT COLOR="#00ff00"><TT>iter</TT></FONT><FONT
+		COLOR="#ff80ff"><TT>"]"</TT></FONT><FONT COLOR="#ffffff"><TT>]]
+	    </TT></FONT><FONT COLOR="#ff80ff"><TT>":"</TT></FONT><FONT COLOR="#ffffff"><TT>]
+	    [</TT></FONT><FONT COLOR="#00ff00"><TT>r</TT></FONT><FONT COLOR="#ffffff"><TT>
+	    </TT></FONT><FONT COLOR="#ff80ff"><TT>":="</TT></FONT><FONT COLOR="#ffffff"><TT>]
+	    </TT></FONT><FONT COLOR="#00ff00"><TT>msg</TT></FONT><FONT COLOR="#ff80ff"><TT>"("</TT></FONT><FONT
+		COLOR="#ffffff"><TT>[</TT></FONT><TT><FONT COLOR="#00ff00">par</FONT></TT><FONT
+		COLOR="#ffffff"><TT>]</TT></FONT><FONT COLOR="#ff80ff"><TT>")"</TT></FONT><BR>
+	    &nbsp;
+	    <UL>
+	      <LI>
+		<FONT COLOR="#00ff00"><TT>pr&eacute;</TT></FONT><FONT FACE="Verdane, Arial"><SMALL>&nbsp;:
+		pr&eacute;d&eacute;cesseurs (liste de num&eacute;ros de s&eacute;quence de
+		messages s&eacute;par&eacute;s par une virgule&nbsp;; voir aussi
+		"<A HREF="p18.html#seq">s&eacute;q</A>").<BR>
+		Indique que le message courant ne sera envoy&eacute; que lorsque tous ses
+		pr&eacute;d&eacute;cesseurs le seront aussi (permet de synchroniser l'envoi
+		de messages).</SMALL></FONT><BR>
+		&nbsp;
+	      <LI>
+		<FONT COLOR="#00ff00"><TT>cond</TT></FONT><FONT FACE="Verdane, Arial"><SMALL>&nbsp;:
+		garde, expression bool&eacute;enne.<BR>
+		Permet de conditionner l'envoi du message, &agrave; l'aide d'une clause
+		exprim&eacute;e en langage naturel.</SMALL></FONT><BR>
+		&nbsp;
+	      <LI>
+		<A NAME="seq"><!-- --></A><FONT COLOR="#00ff00"><TT>s&eacute;q</TT></FONT><FONT
+		    FACE="Verdane, Arial"><SMALL>&nbsp;: num&eacute;ro de s&eacute;quence du
+		message.<BR>
+		Indique le rang du message, c'est-&agrave;-dire son num&eacute;ro d'ordre
+		par rapport aux autres messages. Les messages sont num&eacute;rot&eacute;s
+		&agrave; la fa&ccedil;on de chapitres dans un document, &agrave; l'aide de
+		chiffres s&eacute;par&eacute;s par des points. Ainsi, il est possible de
+		repr&eacute;senter le niveau d'embo&icirc;tement des messages et leur
+		pr&eacute;c&eacute;dence.<BR>
+		Exemple : l'envoi du message 1.3.5 suit imm&eacute;diatement celui du message
+		1.3.4 et ces deux messages font partie du flot (de la famille de messages)
+		1.3.<BR>
+		Pour repr&eacute;senter l'envoi simultan&eacute; de deux messages, il suffit
+		de les indexer par une lettre.<BR>
+		Exemple : l'envoi des messages 1.3.a et 1.3.b est
+		simultan&eacute;.</SMALL></FONT><BR>
+		&nbsp;
+	      <LI>
+		<FONT COLOR="#00ff00"><TT>iter</TT></FONT><FONT FACE="Verdane, Arial"><SMALL>&nbsp;:
+		r&eacute;currence du message.<BR>
+		Permet de sp&eacute;cifier en langage naturel l'envoi s&eacute;quentiel (ou
+		en parall&egrave;le, avec</SMALL></FONT>
+		<FONT COLOR="#ff80ff"><TT>"||"</TT></FONT><FONT FACE="Verdane, Arial"><SMALL>)
+		de messages. Notez qu'il est aussi possible de sp&eacute;cifier qu'un message
+		est r&eacute;current en omettant la clause d'it&eacute;ration (en n'utilisant
+		que</SMALL></FONT>
+		<FONT COLOR="#ff80ff"><TT>"*"</TT></FONT><FONT FACE="Verdane, Arial"><SMALL>
+		ou</SMALL></FONT>
+		<FONT COLOR="#ff80ff"><TT>"*||"</TT></FONT><FONT FACE="Verdane, Arial"><SMALL>).</SMALL></FONT><BR>
+		&nbsp;
+	      <LI>
+		<FONT COLOR="#00ff00"><TT>r</TT></FONT><FONT FACE="Verdane, Arial"><SMALL>&nbsp;:
+		valeur de retour du message.<BR>
+		Permet d'affecter la valeur de retour d'un message, pour par exemple la
+		retransmettre dans un autre message, en tant que
+		param&egrave;tre.</SMALL></FONT><BR>
+		&nbsp;
+	      <LI>
+		<FONT COLOR="#00ff00"><TT>msg</TT></FONT><FONT FACE="Verdane, Arial"><SMALL>&nbsp;:
+		nom du message.</SMALL></FONT><BR>
+		&nbsp;
+	      <LI>
+		<TT><FONT COLOR="#00ff00">par</FONT></TT><FONT FACE="Verdane, Arial"><SMALL>&nbsp;:
+		param&egrave;tres (optionnels) du message.</SMALL></FONT>
+	    </UL>
+	</UL>
+	<P>
+	<BR>
+	<FONT FACE="Verdane, Arial"><SMALL><B>Exemples :</B></SMALL></FONT>
+	<BLOCKQUOTE>
+	  <BR>
+	  <FONT COLOR="#ffffff"><TT>3 : bonjour()</TT></FONT>
+	  <P>
+	  <FONT FACE="Verdane, Arial"><SMALL>Ce message a pour num&eacute;ro de
+	  s&eacute;quence "3".</SMALL></FONT><BR>
+	  &nbsp;
+	  <P>
+	  <FONT COLOR="#ffffff"><TT>[heure = midi] 1 : manger()</TT></FONT>
+	  <P>
+	  <FONT FACE="Verdane, Arial"><SMALL>Ce message n'est envoy&eacute; que s'il
+	  est midi.</SMALL></FONT><BR>
+	  &nbsp;
+	  <P>
+	  <FONT COLOR="#ffffff"><TT>1.3.6 * : ouvrir()</TT></FONT>
+	  <P>
+	  <FONT FACE="Verdane, Arial"><SMALL>Ce message est envoy&eacute; de mani&egrave;re
+	  s&eacute;quentielle un certain nombre de fois.</SMALL></FONT><BR>
+	  &nbsp;
+	  <P>
+	  <FONT COLOR="#ffffff"><TT>3 / *||[i := 1..5] : fermer()</TT></FONT>
+	  <P>
+	  <FONT FACE="Verdane, Arial"><SMALL>Repr&eacute;sente l'envoi en parall&egrave;le
+	  de 5 messages. Ces messages ne seront envoy&eacute;s qu'apr&egrave;s l'envoi
+	  du message 3.</SMALL></FONT><BR>
+	  &nbsp;
+	  <P>
+	  <FONT COLOR="#ffffff"><TT>1.3,2.1 / [t &lt; 10s] 2.5 : age :=
+	  demanderAge(nom,prenom)</TT></FONT> &nbsp;
+	  <P>
+	  <FONT FACE="Verdane, Arial"><SMALL>Ce message (num&eacute;ro 2.5) ne sera
+	  envoy&eacute; qu'apr&egrave;s les messages 1.3 et 2.1, et que si "t &lt;
+	  10s".</SMALL></FONT><BR>
+	  &nbsp;
+	  <P>
+	  <FONT COLOR="#ffffff"><TT>1.3 / [disk full] 1.7.a * : deleteTempFiles()<BR>
+	  1.3 / [disk full] 1.7.b : reduceSwapFile(20%)</TT></FONT>
+	  <P>
+	  <FONT FACE="Verdane, Arial"><SMALL>Ces messages ne seront envoy&eacute;s
+	  qu'apr&egrave;s l'envoi du message 1.3 et si la condition "disk full" est
+	  r&eacute;alis&eacute;e. Si cela est le cas, les messages 1.7.a et 1.7.b seront
+	  envoy&eacute;s simultan&eacute;ment. Plusieurs messages 1.7.a peuvent &ecirc;tre
+	  envoy&eacute;s.</SMALL></FONT>
+	</BLOCKQUOTE>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20>&nbsp;<BR>
+	&nbsp;</TD>
+      <TD></TD>
+    </TR>
+    <TR VALIGN="Top">
+      <TD><FONT FACE="Wingdings">q</FONT>&nbsp;</TD>
+      <TD><A NAME="actif"><!-- --></A><FONT FACE="Verdane, Arial"><SMALL><B>Objets
+	actifs (threads)</B></SMALL></FONT><BR>
+	<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH=20></TD>
+      <TD><UL>
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>UML permet de repr&eacute;senter des
+	    communications entre <A HREF="p12.html#inst">objets</A> actifs de mani&egrave;re
+	    concurrente.</SMALL></FONT><BR>
+	    &nbsp;
+	  <LI>
+	    <FONT FACE="Verdane, Arial"><SMALL>Cette extension des
+	    <A HREF="p18.html#coll">diagrammes de collaboration</A> permet notamment
+	    de repr&eacute;senter des communications entre processus ou l'ex&eacute;cution
+	    de threads.</SMALL></FONT><BR>
+	    &nbsp;
+	</UL>
+	<P>
+	<IMG SRC="../img/obj-act.gif" WIDTH="576" HEIGHT="347" ALT="objets actifs"></TD>
+    </TR>
+  </TABLE>
+</BLOCKQUOTE>
+<P>
+&nbsp;
+<P>
+&nbsp;
+<CENTER>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Center" WIDTH="95%">
+    <TR VALIGN="Top">
+      <TD><P ALIGN=Center>
+	<A HREF="i-p17.html" TARGET="_top" onMouseOver="imgOn('g')" onMouseOut="imgOff('g')">
+	<IMG NAME="g" SRC="../img/g.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	pr&eacute;c&eacute;dente</SMALL></SMALL></FONT></TD>
+      <TD WIDTH="50%"><P ALIGN=Center>
+	<A HREF="../index-cours.html" TARGET="_top" onMouseOver="imgOn('h')" onMouseOut="imgOff('h')">
+	<IMG NAME="h" SRC="../img/h.gif" WIDTH="32" HEIGHT="40" BORDER="0"></A><BR>
+        <FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>sommaire</SMALL></SMALL></FONT><BR>
+        <BR>
+        <FONT FACE="Verdana, Arial" COLOR="#ff8040"><SMALL>&copy;
+        <A HREF="../index-me.html" TARGET="_top">uml@free.fr</A> - tous droits
+        r&eacute;serv&eacute;s</SMALL></FONT></TD>
+      <TD><P ALIGN=Center>
+	<A HREF="i-p19.html" TARGET="_top" onMouseOver="imgOn('d')" onMouseOut="imgOff('d')">
+	<IMG NAME="d" SRC="../img/d.gif" WIDTH="40" HEIGHT="32" BORDER="0"></A><BR>
+	<FONT FACE="Arial" COLOR="#ffffff"><SMALL><SMALL>page
+	suivante</SMALL></SMALL></FONT></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<P>
+&nbsp;
+</BODY>
+<!-- Mirrored from uml.free.fr by HTTrack Website Copier/3.x [XR&CO'2001] -->
+</HTML>
