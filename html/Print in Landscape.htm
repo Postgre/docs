@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)http://home.tampabay.rr.com/bmerkey/examples/landscape-test.html -->
+<HTML><HEAD><TITLE>Print in Landscape</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="favicon.ico" rel="shortcut icon">
+<STYLE type=text/css>BODY {
+	MARGIN: 2% 5%; BACKGROUND-COLOR: linen
+}
+H2 {
+	COLOR: indigo
+}
+H3 {
+	COLOR: indigo
+}
+PRE {
+	COLOR: indigo
+}
+DIV.breakafter {
+	PAGE-BREAK-AFTER: always; COLOR: silver
+}
+DIV.breakbefore {
+	PAGE-BREAK-BEFORE: always; COLOR: silver
+}
+</STYLE>
+
+<STYLE type=text/css media=print>DIV.page {
+	MARGIN: 10% 0%; WRITING-MODE: tb-rl; HEIGHT: 80%
+}
+DIV.page TABLE {
+	FILTER: progid:DXImageTransform.Microsoft.BasicImage(Rotation=1); MARGIN-RIGHT: 80pt
+}
+</STYLE>
+
+<META http-equiv=Keywords 
+content="CSS print landscape; print landscape; printing in landscape; landscape printing; Web page print orientation; landscape orientation; HTML page in landscape; print; writing-mode; print stylesheet; style sheets; CSS tips;">
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+<BODY>
+<H2>Force Specific Content to Print in Landscape Orientation</H2>
+<P>This handy trick works in IE5.5/Win and newer. It assumes that the default 
+printer orientation is portrait.</P>
+<P>Use the <CODE>writing-mode</CODE> property (submitted to W3C). A value meant 
+for East Asian typography, <CODE>tb-rl</CODE>, causes IE to write text from top 
+to bottom and right to left. Surround the content you want in landscape with a 
+DIV with a class defined in a print stylesheet. For instance: </P><PRE>&lt;style type="text/css" media="print"&gt;
+div.page	{ 
+writing-mode: tb-rl;
+height: 80%;
+margin: 10% 0%;
+}
+&lt;/style&gt;</PRE>
+<P>Note that now CSS properties have a reverse sense. Height means width and 
+top/bottom margins become left/right margins. </P>
+<P>Put a page break *after* a portrait page that is to be followed by a 
+landscape and a page break *before* a portrait page that is preceded by a 
+landscape. Tweak to your needs. <B>Caveat:</B> Data tables resist this hack. To 
+get a table to flip nicely for print it is necessary to add another style 
+rule—which works only in IE6+. Please see the source for details. When once we 
+practice to deceive, my, how the hacks unweave! </P>
+<DIV class=breakafter>Page break after here.</DIV>
+<DIV class=page>
+<H3>Second Page Should Be Printed in Landscape</H3>
+<P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
+enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
+nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in 
+hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu 
+feugiat nulla facilisis at vero eros et accumsan et iusto.</P>
+<P>Haec disserens qua de re agatur et in quo causa consistat non videt. Non enim 
+si alii ad alia propensiores sunt propter causas naturales et antecedentes, 
+idciro etiam nostrarum voluntatum atque appetitionum sunt causae naturales at 
+antecedentes; nam nihil esset in nostra potestate si res ita se haberet. 
+</P></DIV>
+<DIV class=page>
+<H3>Third Page Should Be in Landscape</H3>
+<P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
+enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
+nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in 
+hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu 
+feugiat nulla facilisis at vero eros et accumsan et iusto.</P>
+<P>Haec disserens qua de re agatur et in quo causa consistat non videt. Non enim 
+si alii ad alia propensiores sunt propter causas naturales et antecedentes, 
+idciro etiam nostrarum voluntatum atque appetitionum sunt causae naturales at 
+antecedentes; nam nihil esset in nostra potestate si res ita se haberet. </P><!-- Use IE Conditional Comments to hide table from IE5.x --><!--[if gte IE 6]>
+<TABLE borderColor=purple cellSpacing=2 cellPadding=2 border=1>
+  <TBODY>
+  <TR>
+    <TD>First Cell in first row</TD>
+    <TD>Second Cell</TD>
+    <TD>Third Cell in first row</TD></TR>
+  <TR>
+    <TD>First Cell in row 2</TD>
+    <TD>Second Cell</TD>
+    <TD>Third Cell in row 2</TD></TR></TBODY></TABLE><![endif]--></DIV>
+<DIV class=breakbefore>Page break before here.</DIV>
+<H3>...and the last page should be back to portrait</H3>
+<P>Haec disserens qua de re agatur et in quo causa consistat non videt. Non enim 
+si alii ad alia propensiores sunt propter causas naturales et antecedentes, 
+idciro etiam nostrarum voluntatum atque appetitionum sunt causae naturales at 
+antecedentes; nam nihil esset in nostra potestate si res ita se 
+haberet.</P></BODY></HTML>
