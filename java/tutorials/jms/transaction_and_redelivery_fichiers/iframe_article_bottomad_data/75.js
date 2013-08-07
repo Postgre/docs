@@ -1,0 +1,1 @@
+document.write('<a href="http://red.as-us.falkag.net/server/link.asp?rdm='+rdm+'&cmd=url&iid='+iid+'&bid='+bid+'&dat=http://www.kqzyfj.com/click-1552776-10356332" target="_top" > <img src="http://www.lduhtrp.net/image-1552776-10356332" width="728" height="90" alt="ThinkGeek! You\'ll love this stuff!" border="0"></a>' + Ads_ViewCode + '');

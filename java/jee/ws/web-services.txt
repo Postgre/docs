@@ -1,0 +1,190 @@
+web services
+
+//=============================================================================
+// version de jax-ws embarquée dans le jdk
+//=============================================================================
+
+$ wsimport -version
+JAX-WS RI 2.1.6 in JDK 6
+
+chdomas@DK273073 /cygdrive/c/Program Files/Java/jdk1.7.0_17/bin
+$ ./wsgen -version
+JAX-WS RI 2.2.4-b01
+
+//=============================================================================
+// dump:
+//=============================================================================
+-Dcom.sun.xml.internal.ws.transport.http.client.HttpTransportPipe.dump=true
+
+//=============================================================================
+// transfert d'une pièce jointe avec mtom
+//=============================================================================
+http://docs.oracle.com/cd/E17802_01/webservices/webservices/docs/2.0/jaxws/mtom-swaref.html#1._MTOM_and_XOP
+
+
+--uuid:bdf3c061-d4e4-4f3e-8336-7fd164b8e157
+Content-Type: application/xop+xml; charset=UTF-8; type="text/xml";
+Content-Transfer-Encoding: binary
+Content-ID: <root.message@cxf.apache.org>
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getAttachementResponse xmlns:ns2="http://natixis.com"><return><xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:043d4a4e-b40d-48d5-a40a-071f7912c9bf-44@cxf.apache.org"/></return></ns2:getAttachementResponse></soap:Body></soap:Envelope>
+--uuid:bdf3c061-d4e4-4f3e-8336-7fd164b8e157
+Content-Type: application/pdf
+Content-Transfer-Encoding: binary
+Content-ID: <043d4a4e-b40d-48d5-a40a-071f7912c9bf-44@cxf.apache.org>
+
+%PDF-1.5
+%Çì�¢
+5 0 obj
+<</Length 6 0 R/Filter /FlateDecode>>
+stream
+xœí[[¯ÅÁ`{maû„x—d›¾_’·("�#åç‰¤Há—ü´ü½|Õ3=]³Ó³»çxÍ± XÀ¸¯ÕÕ_]»öÇN
+¥;IÊÇ7ß¯~\ÉÎ;%¼��M.vÞx×=ýg÷·î‡Õ��Ó.Ïè|ô¦ÛF×)o„4õÓ¯B÷§¯¾ÄÙ}†¿ÃjQú'Ïáßß|ßýñSb§”�¶;ÿv%EJÉÊžÕ)b’:vçß¯Ö/mÎÿµRFXþ‚þúx÷?è4zìl=ÿäkükULÂ+|þýüó•NF¸à»-N*"fücõõúW%‚ÔN¯_Þ€ÀdR\_ÛHáR°výÊf«E
+
+//=============================================================================
+// transfert d'une pièce jointe sans mtom
+//=============================================================================
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getAttachementResponse xmlns:ns2="http://natixis.com"><return>JVBERi0xLjUKJcfsj6IKNSAwIG9iago8PC9MZW5ndGggNiAwIFIvRmlsdGVyIC9GbGF0ZURlY29kZT4+CnN0cmVhbQp4nO1bW68cxREWwWB7bWH7GAwYDAOEeJdkm75fkrcoERIiD5Aj5QHniQSkSBDhl/y0/L181T... ... D5dCj4+CnN0YXJ0eHJlZgozOTE1MDgKJSVFT0YK</return></ns2:getAttachementResponse></soap:Body></soap:Envelope>
+
+//=============================================================================
+// server side
+//=============================================================================
+
+@MTOM
+// @BindingType(value = SOAPBinding.SOAP12HTTP_MTOM_BINDING)
+@WebService(name = "SettlementManager", targetNamespace = "http://natixis.com")
+public class SettlementManager {
+
+    @WebMethod
+    public List<Settlement> getSettlements() {
+        List<Settlement> settlements = new ArrayList<Settlement>();
+
+        settlements.add(new Settlement("cred1", "debt1", new BigDecimal("1"), new Date()));
+        settlements.add(new Settlement("cred2", "debt2", new BigDecimal("2"), new Date()));
+        settlements.add(new Settlement("cred3", "debt3", new BigDecimal("3"), new Date()));
+        settlements.add(new Settlement("cred4", "debt4", new BigDecimal("4"), new Date()));
+
+        return settlements;
+    }
+
+    @WebMethod
+    @XmlMimeType("application/octet-stream") 
+    public DataHandler getAttachement(String id) {
+        String resourceName = null;
+        if ("pdf".equals(id)) {
+            resourceName = "bulletin_de_rattachement.pdf";
+        } else {
+            resourceName = "North_Flows_View.png";
+        }
+
+        //        return new DataHandler(Thread.currentThread().getContextClassLoader().getResource(resourceName));
+        DataHandler dataHandler =
+                new DataHandler(Thread.currentThread().getContextClassLoader().getResource(resourceName));
+        System.out.println("attachement - name: " + dataHandler.getName());
+        System.out.println("attachement - type: " + dataHandler.getContentType());
+
+        return dataHandler;
+    }
+
+
+//=============================================================================
+// wsdl
+// ns1:expectedContentTypes="application/octet-stream" is important to generate a DataHandler without that
+// it generates a byte[]
+//=============================================================================
+
+<xs:complexType name="getAttachementResponse">
+    <xs:sequence>
+      <xs:element xmlns:ns1="http://www.w3.org/2005/05/xmlmime" minOccurs="0" name="return" ns1:expectedContentTypes="application/octet-stream" type="xs:base64Binary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+//=============================================================================
+// client
+//=============================================================================
+package com.natixis.clientsample;
+
+import javax.activation.DataHandler;
+import javax.xml.ws.BindingProvider;
+
+import com.natixis.SettlementManager;
+import com.natixis.SettlementManagerService;
+
+public class ClientSample {
+
+    public static void main(String[] args) {
+        SettlementManagerService service1 = new SettlementManagerService();
+        SettlementManager port1 = service1.getSettlementManagerPort();
+
+        ((BindingProvider) port1).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
+                "http://localhost:8081/ws-test/SettlementManager");
+
+        //        List<Settlement> settlements = port1.getSettlements();
+        //        System.out.println("settlements: " + settlements);
+
+        DataHandler attachement = port1.getAttachement("img");
+        System.out.println("attachement name: " + attachement.getName());
+        System.out.println("attachement type: " + attachement.getContentType());
+    }
+}
+
+
+
+//=============================================================================
+// nota bene
+//=============================================================================
+due to a bug in jaxb ri embedded in jdk 1.6, content type is not avaliable on client side
+it is working on jdk 7
+
+//=============================================================================
+// runtime exception thrown from a webservice
+//=============================================================================
+
+code:
+throw new RuntimeException("no attachment - id: " + id);
+
+---[HTTP response - http://localhost:8081/ws-test/SettlementManager - 500]---
+null: [HTTP/1.1 500 Erreur Interne de Servlet]
+Connection: [close]
+Content-Length: [218]
+Content-Type: [text/xml;charset=UTF-8]
+Date: [Thu, 25 Jul 2013 16:17:05 GMT]
+Server: [Apache-Coyote/1.1]
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><soap:Fault><faultcode>soap:Server</faultcode><faultstring>no attachment - id: img</faultstring></soap:Fault></soap:Body></soap:Envelope>--------------------
+Exception in thread "main" javax.xml.ws.soap.SOAPFaultException: no attachment - id: img
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:111)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:108)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:78)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:129)
+	at com.sun.proxy.$Proxy32.getAttachement(Unknown Source)
+	at com.natixis.clientsample.ClientSample.main(ClientSample.java:21)
+	
+	
+	
+code:
+    @WebMethod
+    @XmlMimeType("application/octet-stream")
+    public DataHandler getAttachement(String id) throws NoAttachementFound {
+            throw new NoAttachementFound(id);	
+			
+			
+---[HTTP response - http://localhost:8081/ws-test/SettlementManager - 500]---
+null: [HTTP/1.1 500 Erreur Interne de Servlet]
+Connection: [close]
+Content-Length: [271]
+Content-Type: [text/xml;charset=UTF-8]
+Date: [Fri, 26 Jul 2013 09:05:38 GMT]
+Server: [Apache-Coyote/1.1]
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><soap:Fault><faultcode>soap:Server</faultcode><faultstring>doc</faultstring><detail><ns1:NoAttachementFound xmlns:ns1="http://natixis.com"/></detail></soap:Fault></soap:Body></soap:Envelope>--------------------
+Exception in thread "main" javax.xml.ws.soap.SOAPFaultException: doc
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:119)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:108)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:78)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:129)
+	at com.sun.proxy.$Proxy32.getAttachement(Unknown Source)
+	at com.natixis.clientsample.ClientSample.main(ClientSample.java:21)
+
+	
+
