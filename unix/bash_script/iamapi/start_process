@@ -1,0 +1,63 @@
+#!/bin/bash
+
+
+E_BADARGS=66
+COLOR_RED='\E[31;40m'
+COLOR_GREEN='\E[32;40m'
+COLOR_YELLOW='\E[33;40m'
+COLOR_BLUE='\E[34;40m'
+COLOR_MAGENTA='\E[35;40m'
+COLOR_CYAN='\E[36;40m'
+COLOR_WHITE='\E[37;40m'
+
+OS_SUN="SunOS"
+
+if test -z "$3"  # Bad command line arg supplied?
+then
+  echo "Usage: $(basename $0) [Run_File_Name] [Ant_Target] [Conf_dir] [Process_name]"
+  exit $E_BADARGS
+fi
+
+ANT_FILE_NAME=$1
+ANT_TARGET=$2
+CONF_DIR=$3
+PROCESS_NAME=$4
+OS=$(uname)
+
+PS_CMD="ps"
+if [ $OS == $OS_SUN ]
+then
+  PS_CMD="/usr/ucb/ps"
+fi
+
+if [ -f ./status_process ]
+then
+  PID=$(./status_process \-b $PROCESS_NAME)
+else
+  PID=$($PS_CMD axww | grep "\-Dprocess\.name=$PROCESS_NAME" | awk '{print $1}')
+  NUMBER_OF_PID=$(echo "$PID" | wc -l | sed 's/^[ \t]*//;s/[ \t]*$//')
+  if [ $NUMBER_OF_PID -gt 1 ]
+  then
+    PID=-1
+  elif test -z $PID
+  then
+    PID=0
+  fi
+fi
+
+if [ $PID == 0 ]
+then
+  (nohup ant -f $ANT_FILE_NAME $ANT_TARGET -Dconf.dir=$CONF_DIR -DprocessName=$PROCESS_NAME &)
+elif [ $PID == -1 ]
+then
+  echo -en "$COLOR_RED"
+  echo "ERROR: process $PROCESS_NAME is already running more than one time..."
+  echo "       Execute 'status_process $PROCESS_NAME' to have more informations."
+  tput sgr0
+else
+  echo -en "$COLOR_RED"
+  echo "ERROR: process $PROCESS_NAME is already running."
+  tput sgr0
+fi
+
+exit $?
