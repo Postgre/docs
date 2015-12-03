@@ -1,0 +1,48 @@
+bad_code.java
+=============
+
+* toutes les variables sont en protected
+* dans le constructeur appel super() inutile
+* pas de javadoc sur la classe ni les méthodes
+* Map de Map
+* storeReleventReutersFiels: méthode synchronized + variable synnchronized
+* waitForReutersPage: catch InterruptedException
+** printStackTrace() -> logger
+** Thread.currentThread().interrupt()
+
+
+général
+=======
+
+Troubleshooting
+===============
+* jstack
+* jmap
+* logcc
+
+DI
+==
+injection de dépendance
+
+jdbc 
+====
+prepared statement
+batch
+
+Concurrent
+==========
+Map accédée par plusieurs threads
+
+lib
+===
+Map key -> list
+
+nouveautés java 8
+=================
+* stream
+* lambda
+* reference method
+
+
+
+

@@ -36,6 +36,9 @@ grep -r --include=*.java -l "Secured" ./core/ | xargs sed -i "/Secured/d"
 
 # =============================================================================
 
+# find files in a conf subdirectory
+find . -path "*/conf/*" -type f | xargs grep 80
+
 # delete line in all properties files
 find $1 -name '*.properties' -exec sed -i '/basket.version/d' {} \;
 
