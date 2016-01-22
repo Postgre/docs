@@ -1,0 +1,61 @@
+
+
+Execution stack creates objects on heap.
+
+Stop the world
+http://fr.slideshare.net/MindfireSolutions/java-garbage-collection-how-it-works
+
+High Throughput: (Débit) GC Time/Working process time
+Low Latency
+
+
+    The Serial GC - recommended for client-style applications that do not have low pause time requirements.
+    The Parallel GC - use when the throughput matters.
+    The Mostly-Concurrent GC (also known as Concurrent Mark-Sweep GC(CMS)) - use when the latency matters.
+    The Garbage First GC (G1) - new GC algorithm, for CMS replacement.
+	
+
+    Stop-the-world collectors pause the application threads to collect garbage. The duration and frequency of these pauses should not adversely impact the application's ability to adhere to the SLA.
+    Concurrent GC algorithms contend with the application threads for CPU cycles. This overhead should not affect the application throughput.
+    Non-compacting GC algorithms can cause heap fragmentation, which leads to long stop-the-world pauses due to full GC. The heap fragmentation should be kept to a minimum.
+    Garbage collection needs memory to work. Certain GC algorithms have a higher memory footprint than others. If the application needs a large heap, make sure the GC's memory overhead is not large.
+    A clear understanding of GC logs and commonly used JVM parameters is necessary to easily tune GC behavior should the code complexity grow or workload characteristics change.
+
+Runtime Switches
+'Mandatory' Flags
+
+    -verbose:gc – Get me some GC output
+    -Xloggc:<pathtofile> – Path to the log output, make sure you've got disk space
+    -XX:+PrintGCDetails – Minimum information for tools to help
+
+– Replace -verbose:gc with this
+
+    -XX:+PrintTenuringDistribution – Premature promotion information
+
+Basic Heap Sizing Flags
+
+    -Xms<size> – Set the minimum size reserved for the heap
+    -Xmx<size> – Set the maximum size reserved for the heap
+    -XX:MaxPermSize=<size> – Set the maximum size of your perm gen – Good for Spring apps and App servers
+
+In the old days, we were taught to set –Xms to be the same value as –Xmx. However this has changed. So now you can set –Xms to something reasonably small, or just not set it at all, because the heap adaptiveness is now very good.
+Other Flags
+
+    -XX:NewRatio=N
+    -XX:NewSize=N
+    -XX:MaxNewSize=N
+    -XX:MaxHeapFreeRatio
+    -XX:MinHeapFreeRatio
+    -XX:SurvivorRatio=N
+    -XX:MaxTenuringThreshold=N
+	
+
+	
+http://www.infoq.com/fr/articles/Java_Garbage_Collection_Distilled
+https://www.artima.com/insidejvm/ed2/gcP.html
+http://codegotbugs.blogspot.co.uk/2012/06/java-garbage-collection.html
+https://plumbr.eu/handbook/garbage-collection-algorithms-implementations
+http://www.cubrid.org/blog/dev-platform/understanding-java-garbage-collection/
+http://www.oracle.com/technetwork/java/javase/gc-tuning-6-140523.html#generation_sizing.young_gen
+http://www.javaworld.com/article/2078645/java-se/jvm-performance-optimization-part-3-garbage-collection.html
+https://www.artima.com/insidejvm/ed2/gcP.html
