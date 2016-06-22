@@ -55,6 +55,15 @@ sed -i '/iamapiauthorized_mode/d' $1
 # unix 2 dos on modified files
 $ git st | sed 's/ M /u2d/g'
 
+# get the location path of a script independently from where the script have been called
+echo $(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) 
+
+# extract a regex group with sed (-n: quietly -r: regex)
+abdvpproc@slbafrdvpap01 /slbafrdvpap01/appli/dev/tomcat-activepivot
+$ echo $(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) | sed -nr 's/.*tomcat-(.*)$/\1/p'
+activepivot
+
+
 # =============================================================================
 # telnet
 # =============================================================================
