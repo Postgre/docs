@@ -1,0 +1,15 @@
+Outlook shortcuts
+=================
+Switch to Mail									CTRL+1
+Switch to Calendar								CTRL+2
+Switch to next message (with message open)		CTRL+PERIOD
+Switch to previous message (with message open)	CTRL+COMMA
+Go to a different folder						CTRL+Y
+Move an item									CTRL+SHIFT+V
+
+Mail
+----
+Send											ALT+S
+Reply to a message								CTRL+R
+Reply all to a message							CTRL+SHIFT+R
+Forward a message								CTRL+F
