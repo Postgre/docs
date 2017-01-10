@@ -1,0 +1,9 @@
+* get all indices with status and size
+```
+GET /_cat/indices
+```
+
+* get all indices with details
+```
+GET /_search?pretty=true&q=*:*
+```

@@ -1,0 +1,39 @@
+# =============================================================================
+# import time for rm batches from rm database to elasticsearch
+# =============================================================================
+
+input {
+    jdbc {
+        jdbc_connection_string => "jdbc:sybase:Tds:slpdfrasew5501:20310"
+        jdbc_user => "user"
+        jdbc_password => "pwd"
+        jdbc_driver_library => "/slbafrw55tn01/appli/elk/logstash-plugins/sybase/jconn3-6.0-b26564.jar"
+        jdbc_driver_class => "com.sybase.jdbc3.jdbc.SybDriver"
+
+        statement => "select ID, NAME, convert(char(19), STARTTIME, 23) || ' Europe/Paris' STARTTIME, ROUND(TIMING/60000,0) TIMING from TIMING_PERF where USERCODE = 1 and STARTTIME > '20160101' order by STARTTIME"
+    }
+}
+
+filter {
+    date {
+        match => [ "starttime", "yyyy-MM-dd'T'HH:mm:ss ZZZ" ]
+    }
+    grok {
+        match => [ "name", "%{WORD:perimeter}/%{WORD:entity} \| MandateCount : %{WORD:mandate_count} \| File : %{GREEDYDATA}/mandateFile_Feuille_%{NOTSPACE:conf_file}.data" ]
+    }
+    mutate {
+        convert => [ "mandate_count", "integer" ]
+        convert => [ "timing", "integer" ]
+        remove_field => [ "name" ]
+    }
+}
+
+output {
+    stdout { codec => rubydebug }
+    stdout { codec => json_lines }
+
+    elasticsearch {
+            index => "rm-prod-batch"
+            document_id => "%{id}"
+        }
+}

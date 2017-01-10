@@ -1,0 +1,87 @@
+The conf file read jmx conf in a folder.
+
+jmx confs folder file:
+
+```
+{
+    "host" : "host",
+    "port" : 5402,
+    "username" : "role",
+    "password": "pwd",
+    "alias" : "credit",
+    "queries" : [
+        {
+          "object_name" : "java.lang:type=Memory",
+          "attributes" : [ "HeapMemoryUsage" ],
+          "object_alias" : "Memory"
+        }
+        ]
+}
+```
+
+the logstash conf file
+```
+# =============================================================================
+# import sensirisk jmx metrics to elasticsearch
+# =============================================================================
+#
+# The goal of this process is to get the output of the jmx input plugin:
+#
+# {"metric_value_number":2211512320,"path":"/data/w55_tnr/elk/logstash/conf/sensirisk-jmx","@timestamp":"2017-01-10T14:28:21.797Z","@version":"1","host":"mspejubat01","metric_path":"equity.Memory.HeapMemoryUsage.committed","type":"jmx","tags":[]}
+# {"metric_value_number":515434880,"path":"/data/w55_tnr/elk/logstash/conf/sensirisk-jmx","@timestamp":"2017-01-10T14:28:21.807Z","@version":"1","host":"mspejubat01","metric_path":"equity.Memory.HeapMemoryUsage.init","type":"jmx","tags":[]}
+# {"metric_value_number":3355443200,"path":"/data/w55_tnr/elk/logstash/conf/sensirisk-jmx","@timestamp":"2017-01-10T14:28:21.809Z","@version":"1","host":"mspejubat01","metric_path":"equity.Memory.HeapMemoryUsage.max","type":"jmx","tags":[]}
+# {"metric_value_number":803654336,"path":"/data/w55_tnr/elk/logstash/conf/sensirisk-jmx","@timestamp":"2017-01-10T14:28:21.810Z","@version":"1","host":"mspejubat01","metric_path":"equity.Memory.HeapMemoryUsage.used","type":"jmx","tags":[]}
+#
+# filter to remove useless lines (init and committed memory metric) and aggregate max and used memory in one event:
+#
+# {"server":"equity","@timestamp":"2017-01-10T14:26:42.212Z","max":3355443200,"@version":"1","host":"mspejubat01","used":786385776,"type":"jmx","tags":[]}
+#
+
+
+input {
+    jmx {
+        path => "/data/w55_tnr/elk/logstash/conf/sensirisk-jmx"
+        polling_frequency => 15
+        type => "jmx"
+    }
+}
+
+filter {
+    grok { match => { "metric_path" => "%{WORD:server}.Memory.HeapMemoryUsage.%{WORD:mem_metric}" } }
+
+    if ([mem_metric] == "init" or [mem_metric] == "committed") { drop {} }
+
+    if [mem_metric] == "max" {
+        # keep the "max" metric (first event) but drop the event
+        aggregate {
+            task_id => "%{host}-%{server}"
+            code => "map['max'] = event.get('metric_value_number')"
+            map_action => "create"
+        }
+        drop {}
+    }
+
+    if [mem_metric] == "used" {
+        # add the "max" metric to the "used" event
+        aggregate {
+            task_id => "%{host}-%{server}"
+            code => "event.set('max', map['max']); event.set('used', event.get('metric_value_number'))"
+            map_action => "update"
+            end_of_task => true
+        }
+    }
+
+    mutate {
+        rename => { "metric_value_number" => "%{mem_metric}" }
+        remove_field => [ "path", "mem_metric", "metric_path" ]
+    }
+}
+
+output {
+    stdout { codec => json_lines }
+
+    elasticsearch {
+            index => "sensirisk-jmx-%{+YYYY.MM}"
+    }
+}
+```

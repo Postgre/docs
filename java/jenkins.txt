@@ -1,0 +1,6 @@
+
+* start a daemon from jenkins
+
+```
+BUILD_ID=dontKillMe nohup /slbafrw55tn01/appli/elk/logstash/bin/logstash -f /data/w55_tnr/elk/logstash/conf/sensirisk-jmx.conf > /data/w55_tnr/elk/logstash/log/sensirisk-jmx.log 2>&1 &
+```
