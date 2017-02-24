@@ -1,30 +1,10 @@
 # =============================================================================
-# ims
-# =============================================================================
-
-# find an ims by its port
-netstat -pa | grep <port>
-==> <pid>
-ps -ef | grep <pid>
-
-# =============================================================================
-
-# retart an ims
-jps -lm | grep nm-test | cut -d" " -f1 | xargs kill -9; rm ./nm-test/nm-test.persistence -rf ; ./run.sh nm-test
-
-# =============================================================================
- 
-# extract process time from iamapi
-grep "\[IAMAPI-SERVER-.*\].*order actions after process" server/target/iamapi.log | cut -d"-" -f12 | cut -d" " -f4 > "process-time.xls"
-
-# =============================================================================
-
-# remove caches for perf tests
-rm server/cache -rf && rm server/temp -rf && rm -rf /cygdrive/c/work/dev/others/quickfix-test/quickfix-test/target/client/
-
-# =============================================================================
 # cmd
 # =============================================================================
+
+# display a file in hexa
+od -t c -t x1 <file>
+
 
 # find a class in all jars
 for i in `find . -name "*.jar"`; do jar tvf $i | grep "search pattern" && echo $i ; done
@@ -63,6 +43,9 @@ abdvpproc@slbafrdvpap01 /slbafrdvpap01/appli/dev/tomcat-activepivot
 $ echo $(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) | sed -nr 's/.*tomcat-(.*)$/\1/p'
 activepivot
 
+
+display top memory consummer
+top -b -n  1 -o %MEM -c | head -20
 
 # =============================================================================
 # telnet
